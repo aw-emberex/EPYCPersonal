@@ -7,158 +7,158 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA373B4E16F55C5200A03D0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA373B4D16F55C5200A03D0A /* UIKit.framework */; };
-		FA373B5016F55C5200A03D0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA373B4F16F55C5200A03D0A /* Foundation.framework */; };
-		FA373B5216F55C5200A03D0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA373B5116F55C5200A03D0A /* CoreGraphics.framework */; };
-		FA373B5816F55C5200A03D0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA373B5616F55C5200A03D0A /* InfoPlist.strings */; };
-		FA373B5A16F55C5200A03D0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA373B5916F55C5200A03D0A /* main.m */; };
-		FA373B5E16F55C5200A03D0A /* EPYCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA373B5D16F55C5200A03D0A /* EPYCAppDelegate.m */; };
-		FA373B6016F55C5200A03D0A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FA373B5F16F55C5200A03D0A /* Default.png */; };
-		FA373B6216F55C5200A03D0A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA373B6116F55C5200A03D0A /* Default@2x.png */; };
-		FA373B6416F55C5200A03D0A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA373B6316F55C5200A03D0A /* Default-568h@2x.png */; };
-		FA373B6716F55C5200A03D0A /* EPYCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA373B6616F55C5200A03D0A /* EPYCViewController.m */; };
-		FA373B6A16F55C5200A03D0A /* EPYCViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA373B6816F55C5200A03D0A /* EPYCViewController_iPhone.xib */; };
-		FA373B6D16F55C5200A03D0A /* EPYCViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA373B6B16F55C5200A03D0A /* EPYCViewController_iPad.xib */; };
-		FA373B7516F55C5200A03D0A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA373B7416F55C5200A03D0A /* SenTestingKit.framework */; };
-		FA373B7616F55C5200A03D0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA373B4D16F55C5200A03D0A /* UIKit.framework */; };
-		FA373B7716F55C5200A03D0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA373B4F16F55C5200A03D0A /* Foundation.framework */; };
-		FA373B7F16F55C5200A03D0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA373B7D16F55C5200A03D0A /* InfoPlist.strings */; };
-		FA373B8216F55C5200A03D0A /* EPYCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA373B8116F55C5200A03D0A /* EPYCTests.m */; };
+		FA6952DB16F5710A0017453E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DA16F5710A0017453E /* UIKit.framework */; };
+		FA6952DD16F5710A0017453E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DC16F5710A0017453E /* Foundation.framework */; };
+		FA6952DF16F5710A0017453E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DE16F5710A0017453E /* CoreGraphics.framework */; };
+		FA6952E516F5710A0017453E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6952E316F5710A0017453E /* InfoPlist.strings */; };
+		FA6952E716F5710A0017453E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6952E616F5710A0017453E /* main.m */; };
+		FA6952EB16F5710A0017453E /* EPYCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6952EA16F5710A0017453E /* EPYCAppDelegate.m */; };
+		FA6952ED16F5710A0017453E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6952EC16F5710A0017453E /* Default.png */; };
+		FA6952EF16F5710A0017453E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6952EE16F5710A0017453E /* Default@2x.png */; };
+		FA6952F116F5710A0017453E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6952F016F5710A0017453E /* Default-568h@2x.png */; };
+		FA6952F416F5710A0017453E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6952F216F5710A0017453E /* MainStoryboard_iPhone.storyboard */; };
+		FA6952F716F5710A0017453E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6952F516F5710A0017453E /* MainStoryboard_iPad.storyboard */; };
+		FA6952FA16F5710A0017453E /* EPYCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6952F916F5710A0017453E /* EPYCViewController.m */; };
+		FA69530216F5710A0017453E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA69530116F5710A0017453E /* SenTestingKit.framework */; };
+		FA69530316F5710A0017453E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DA16F5710A0017453E /* UIKit.framework */; };
+		FA69530416F5710A0017453E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DC16F5710A0017453E /* Foundation.framework */; };
+		FA69530C16F5710A0017453E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA69530A16F5710A0017453E /* InfoPlist.strings */; };
+		FA69530F16F5710A0017453E /* EPYCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69530E16F5710A0017453E /* EPYCTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA373B7816F55C5200A03D0A /* PBXContainerItemProxy */ = {
+		FA69530516F5710A0017453E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FA373B4216F55C5200A03D0A /* Project object */;
+			containerPortal = FA6952CF16F5710A0017453E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FA373B4916F55C5200A03D0A;
+			remoteGlobalIDString = FA6952D616F5710A0017453E;
 			remoteInfo = EPYC;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA373B4A16F55C5200A03D0A /* EPYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA373B4D16F55C5200A03D0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		FA373B4F16F55C5200A03D0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FA373B5116F55C5200A03D0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FA373B5516F55C5200A03D0A /* EPYC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPYC-Info.plist"; sourceTree = "<group>"; };
-		FA373B5716F55C5200A03D0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FA373B5916F55C5200A03D0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA373B5B16F55C5200A03D0A /* EPYC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPYC-Prefix.pch"; sourceTree = "<group>"; };
-		FA373B5C16F55C5200A03D0A /* EPYCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCAppDelegate.h; sourceTree = "<group>"; };
-		FA373B5D16F55C5200A03D0A /* EPYCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCAppDelegate.m; sourceTree = "<group>"; };
-		FA373B5F16F55C5200A03D0A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		FA373B6116F55C5200A03D0A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		FA373B6316F55C5200A03D0A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FA373B6516F55C5200A03D0A /* EPYCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCViewController.h; sourceTree = "<group>"; };
-		FA373B6616F55C5200A03D0A /* EPYCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCViewController.m; sourceTree = "<group>"; };
-		FA373B6916F55C5200A03D0A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPYCViewController_iPhone.xib; sourceTree = "<group>"; };
-		FA373B6C16F55C5200A03D0A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EPYCViewController_iPad.xib; sourceTree = "<group>"; };
-		FA373B7316F55C5200A03D0A /* EPYCTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPYCTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA373B7416F55C5200A03D0A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		FA373B7C16F55C5200A03D0A /* EPYCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPYCTests-Info.plist"; sourceTree = "<group>"; };
-		FA373B7E16F55C5200A03D0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FA373B8016F55C5200A03D0A /* EPYCTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCTests.h; sourceTree = "<group>"; };
-		FA373B8116F55C5200A03D0A /* EPYCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCTests.m; sourceTree = "<group>"; };
+		FA6952D716F5710A0017453E /* EPYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA6952DA16F5710A0017453E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FA6952DC16F5710A0017453E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FA6952DE16F5710A0017453E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FA6952E216F5710A0017453E /* EPYC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPYC-Info.plist"; sourceTree = "<group>"; };
+		FA6952E416F5710A0017453E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA6952E616F5710A0017453E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA6952E816F5710A0017453E /* EPYC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPYC-Prefix.pch"; sourceTree = "<group>"; };
+		FA6952E916F5710A0017453E /* EPYCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCAppDelegate.h; sourceTree = "<group>"; };
+		FA6952EA16F5710A0017453E /* EPYCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCAppDelegate.m; sourceTree = "<group>"; };
+		FA6952EC16F5710A0017453E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FA6952EE16F5710A0017453E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FA6952F016F5710A0017453E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FA6952F316F5710A0017453E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		FA6952F616F5710A0017453E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		FA6952F816F5710A0017453E /* EPYCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCViewController.h; sourceTree = "<group>"; };
+		FA6952F916F5710A0017453E /* EPYCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCViewController.m; sourceTree = "<group>"; };
+		FA69530016F5710A0017453E /* EPYCTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPYCTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA69530116F5710A0017453E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FA69530916F5710A0017453E /* EPYCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPYCTests-Info.plist"; sourceTree = "<group>"; };
+		FA69530B16F5710A0017453E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA69530D16F5710A0017453E /* EPYCTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCTests.h; sourceTree = "<group>"; };
+		FA69530E16F5710A0017453E /* EPYCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FA373B4716F55C5200A03D0A /* Frameworks */ = {
+		FA6952D416F5710A0017453E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA373B4E16F55C5200A03D0A /* UIKit.framework in Frameworks */,
-				FA373B5016F55C5200A03D0A /* Foundation.framework in Frameworks */,
-				FA373B5216F55C5200A03D0A /* CoreGraphics.framework in Frameworks */,
+				FA6952DB16F5710A0017453E /* UIKit.framework in Frameworks */,
+				FA6952DD16F5710A0017453E /* Foundation.framework in Frameworks */,
+				FA6952DF16F5710A0017453E /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA373B6F16F55C5200A03D0A /* Frameworks */ = {
+		FA6952FC16F5710A0017453E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA373B7516F55C5200A03D0A /* SenTestingKit.framework in Frameworks */,
-				FA373B7616F55C5200A03D0A /* UIKit.framework in Frameworks */,
-				FA373B7716F55C5200A03D0A /* Foundation.framework in Frameworks */,
+				FA69530216F5710A0017453E /* SenTestingKit.framework in Frameworks */,
+				FA69530316F5710A0017453E /* UIKit.framework in Frameworks */,
+				FA69530416F5710A0017453E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA373B4116F55C5200A03D0A = {
+		FA6952CE16F5710A0017453E = {
 			isa = PBXGroup;
 			children = (
-				FA373B5316F55C5200A03D0A /* EPYC */,
-				FA373B7A16F55C5200A03D0A /* EPYCTests */,
-				FA373B4C16F55C5200A03D0A /* Frameworks */,
-				FA373B4B16F55C5200A03D0A /* Products */,
+				FA6952E016F5710A0017453E /* EPYC */,
+				FA69530716F5710A0017453E /* EPYCTests */,
+				FA6952D916F5710A0017453E /* Frameworks */,
+				FA6952D816F5710A0017453E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FA373B4B16F55C5200A03D0A /* Products */ = {
+		FA6952D816F5710A0017453E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA373B4A16F55C5200A03D0A /* EPYC.app */,
-				FA373B7316F55C5200A03D0A /* EPYCTests.octest */,
+				FA6952D716F5710A0017453E /* EPYC.app */,
+				FA69530016F5710A0017453E /* EPYCTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA373B4C16F55C5200A03D0A /* Frameworks */ = {
+		FA6952D916F5710A0017453E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA373B4D16F55C5200A03D0A /* UIKit.framework */,
-				FA373B4F16F55C5200A03D0A /* Foundation.framework */,
-				FA373B5116F55C5200A03D0A /* CoreGraphics.framework */,
-				FA373B7416F55C5200A03D0A /* SenTestingKit.framework */,
+				FA6952DA16F5710A0017453E /* UIKit.framework */,
+				FA6952DC16F5710A0017453E /* Foundation.framework */,
+				FA6952DE16F5710A0017453E /* CoreGraphics.framework */,
+				FA69530116F5710A0017453E /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA373B5316F55C5200A03D0A /* EPYC */ = {
+		FA6952E016F5710A0017453E /* EPYC */ = {
 			isa = PBXGroup;
 			children = (
-				FA373B5C16F55C5200A03D0A /* EPYCAppDelegate.h */,
-				FA373B5D16F55C5200A03D0A /* EPYCAppDelegate.m */,
-				FA373B6516F55C5200A03D0A /* EPYCViewController.h */,
-				FA373B6616F55C5200A03D0A /* EPYCViewController.m */,
-				FA373B6816F55C5200A03D0A /* EPYCViewController_iPhone.xib */,
-				FA373B6B16F55C5200A03D0A /* EPYCViewController_iPad.xib */,
-				FA373B5416F55C5200A03D0A /* Supporting Files */,
+				FA6952E916F5710A0017453E /* EPYCAppDelegate.h */,
+				FA6952EA16F5710A0017453E /* EPYCAppDelegate.m */,
+				FA6952F216F5710A0017453E /* MainStoryboard_iPhone.storyboard */,
+				FA6952F516F5710A0017453E /* MainStoryboard_iPad.storyboard */,
+				FA6952F816F5710A0017453E /* EPYCViewController.h */,
+				FA6952F916F5710A0017453E /* EPYCViewController.m */,
+				FA6952E116F5710A0017453E /* Supporting Files */,
 			);
 			path = EPYC;
 			sourceTree = "<group>";
 		};
-		FA373B5416F55C5200A03D0A /* Supporting Files */ = {
+		FA6952E116F5710A0017453E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA373B5516F55C5200A03D0A /* EPYC-Info.plist */,
-				FA373B5616F55C5200A03D0A /* InfoPlist.strings */,
-				FA373B5916F55C5200A03D0A /* main.m */,
-				FA373B5B16F55C5200A03D0A /* EPYC-Prefix.pch */,
-				FA373B5F16F55C5200A03D0A /* Default.png */,
-				FA373B6116F55C5200A03D0A /* Default@2x.png */,
-				FA373B6316F55C5200A03D0A /* Default-568h@2x.png */,
+				FA6952E216F5710A0017453E /* EPYC-Info.plist */,
+				FA6952E316F5710A0017453E /* InfoPlist.strings */,
+				FA6952E616F5710A0017453E /* main.m */,
+				FA6952E816F5710A0017453E /* EPYC-Prefix.pch */,
+				FA6952EC16F5710A0017453E /* Default.png */,
+				FA6952EE16F5710A0017453E /* Default@2x.png */,
+				FA6952F016F5710A0017453E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FA373B7A16F55C5200A03D0A /* EPYCTests */ = {
+		FA69530716F5710A0017453E /* EPYCTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA373B8016F55C5200A03D0A /* EPYCTests.h */,
-				FA373B8116F55C5200A03D0A /* EPYCTests.m */,
-				FA373B7B16F55C5200A03D0A /* Supporting Files */,
+				FA69530D16F5710A0017453E /* EPYCTests.h */,
+				FA69530E16F5710A0017453E /* EPYCTests.m */,
+				FA69530816F5710A0017453E /* Supporting Files */,
 			);
 			path = EPYCTests;
 			sourceTree = "<group>";
 		};
-		FA373B7B16F55C5200A03D0A /* Supporting Files */ = {
+		FA69530816F5710A0017453E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA373B7C16F55C5200A03D0A /* EPYCTests-Info.plist */,
-				FA373B7D16F55C5200A03D0A /* InfoPlist.strings */,
+				FA69530916F5710A0017453E /* EPYCTests-Info.plist */,
+				FA69530A16F5710A0017453E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -166,13 +166,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA373B4916F55C5200A03D0A /* EPYC */ = {
+		FA6952D616F5710A0017453E /* EPYC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA373B8516F55C5200A03D0A /* Build configuration list for PBXNativeTarget "EPYC" */;
+			buildConfigurationList = FA69531216F5710A0017453E /* Build configuration list for PBXNativeTarget "EPYC" */;
 			buildPhases = (
-				FA373B4616F55C5200A03D0A /* Sources */,
-				FA373B4716F55C5200A03D0A /* Frameworks */,
-				FA373B4816F55C5200A03D0A /* Resources */,
+				FA6952D316F5710A0017453E /* Sources */,
+				FA6952D416F5710A0017453E /* Frameworks */,
+				FA6952D516F5710A0017453E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -180,82 +180,82 @@
 			);
 			name = EPYC;
 			productName = EPYC;
-			productReference = FA373B4A16F55C5200A03D0A /* EPYC.app */;
+			productReference = FA6952D716F5710A0017453E /* EPYC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA373B7216F55C5200A03D0A /* EPYCTests */ = {
+		FA6952FF16F5710A0017453E /* EPYCTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA373B8816F55C5200A03D0A /* Build configuration list for PBXNativeTarget "EPYCTests" */;
+			buildConfigurationList = FA69531516F5710A0017453E /* Build configuration list for PBXNativeTarget "EPYCTests" */;
 			buildPhases = (
-				FA373B6E16F55C5200A03D0A /* Sources */,
-				FA373B6F16F55C5200A03D0A /* Frameworks */,
-				FA373B7016F55C5200A03D0A /* Resources */,
-				FA373B7116F55C5200A03D0A /* ShellScript */,
+				FA6952FB16F5710A0017453E /* Sources */,
+				FA6952FC16F5710A0017453E /* Frameworks */,
+				FA6952FD16F5710A0017453E /* Resources */,
+				FA6952FE16F5710A0017453E /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA373B7916F55C5200A03D0A /* PBXTargetDependency */,
+				FA69530616F5710A0017453E /* PBXTargetDependency */,
 			);
 			name = EPYCTests;
 			productName = EPYCTests;
-			productReference = FA373B7316F55C5200A03D0A /* EPYCTests.octest */;
+			productReference = FA69530016F5710A0017453E /* EPYCTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FA373B4216F55C5200A03D0A /* Project object */ = {
+		FA6952CF16F5710A0017453E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = EPYC;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Emberex;
 			};
-			buildConfigurationList = FA373B4516F55C5200A03D0A /* Build configuration list for PBXProject "EPYC" */;
+			buildConfigurationList = FA6952D216F5710A0017453E /* Build configuration list for PBXProject "EPYC" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = FA373B4116F55C5200A03D0A;
-			productRefGroup = FA373B4B16F55C5200A03D0A /* Products */;
+			mainGroup = FA6952CE16F5710A0017453E;
+			productRefGroup = FA6952D816F5710A0017453E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA373B4916F55C5200A03D0A /* EPYC */,
-				FA373B7216F55C5200A03D0A /* EPYCTests */,
+				FA6952D616F5710A0017453E /* EPYC */,
+				FA6952FF16F5710A0017453E /* EPYCTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FA373B4816F55C5200A03D0A /* Resources */ = {
+		FA6952D516F5710A0017453E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA373B5816F55C5200A03D0A /* InfoPlist.strings in Resources */,
-				FA373B6016F55C5200A03D0A /* Default.png in Resources */,
-				FA373B6216F55C5200A03D0A /* Default@2x.png in Resources */,
-				FA373B6416F55C5200A03D0A /* Default-568h@2x.png in Resources */,
-				FA373B6A16F55C5200A03D0A /* EPYCViewController_iPhone.xib in Resources */,
-				FA373B6D16F55C5200A03D0A /* EPYCViewController_iPad.xib in Resources */,
+				FA6952E516F5710A0017453E /* InfoPlist.strings in Resources */,
+				FA6952ED16F5710A0017453E /* Default.png in Resources */,
+				FA6952EF16F5710A0017453E /* Default@2x.png in Resources */,
+				FA6952F116F5710A0017453E /* Default-568h@2x.png in Resources */,
+				FA6952F416F5710A0017453E /* MainStoryboard_iPhone.storyboard in Resources */,
+				FA6952F716F5710A0017453E /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA373B7016F55C5200A03D0A /* Resources */ = {
+		FA6952FD16F5710A0017453E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA373B7F16F55C5200A03D0A /* InfoPlist.strings in Resources */,
+				FA69530C16F5710A0017453E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FA373B7116F55C5200A03D0A /* ShellScript */ = {
+		FA6952FE16F5710A0017453E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,63 +271,63 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FA373B4616F55C5200A03D0A /* Sources */ = {
+		FA6952D316F5710A0017453E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA373B5A16F55C5200A03D0A /* main.m in Sources */,
-				FA373B5E16F55C5200A03D0A /* EPYCAppDelegate.m in Sources */,
-				FA373B6716F55C5200A03D0A /* EPYCViewController.m in Sources */,
+				FA6952E716F5710A0017453E /* main.m in Sources */,
+				FA6952EB16F5710A0017453E /* EPYCAppDelegate.m in Sources */,
+				FA6952FA16F5710A0017453E /* EPYCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA373B6E16F55C5200A03D0A /* Sources */ = {
+		FA6952FB16F5710A0017453E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA373B8216F55C5200A03D0A /* EPYCTests.m in Sources */,
+				FA69530F16F5710A0017453E /* EPYCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FA373B7916F55C5200A03D0A /* PBXTargetDependency */ = {
+		FA69530616F5710A0017453E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA373B4916F55C5200A03D0A /* EPYC */;
-			targetProxy = FA373B7816F55C5200A03D0A /* PBXContainerItemProxy */;
+			target = FA6952D616F5710A0017453E /* EPYC */;
+			targetProxy = FA69530516F5710A0017453E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FA373B5616F55C5200A03D0A /* InfoPlist.strings */ = {
+		FA6952E316F5710A0017453E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA373B5716F55C5200A03D0A /* en */,
+				FA6952E416F5710A0017453E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		FA373B6816F55C5200A03D0A /* EPYCViewController_iPhone.xib */ = {
+		FA6952F216F5710A0017453E /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA373B6916F55C5200A03D0A /* en */,
+				FA6952F316F5710A0017453E /* en */,
 			);
-			name = EPYCViewController_iPhone.xib;
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		FA373B6B16F55C5200A03D0A /* EPYCViewController_iPad.xib */ = {
+		FA6952F516F5710A0017453E /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA373B6C16F55C5200A03D0A /* en */,
+				FA6952F616F5710A0017453E /* en */,
 			);
-			name = EPYCViewController_iPad.xib;
+			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		FA373B7D16F55C5200A03D0A /* InfoPlist.strings */ = {
+		FA69530A16F5710A0017453E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA373B7E16F55C5200A03D0A /* en */,
+				FA69530B16F5710A0017453E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FA373B8316F55C5200A03D0A /* Debug */ = {
+		FA69531016F5710A0017453E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -367,7 +367,7 @@
 			};
 			name = Debug;
 		};
-		FA373B8416F55C5200A03D0A /* Release */ = {
+		FA69531116F5710A0017453E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -393,7 +393,7 @@
 			};
 			name = Release;
 		};
-		FA373B8616F55C5200A03D0A /* Debug */ = {
+		FA69531316F5710A0017453E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -404,7 +404,7 @@
 			};
 			name = Debug;
 		};
-		FA373B8716F55C5200A03D0A /* Release */ = {
+		FA69531416F5710A0017453E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -415,7 +415,7 @@
 			};
 			name = Release;
 		};
-		FA373B8916F55C5200A03D0A /* Debug */ = {
+		FA69531616F5710A0017453E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EPYC.app/EPYC";
@@ -432,7 +432,7 @@
 			};
 			name = Debug;
 		};
-		FA373B8A16F55C5200A03D0A /* Release */ = {
+		FA69531716F5710A0017453E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EPYC.app/EPYC";
@@ -452,32 +452,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA373B4516F55C5200A03D0A /* Build configuration list for PBXProject "EPYC" */ = {
+		FA6952D216F5710A0017453E /* Build configuration list for PBXProject "EPYC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA373B8316F55C5200A03D0A /* Debug */,
-				FA373B8416F55C5200A03D0A /* Release */,
+				FA69531016F5710A0017453E /* Debug */,
+				FA69531116F5710A0017453E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA373B8516F55C5200A03D0A /* Build configuration list for PBXNativeTarget "EPYC" */ = {
+		FA69531216F5710A0017453E /* Build configuration list for PBXNativeTarget "EPYC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA373B8616F55C5200A03D0A /* Debug */,
-				FA373B8716F55C5200A03D0A /* Release */,
+				FA69531316F5710A0017453E /* Debug */,
+				FA69531416F5710A0017453E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		FA373B8816F55C5200A03D0A /* Build configuration list for PBXNativeTarget "EPYCTests" */ = {
+		FA69531516F5710A0017453E /* Build configuration list for PBXNativeTarget "EPYCTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA373B8916F55C5200A03D0A /* Debug */,
-				FA373B8A16F55C5200A03D0A /* Release */,
+				FA69531616F5710A0017453E /* Debug */,
+				FA69531716F5710A0017453E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FA373B4216F55C5200A03D0A /* Project object */;
+	rootObject = FA6952CF16F5710A0017453E /* Project object */;
 }
