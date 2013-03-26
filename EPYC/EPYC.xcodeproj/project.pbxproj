@@ -24,8 +24,11 @@
 		FA69530416F5710A0017453E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DC16F5710A0017453E /* Foundation.framework */; };
 		FA69530C16F5710A0017453E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA69530A16F5710A0017453E /* InfoPlist.strings */; };
 		FA69530F16F5710A0017453E /* EPYCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69530E16F5710A0017453E /* EPYCTests.m */; };
-		FA69531A16F578A20017453E /* Phrase.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69531916F578A20017453E /* Phrase.m */; };
-		FA69531B16F578A20017453E /* Phrase.m in Sources */ = {isa = PBXBuildFile; fileRef = FA69531916F578A20017453E /* Phrase.m */; };
+		FABEA18616FE8B7900780A71 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABEA18516FE8B7900780A71 /* CoreData.framework */; };
+		FABEA18916FE8C2700780A71 /* Phrase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FABEA18716FE8C2700780A71 /* Phrase.xcdatamodeld */; };
+		FABEA18A16FE8C2700780A71 /* Phrase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FABEA18716FE8C2700780A71 /* Phrase.xcdatamodeld */; };
+		FABEA1E416FFCEBF00780A71 /* Phrase.m in Sources */ = {isa = PBXBuildFile; fileRef = FABEA1E316FFCEBF00780A71 /* Phrase.m */; };
+		FABEA1E516FFCEBF00780A71 /* Phrase.m in Sources */ = {isa = PBXBuildFile; fileRef = FABEA1E316FFCEBF00780A71 /* Phrase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +65,10 @@
 		FA69530B16F5710A0017453E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA69530D16F5710A0017453E /* EPYCTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCTests.h; sourceTree = "<group>"; };
 		FA69530E16F5710A0017453E /* EPYCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCTests.m; sourceTree = "<group>"; };
-		FA69531816F578A20017453E /* Phrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phrase.h; sourceTree = "<group>"; };
-		FA69531916F578A20017453E /* Phrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phrase.m; sourceTree = "<group>"; };
+		FABEA18516FE8B7900780A71 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FABEA18816FE8C2700780A71 /* Phrase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Phrase.xcdatamodel; sourceTree = "<group>"; };
+		FABEA1E216FFCEBF00780A71 /* Phrase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Phrase.h; path = ../Phrase.h; sourceTree = "<group>"; };
+		FABEA1E316FFCEBF00780A71 /* Phrase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Phrase.m; path = ../Phrase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABEA18616FE8B7900780A71 /* CoreData.framework in Frameworks */,
 				FA6952DB16F5710A0017453E /* UIKit.framework in Frameworks */,
 				FA6952DD16F5710A0017453E /* Foundation.framework in Frameworks */,
 				FA6952DF16F5710A0017453E /* CoreGraphics.framework in Frameworks */,
@@ -93,6 +99,7 @@
 		FA6952CE16F5710A0017453E = {
 			isa = PBXGroup;
 			children = (
+				FABEA18516FE8B7900780A71 /* CoreData.framework */,
 				FA6952E016F5710A0017453E /* EPYC */,
 				FA69530716F5710A0017453E /* EPYCTests */,
 				FA6952D916F5710A0017453E /* Frameworks */,
@@ -123,11 +130,12 @@
 		FA6952E016F5710A0017453E /* EPYC */ = {
 			isa = PBXGroup;
 			children = (
-				FA6952E916F5710A0017453E /* EPYCAppDelegate.h */,
+				FABEA18716FE8C2700780A71 /* Phrase.xcdatamodeld */,
+				FABEA1E216FFCEBF00780A71 /* Phrase.h */,
+				FABEA1E316FFCEBF00780A71 /* Phrase.m */,
 				FA6952EA16F5710A0017453E /* EPYCAppDelegate.m */,
+				FA6952E916F5710A0017453E /* EPYCAppDelegate.h */,
 				FA6952F216F5710A0017453E /* MainStoryboard_iPhone.storyboard */,
-				FA69531816F578A20017453E /* Phrase.h */,
-				FA69531916F578A20017453E /* Phrase.m */,
 				FA6952F516F5710A0017453E /* MainStoryboard_iPad.storyboard */,
 				FA6952F816F5710A0017453E /* EPYCViewController.h */,
 				FA6952F916F5710A0017453E /* EPYCViewController.m */,
@@ -284,7 +292,8 @@
 				FA6952E716F5710A0017453E /* main.m in Sources */,
 				FA6952EB16F5710A0017453E /* EPYCAppDelegate.m in Sources */,
 				FA6952FA16F5710A0017453E /* EPYCViewController.m in Sources */,
-				FA69531A16F578A20017453E /* Phrase.m in Sources */,
+				FABEA18916FE8C2700780A71 /* Phrase.xcdatamodeld in Sources */,
+				FABEA1E416FFCEBF00780A71 /* Phrase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA69530F16F5710A0017453E /* EPYCTests.m in Sources */,
-				FA69531B16F578A20017453E /* Phrase.m in Sources */,
+				FABEA18A16FE8C2700780A71 /* Phrase.xcdatamodeld in Sources */,
+				FABEA1E516FFCEBF00780A71 /* Phrase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +486,7 @@
 				FA69531416F5710A0017453E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA69531516F5710A0017453E /* Build configuration list for PBXNativeTarget "EPYCTests" */ = {
 			isa = XCConfigurationList;
@@ -484,8 +495,23 @@
 				FA69531716F5710A0017453E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FABEA18716FE8C2700780A71 /* Phrase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FABEA18816FE8C2700780A71 /* Phrase.xcdatamodel */,
+			);
+			currentVersion = FABEA18816FE8C2700780A71 /* Phrase.xcdatamodel */;
+			name = Phrase.xcdatamodeld;
+			path = ../Phrase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA6952CF16F5710A0017453E /* Project object */;
 }

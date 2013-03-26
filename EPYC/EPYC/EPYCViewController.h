@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EPYCAppDelegate.h"
 
 @interface EPYCViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UITextView *phraseViewController;
 @property (strong, nonatomic) NSMutableArray* phraseCollection;
 @property (weak, nonatomic) IBOutlet UITableView *phraseTableView;
+@property (strong, nonatomic) EPYCAppDelegate* appDelegate;
 
 @end
