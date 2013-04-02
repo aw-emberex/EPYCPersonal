@@ -76,6 +76,7 @@
     NSMutableArray* results = [[_appDelegate.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
     return results;
 }
+
 - (IBAction)resetDataAction:(id)sender {
     [self resetAllData];
     [self setPhraseCollection:[self getPhraseCollection]];

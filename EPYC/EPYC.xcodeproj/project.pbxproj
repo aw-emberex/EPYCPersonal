@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA05BFAC1708CAD700F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABEA18516FE8B7900780A71 /* CoreData.framework */; };
 		FA6952DB16F5710A0017453E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DA16F5710A0017453E /* UIKit.framework */; };
 		FA6952DD16F5710A0017453E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DC16F5710A0017453E /* Foundation.framework */; };
 		FA6952DF16F5710A0017453E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6952DE16F5710A0017453E /* CoreGraphics.framework */; };
@@ -87,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA05BFAC1708CAD700F6B7CA /* CoreData.framework in Frameworks */,
 				FA69530216F5710A0017453E /* SenTestingKit.framework in Frameworks */,
 				FA69530316F5710A0017453E /* UIKit.framework in Frameworks */,
 				FA69530416F5710A0017453E /* Foundation.framework in Frameworks */,
@@ -99,7 +101,6 @@
 		FA6952CE16F5710A0017453E = {
 			isa = PBXGroup;
 			children = (
-				FABEA18516FE8B7900780A71 /* CoreData.framework */,
 				FA6952E016F5710A0017453E /* EPYC */,
 				FA69530716F5710A0017453E /* EPYCTests */,
 				FA6952D916F5710A0017453E /* Frameworks */,
@@ -119,6 +120,7 @@
 		FA6952D916F5710A0017453E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FABEA18516FE8B7900780A71 /* CoreData.framework */,
 				FA6952DA16F5710A0017453E /* UIKit.framework */,
 				FA6952DC16F5710A0017453E /* Foundation.framework */,
 				FA6952DE16F5710A0017453E /* CoreGraphics.framework */,

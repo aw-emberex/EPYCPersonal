@@ -1,15 +1,15 @@
 //
-//  EPYCTests.m
-//  EPYCTests
+//  StoryBoardTest1Tests.m
+//  StoryBoardTest1Tests
 //
-//  Created by Alex Wait on 3/16/13.
+//  Created by Alex Wait on 3/27/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
-#import "EPYCTests.h"
+#import "StoryBoardTest1Tests.h"
 #import <CoreData/CoreData.h>
 
-@implementation EPYCTests
+@implementation StoryBoardTest1Tests
 
 - (void)setUp
 {
@@ -27,7 +27,7 @@
 
 - (void)testExample
 {
-    //STFail(@"Unit tests are not implemented yet in EPYCTests");
+    //STFail(@"Unit tests are not implemented yet in StoryBoardTest1Tests");
 }
 
 @end
