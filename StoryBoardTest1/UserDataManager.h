@@ -15,6 +15,7 @@
 @property (readonly, nonatomic) User* currentUser;
 @property (readonly, nonatomic) EPYCAppDelegate* appDelegate;
 @property (readonly, nonatomic) NSEntityDescription* userEntity;
+@property (nonatomic, strong) NSArray* currentUserList;
 
 +(UserDataManager*) getUserDataManager;
 -(NSArray*) getUsers;

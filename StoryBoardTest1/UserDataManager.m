@@ -14,6 +14,7 @@
 @synthesize currentUser = _currentUser;
 @synthesize appDelegate = _appDelegate;
 @synthesize userEntity = _userEntity;
+@synthesize currentUserList;
 
 static UserDataManager* _selfSingleton = nil;
 
@@ -35,14 +36,14 @@ static UserDataManager* _selfSingleton = nil;
         _userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
     }
     [self addNewUser:@"alex"];
-    NSLog(@"All Users %@",[self getUsers]);
+    //NSLog(@"All Users %@",[self getUsers]);
     return self;
 };
 
 -(User*) getCurrentUser { //cache this until set
     NSFetchRequest* newFetch = [[NSFetchRequest alloc]init];
     //BAD
-    NSPredicate* pred = [NSPredicate predicateWithFormat:@"lastSelectedUser == true"];
+    NSPredicate* pred = [NSPredicate predicateWithFormat:@"isSelectedUser == true"];
     [newFetch setEntity:_userEntity];
     [newFetch setPredicate:pred];
     
@@ -55,11 +56,17 @@ static UserDataManager* _selfSingleton = nil;
 }
 
 -(NSArray*) getUsers {
+    if (self.currentUserList) {
+        return self.currentUserList;
+    }
     NSFetchRequest* newFetch = [[NSFetchRequest alloc]init];
     [newFetch setEntity:_userEntity];
     [newFetch setReturnsObjectsAsFaults:NO];
     NSError* __autoreleasing error = nil;
     NSArray* result = [_appDelegate.managedObjectContext executeFetchRequest:newFetch error:&error];
+    if (!self.currentUserList) {
+        self.currentUserList = result;
+    }
     return result;
 }
 
@@ -72,8 +79,9 @@ static UserDataManager* _selfSingleton = nil;
 }
 
 -(void) addNewUser: (NSString*) userName {
+    self.currentUserList = nil;
     User* user = (User*) [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
-    //user.lastSelectedUser = [NSNumber numberWithBool:NO];
+    user.isSelectedUser = [NSNumber numberWithBool:NO];
     user.name = userName;
     NSError* __autoreleasing error;
     [_appDelegate.managedObjectContext save:&error];

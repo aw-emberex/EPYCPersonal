@@ -10,7 +10,7 @@
 #import "EPYCAppDelegate.h"
 #import "Phrase.h"
 
-@interface EPYCViewController () <UITableViewDataSource>
+@interface EPYCViewController () <UITableViewDataSource, UITextViewDelegate>
 
 @end
 
@@ -25,6 +25,7 @@
     EPYCAppDelegate *appDelegate = (EPYCAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.appDelegate = appDelegate;
     [self setPhraseCollection:[self getPhraseCollection]];
+    [self.phraseViewController setDe]
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -34,6 +34,10 @@
 		FA2AF560170401A1004E785E /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* Tab2ViewController.m */; };
 		FAD8BFD31708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAD8BFD41708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
+		FAE2F3731712753B0006F499 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE2F3721712753B0006F499 /* UserCell.m */; };
+		FAE2F3741712753B0006F499 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE2F3721712753B0006F499 /* UserCell.m */; };
+		FAE2F377171276060006F499 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE2F376171276060006F499 /* UserCell.xib */; };
+		FAE2F378171276060006F499 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE2F376171276060006F499 /* UserCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +53,7 @@
 /* Begin PBXFileReference section */
 		FA05BFB11708D97C00F6B7CA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FA1880E2170A99DC00AA6634 /* StoryboardDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoryboardDataModel.xcdatamodel; sourceTree = "<group>"; };
-		FA1880E5170A9BE100AA6634 /* StoryboardDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StoryboardDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		FA1880E5170A9BE100AA6634 /* StoryboardDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		FA1880EA170A9CB000AA6634 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		FA1880EB170A9CB000AA6634 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		FA2AF5131703FD91004E785E /* StoryBoardTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryBoardTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,9 @@
 		FA2AF561170403F4004E785E /* CurrentUserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentUserDataSource.h; sourceTree = "<group>"; };
 		FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataManager.h; path = ../UserDataManager.h; sourceTree = "<group>"; };
 		FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataManager.m; path = ../UserDataManager.m; sourceTree = "<group>"; };
+		FAE2F3711712753B0006F499 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		FAE2F3721712753B0006F499 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
+		FAE2F376171276060006F499 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserCell.xib; path = ../UserCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +150,7 @@
 		FA2AF51C1703FD91004E785E /* StoryBoardTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				FAE2F375171275CE0006F499 /* Custom UI Objects */,
 				FA1880EA170A9CB000AA6634 /* User.h */,
 				FA1880EB170A9CB000AA6634 /* User.m */,
 				FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */,
@@ -194,6 +202,16 @@
 				FA2AF5431703FD91004E785E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAE2F375171275CE0006F499 /* Custom UI Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FAE2F376171276060006F499 /* UserCell.xib */,
+				FAE2F3711712753B0006F499 /* UserCell.h */,
+				FAE2F3721712753B0006F499 /* UserCell.m */,
+			);
+			name = "Custom UI Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +291,7 @@
 				FA2AF52B1703FD91004E785E /* Default@2x.png in Resources */,
 				FA2AF52D1703FD91004E785E /* Default-568h@2x.png in Resources */,
 				FA2AF5301703FD91004E785E /* MainStoryboard.storyboard in Resources */,
+				FAE2F377171276060006F499 /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2AF5451703FD91004E785E /* InfoPlist.strings in Resources */,
+				FAE2F378171276060006F499 /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +335,7 @@
 				FAD8BFD31708EEF1002BAF35 /* UserDataManager.m in Sources */,
 				FA1880E3170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */,
 				FA1880EC170A9CB000AA6634 /* User.m in Sources */,
+				FAE2F3731712753B0006F499 /* UserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +348,7 @@
 				FAD8BFD41708EEF1002BAF35 /* UserDataManager.m in Sources */,
 				FA1880E4170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */,
 				FA1880ED170A9CB000AA6634 /* User.m in Sources */,
+				FAE2F3741712753B0006F499 /* UserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

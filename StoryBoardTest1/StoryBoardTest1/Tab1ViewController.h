@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "UserDataManager.h"
 
-@interface Tab1ViewController : UIViewController
+@interface Tab1ViewController : UIViewController <UITableViewDataSource>
 
 -(NSArray*) viewControllers;
 -(NSString*) test;
 
 @property (readonly, nonatomic) UserDataManager* userDataManager;
+@property (weak, nonatomic) IBOutlet UILabel *userDisplayLabelView;
+@property (weak, nonatomic) IBOutlet UITableView *usersTableView;
 
 @end
