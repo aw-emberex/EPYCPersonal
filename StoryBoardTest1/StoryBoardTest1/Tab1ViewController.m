@@ -38,17 +38,20 @@
 {
     [super viewDidLoad];
     _userDataManager = [UserDataManager getUserDataManager];
-    User* currentUser = [_userDataManager getCurrentUser];
-    if (currentUser) {
-        [self.userDisplayLabelView setText:[_userDataManager getCurrentUser].name];
-    } else {
-        [self.userDisplayLabelView setText:@"No Current User"];
-    }
-    
+    [self updateLabels];
     NSLog(@"is scroll enabled %d", self.usersTableView.scrollEnabled);
     self.usersTableView.scrollEnabled = YES;
     NSLog(@"now is it? %d", self.usersTableView.scrollEnabled);
 
+}
+
+-(void) updateLabels {
+    User* currentUser = [_userDataManager getCurrentUser];
+    if (currentUser) {
+        [self.userDisplayLabelView setText:currentUser.name];
+    } else {
+        [self.userDisplayLabelView setText:@"No Current User"];
+    }
 }
 
 -(NSArray*) viewControllers {
@@ -94,6 +97,13 @@
     [cell setUserNameText:[[[_userDataManager getUsers] objectAtIndex:indexPath.row] name ]];
     [cell setNumberLabelText:indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray* users = [_userDataManager getUsers];
+    User* newSelectedUser = [users objectAtIndex:indexPath.row];
+    [_userDataManager setCurrentUser:newSelectedUser];
+    [self updateLabels];
 }
 
 @end

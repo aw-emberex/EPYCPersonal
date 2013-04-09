@@ -27,11 +27,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BMU-6e-Y9E">
-                                <rect key="frame" x="20" y="55" width="290" height="424"/>
+                                <rect key="frame" x="15" y="61" width="290" height="424"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="EXS-gX-iLo" id="uG0-Vn-bz7"/>
+                                    <outlet property="delegate" destination="EXS-gX-iLo" id="TIv-b9-5NW"/>
                                 </connections>
                             </tableView>
                         </subviews>

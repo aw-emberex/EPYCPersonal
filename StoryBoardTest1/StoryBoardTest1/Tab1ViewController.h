@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UserDataManager.h"
 
-@interface Tab1ViewController : UIViewController <UITableViewDataSource>
+@interface Tab1ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 -(NSArray*) viewControllers;
 -(NSString*) test;

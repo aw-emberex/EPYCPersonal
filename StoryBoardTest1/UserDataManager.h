@@ -20,6 +20,7 @@
 +(UserDataManager*) getUserDataManager;
 -(NSArray*) getUsers;
 -(User*) getCurrentUser;
+-(void)setCurrentUser: (User*)newCurrentUser;
 
 @end
 
