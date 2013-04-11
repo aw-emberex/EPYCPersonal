@@ -7,7 +7,7 @@
 //
 
 #import "EPYCAppDelegate.h"
-#import "Tab1ViewController.h"
+#import "UsersViewController.h"
 #import <CoreData/CoreData.h>
 
 @implementation EPYCAppDelegate
@@ -20,7 +20,7 @@
 {
     
     UITabBarController* tabBar = (UITabBarController*)self.window.rootViewController;
-    Tab1ViewController* usersController = [[tabBar viewControllers] objectAtIndex:0];
+    UsersViewController* usersController = [[tabBar viewControllers] objectAtIndex:0];
     
 //    Tab1ViewController* usersListViewController = [[usersController viewControllers] objectAtIndex:0];
     

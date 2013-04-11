@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
-#import "Tab1ViewController.h"
+#import "UsersViewController.h"
 #import "UserDataManager.h"
 #import "UserCell.h"
 
-@interface Tab1ViewController ()
+@interface UsersViewController ()
 
 
 @end
 
-@implementation Tab1ViewController
+@implementation UsersViewController
 
 
 @synthesize userDataManager = _userDataManager;
@@ -39,10 +39,7 @@
     [super viewDidLoad];
     _userDataManager = [UserDataManager getUserDataManager];
     [self updateLabels];
-    NSLog(@"is scroll enabled %d", self.usersTableView.scrollEnabled);
     self.usersTableView.scrollEnabled = YES;
-    NSLog(@"now is it? %d", self.usersTableView.scrollEnabled);
-
 }
 
 -(void) updateLabels {

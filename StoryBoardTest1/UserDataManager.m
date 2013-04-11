@@ -22,7 +22,7 @@ static UserDataManager* _selfSingleton = nil;
     
     @synchronized([UserDataManager class]) {
         if (!_selfSingleton) {
-            _selfSingleton = [[self alloc]init];
+            _selfSingleton = [[UserDataManager alloc]init];
         }
         return _selfSingleton;
     }
@@ -44,14 +44,22 @@ static UserDataManager* _selfSingleton = nil;
     NSFetchRequest* newFetch = [[NSFetchRequest alloc]init];
     //BAD
     NSPredicate* pred = [NSPredicate predicateWithFormat:@"isSelectedUser == true"];
+//    NSPredicate* pred2 = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
+//        bool test = [bindings objectForKey:@"isSelectedUser"];
+//        if (test) {
+//            return YES;
+//        }
+//        return NO;
+//    }];
     [newFetch setEntity:_userEntity];
     [newFetch setPredicate:pred];
     
     NSError* __autoreleasing error = nil;
     NSArray* result = [_appDelegate.managedObjectContext executeFetchRequest:newFetch error:&error];
+    NSLog(@"%@", result);
     if ([result count] > 0) {
         return [result objectAtIndex:0];
-    }
+    }    
     return nil;
 }
 
