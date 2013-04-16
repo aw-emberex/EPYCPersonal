@@ -35,7 +35,7 @@ static UserDataManager* _selfSingleton = nil;
         //other stuff here
         _userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
     }
-    [self addNewUser:@"alex"];
+    //[self addNewUser:@"alex"];
     //NSLog(@"All Users %@",[self getUsers]);
     return self;
 };
@@ -71,7 +71,9 @@ static UserDataManager* _selfSingleton = nil;
     [newFetch setEntity:_userEntity];
     [newFetch setReturnsObjectsAsFaults:NO];
     NSError* __autoreleasing error = nil;
-    NSArray* result = [_appDelegate.managedObjectContext executeFetchRequest:newFetch error:&error];
+    NSArray* tempArray = [_appDelegate.managedObjectContext executeFetchRequest:newFetch error:&error];
+    NSMutableArray* result = [[NSMutableArray alloc] initWithArray:tempArray];
+    
     if (!self.currentUserList) {
         self.currentUserList = result;
     }
@@ -93,6 +95,23 @@ static UserDataManager* _selfSingleton = nil;
     user.name = userName;
     NSError* __autoreleasing error;
     [_appDelegate.managedObjectContext save:&error];
+}
+
+-(void)deleteUser:(User*)userToDelete {
+    NSLog(@"deleting %@", userToDelete);
+    NSLog(@"deleting %d", [self.currentUserList count]);
+    [self.currentUserList removeObject:userToDelete];
+    NSLog(@"deleting %d", [self.currentUserList count]);
+    NSError* __autoreleasing error;
+    [self.appDelegate.managedObjectContext deleteObject:userToDelete];
+    [self.appDelegate.managedObjectContext save:&error];
+    self.currentUserList = nil;
+    [self getUsers];
+}
+
+-(void)deleteUserAtIndex:(int)index {
+    User* user = [self.currentUserList objectAtIndex:index];
+    [self deleteUser:user];
 }
 
 @end

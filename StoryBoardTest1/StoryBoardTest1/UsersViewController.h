@@ -15,7 +15,8 @@
 -(NSString*) test;
 
 @property (readonly, nonatomic) UserDataManager* userDataManager;
-@property (weak, nonatomic) IBOutlet UILabel *userDisplayLabelView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *userDisplayLabelViewold;
 @property (weak, nonatomic) IBOutlet UITableView *usersTableView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *userDisplayLabelView;
 
 @end

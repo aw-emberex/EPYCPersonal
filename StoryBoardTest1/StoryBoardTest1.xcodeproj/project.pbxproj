@@ -91,7 +91,6 @@
 		FA2AF5521703FEDB004E785E /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 		FA2AF55D170401A1004E785E /* Tab2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab2ViewController.h; sourceTree = "<group>"; };
 		FA2AF55E170401A1004E785E /* Tab2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab2ViewController.m; sourceTree = "<group>"; };
-		FA2AF561170403F4004E785E /* CurrentUserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentUserDataSource.h; sourceTree = "<group>"; };
 		FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataManager.h; path = ../UserDataManager.h; sourceTree = "<group>"; };
 		FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataManager.m; path = ../UserDataManager.m; sourceTree = "<group>"; };
 		FAE2F3711712753B0006F499 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
@@ -167,14 +166,13 @@
 				FA1880EB170A9CB000AA6634 /* User.m */,
 				FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */,
 				FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */,
-				FA2AF561170403F4004E785E /* CurrentUserDataSource.h */,
 				FA2AF5251703FD91004E785E /* EPYCAppDelegate.h */,
 				FA2AF5261703FD91004E785E /* EPYCAppDelegate.m */,
 				FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */,
-				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
 				FA2AF5511703FEDB004E785E /* UsersViewController.h */,
 				FA2AF5521703FEDB004E785E /* UsersViewController.m */,
 				FA2AF55D170401A1004E785E /* Tab2ViewController.h */,
+				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
 				FA2AF55E170401A1004E785E /* Tab2ViewController.m */,
 				FA2AF5311703FD91004E785E /* EPYCViewController.h */,
 				FA2AF5321703FD91004E785E /* EPYCViewController.m */,

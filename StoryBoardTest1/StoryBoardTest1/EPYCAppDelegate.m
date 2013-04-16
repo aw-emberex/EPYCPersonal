@@ -24,7 +24,7 @@
     
 //    Tab1ViewController* usersListViewController = [[usersController viewControllers] objectAtIndex:0];
     
-    NSLog(@"test: %@", [usersController test ]);
+    NSLog(@"test: %@", [usersController test]);
     
     return YES;
 }

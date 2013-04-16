@@ -45,9 +45,9 @@
 -(void) updateLabels {
     User* currentUser = [_userDataManager getCurrentUser];
     if (currentUser) {
-        [self.userDisplayLabelView setText:currentUser.name];
+        [self.userDisplayLabelView setTitle:[NSString stringWithFormat:@"Current User: %@", currentUser.name]];
     } else {
-        [self.userDisplayLabelView setText:@"No Current User"];
+        [self.userDisplayLabelView setTitle:@"No Current User"];
     }
 }
 
@@ -101,6 +101,14 @@
     User* newSelectedUser = [users objectAtIndex:indexPath.row];
     [_userDataManager setCurrentUser:newSelectedUser];
     [self updateLabels];
+}
+
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_userDataManager deleteUserAtIndex:indexPath.row];
+    }
+    [self updateLabels];
+    [self.usersTableView reloadData];
 }
 
 @end

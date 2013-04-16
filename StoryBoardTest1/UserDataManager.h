@@ -15,12 +15,14 @@
 @property (readonly, nonatomic) User* currentUser;
 @property (readonly, nonatomic) EPYCAppDelegate* appDelegate;
 @property (readonly, nonatomic) NSEntityDescription* userEntity;
-@property (nonatomic, strong) NSArray* currentUserList;
+@property (nonatomic, strong) NSMutableArray* currentUserList;
 
 +(UserDataManager*) getUserDataManager;
--(NSArray*) getUsers;
+-(NSMutableArray*) getUsers;
 -(User*) getCurrentUser;
 -(void)setCurrentUser: (User*)newCurrentUser;
+-(void)deleteUser:(User*)userToDelete;
+-(void)deleteUserAtIndex:(int)index;
 
 @end
 

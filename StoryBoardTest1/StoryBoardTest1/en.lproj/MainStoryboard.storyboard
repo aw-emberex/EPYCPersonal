@@ -9,25 +9,11 @@
             <objects>
                 <viewController id="EXS-gX-iLo" customClass="UsersViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dBs-bO-lFc">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current User:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O1L-9E-pWi">
-                                <rect key="frame" x="20" y="20" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QtH-w5-95F">
-                                <rect key="frame" x="131" y="14" width="169" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BMU-6e-Y9E">
-                                <rect key="frame" x="15" y="61" width="290" height="424"/>
+                                <rect key="frame" x="15" y="81" width="290" height="429"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -35,18 +21,79 @@
                                     <outlet property="delegate" destination="EXS-gX-iLo" id="TIv-b9-5NW"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="left" barStyle="blackOpaque" id="VFh-zp-rUE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Users" id="v7p-fr-qjk">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="lay-Gd-Z7X">
+                                            <connections>
+                                                <segue destination="l0f-yW-1ik" kind="modal" id="S8D-cI-dtu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Users" image="63-runner.png" id="sHj-FA-10B"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="userDisplayLabelView" destination="QtH-w5-95F" id="7i8-fc-ad3"/>
+                        <outlet property="userDisplayLabelView" destination="v7p-fr-qjk" id="71h-Ac-qym"/>
                         <outlet property="usersTableView" destination="BMU-6e-Y9E" id="fwO-cm-iHz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vmz-HY-2cI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="uoL-1L-v4o">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Title here" style="plain" id="fje-cr-qUp"/>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="94" y="-749"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QxM-Lj-BDL">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="l0f-yW-1ik" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SIR-Tk-Mdy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D0F-k5-Nze" kind="relationship" relationship="rootViewController" id="IeP-Ny-5uf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NhS-UT-sHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="469" y="-741"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HPJ-0u-GGE">
+            <objects>
+                <viewController id="D0F-k5-Nze" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="viD-by-GhZ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EI2-wE-3tu">
+                                <rect key="frame" x="82" y="321" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bj1-w2-6AO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QoM-ls-tIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="-745"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yre-iy-mN5">
@@ -97,7 +144,8 @@
         <class className="UsersViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UsersViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="userDisplayLabelView" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="userDisplayLabelView" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="userDisplayLabelViewold" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="usersTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
