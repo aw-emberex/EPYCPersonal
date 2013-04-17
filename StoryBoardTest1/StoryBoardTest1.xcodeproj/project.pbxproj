@@ -38,6 +38,8 @@
 		FA2AF5531703FEDB004E785E /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF5521703FEDB004E785E /* UsersViewController.m */; };
 		FA2AF55F170401A1004E785E /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* Tab2ViewController.m */; };
 		FA2AF560170401A1004E785E /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* Tab2ViewController.m */; };
+		FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
+		FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FAD8BFD31708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAD8BFD41708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAE2F3731712753B0006F499 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE2F3721712753B0006F499 /* UserCell.m */; };
@@ -91,6 +93,9 @@
 		FA2AF5521703FEDB004E785E /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 		FA2AF55D170401A1004E785E /* Tab2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab2ViewController.h; sourceTree = "<group>"; };
 		FA2AF55E170401A1004E785E /* Tab2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab2ViewController.m; sourceTree = "<group>"; };
+		FA386B61171E6E0600E5129A /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
+		FA386B62171E6E0600E5129A /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
+		FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewDelegate.h; sourceTree = "<group>"; };
 		FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataManager.h; path = ../UserDataManager.h; sourceTree = "<group>"; };
 		FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataManager.m; path = ../UserDataManager.m; sourceTree = "<group>"; };
 		FAE2F3711712753B0006F499 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
@@ -163,6 +168,10 @@
 				FA25B3F5171676A500C16934 /* Images */,
 				FAE2F375171275CE0006F499 /* Custom UI Objects */,
 				FA1880EA170A9CB000AA6634 /* User.h */,
+				FA386B65171E6EBC00E5129A /* Custom Delegate Interfaces */,
+				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
+				FA386B62171E6E0600E5129A /* AddUserViewController.m */,
+				FA386B61171E6E0600E5129A /* AddUserViewController.h */,
 				FA1880EB170A9CB000AA6634 /* User.m */,
 				FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */,
 				FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */,
@@ -172,7 +181,6 @@
 				FA2AF5511703FEDB004E785E /* UsersViewController.h */,
 				FA2AF5521703FEDB004E785E /* UsersViewController.m */,
 				FA2AF55D170401A1004E785E /* Tab2ViewController.h */,
-				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
 				FA2AF55E170401A1004E785E /* Tab2ViewController.m */,
 				FA2AF5311703FD91004E785E /* EPYCViewController.h */,
 				FA2AF5321703FD91004E785E /* EPYCViewController.m */,
@@ -212,6 +220,14 @@
 				FA2AF5431703FD91004E785E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA386B65171E6EBC00E5129A /* Custom Delegate Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */,
+			);
+			name = "Custom Delegate Interfaces";
 			sourceTree = "<group>";
 		};
 		FAE2F375171275CE0006F499 /* Custom UI Objects */ = {
@@ -352,6 +368,7 @@
 				FA1880E3170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */,
 				FA1880EC170A9CB000AA6634 /* User.m in Sources */,
 				FAE2F3731712753B0006F499 /* UserCell.m in Sources */,
+				FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +382,7 @@
 				FA1880E4170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */,
 				FA1880ED170A9CB000AA6634 /* User.m in Sources */,
 				FAE2F3741712753B0006F499 /* UserCell.m in Sources */,
+				FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,6 +23,8 @@
 -(void)setCurrentUser: (User*)newCurrentUser;
 -(void)deleteUser:(User*)userToDelete;
 -(void)deleteUserAtIndex:(int)index;
+-(void) addNewUserWithName: (NSString*) userName;
+-(void) addNewUser:(User*)newUser;
 
 @end
 

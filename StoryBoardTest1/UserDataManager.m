@@ -35,7 +35,11 @@ static UserDataManager* _selfSingleton = nil;
         //other stuff here
         _userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
     }
-    //[self addNewUser:@"alex"];
+    //[self addNewUserWithName:@"alex"];
+    User* test = [[User alloc] initWithEntity:_userEntity insertIntoManagedObjectContext:_appDelegate.managedObjectContext];
+    //test.name = @"LOBATO";
+//    [self addNewUser:test];
+    [self addNewUserWithName:@"SUPER DERP!"];
     //NSLog(@"All Users %@",[self getUsers]);
     return self;
 };
@@ -88,13 +92,27 @@ static UserDataManager* _selfSingleton = nil;
     [_appDelegate.managedObjectContext save:&error];
 }
 
--(void) addNewUser: (NSString*) userName {
+-(User*)getFreshieUser {
+    return (User*) [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
+}
+
+-(void) addNewUserWithName: (NSString*) userName {
     self.currentUserList = nil;
-    User* user = (User*) [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
+    User* user = [self getFreshieUser];
     user.isSelectedUser = [NSNumber numberWithBool:NO];
     user.name = userName;
     NSError* __autoreleasing error;
     [_appDelegate.managedObjectContext save:&error];
+}
+
+-(void) addNewUser:(User*)newUser {
+    User* freshieUser = [self getFreshieUser];
+    freshieUser = newUser;
+    freshieUser.name = @"derp";
+    NSError* __autoreleasing error;
+    [_appDelegate.managedObjectContext save:&error];
+    self.currentUserList = nil;
+    [self getUsers];
 }
 
 -(void)deleteUser:(User*)userToDelete {

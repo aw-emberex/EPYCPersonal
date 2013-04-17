@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "UserDataManager.h"
+#import "UserDetailViewDelegate.h"
 
-@interface UsersViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface UsersViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UserDetailViewDelegate>
 
 -(NSArray*) viewControllers;
 -(NSString*) test;

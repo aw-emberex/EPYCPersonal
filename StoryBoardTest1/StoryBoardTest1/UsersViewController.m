@@ -9,6 +9,7 @@
 #import "UsersViewController.h"
 #import "UserDataManager.h"
 #import "UserCell.h"
+#import "AddUserViewController.h"
 
 @interface UsersViewController ()
 
@@ -61,10 +62,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"A");
-}
-
 -(NSString*) test {
     return @"aaasa";
 }
@@ -109,6 +106,24 @@
     }
     [self updateLabels];
     [self.usersTableView reloadData];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"userDetails"]) {
+        UINavigationController* nav = segue.destinationViewController;
+        AddUserViewController* segueDestination = [[nav viewControllers] objectAtIndex:0];
+        [segueDestination setDelegate:self];
+        NSLog(@"SUCCESS");
+        
+    }
+}
+
+-(void)didCancelDialog {
+    NSLog(@"cancelled");
+}
+
+-(void)didAddUser:(User*)userToAdd {
+    [_userDataManager addNewUser:userToAdd];
 }
 
 @end
