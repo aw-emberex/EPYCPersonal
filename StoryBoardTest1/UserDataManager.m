@@ -36,7 +36,7 @@ static UserDataManager* _selfSingleton = nil;
         _userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
     }
     //[self addNewUserWithName:@"alex"];
-    User* test = [[User alloc] initWithEntity:_userEntity insertIntoManagedObjectContext:_appDelegate.managedObjectContext];
+    //User* test = [[User alloc] initWithEntity:_userEntity insertIntoManagedObjectContext:_appDelegate.managedObjectContext];
     //test.name = @"LOBATO";
 //    [self addNewUser:test];
     [self addNewUserWithName:@"SUPER DERP!"];
@@ -68,9 +68,13 @@ static UserDataManager* _selfSingleton = nil;
 }
 
 -(NSArray*) getUsers {
-    if (self.currentUserList) {
-        return self.currentUserList;
+    if (!self.currentUserList) {
+        [self reloadUsers];
     }
+    return self.currentUserList;
+}
+
+-(void)reloadUsers {
     NSFetchRequest* newFetch = [[NSFetchRequest alloc]init];
     [newFetch setEntity:_userEntity];
     [newFetch setReturnsObjectsAsFaults:NO];
@@ -78,10 +82,7 @@ static UserDataManager* _selfSingleton = nil;
     NSArray* tempArray = [_appDelegate.managedObjectContext executeFetchRequest:newFetch error:&error];
     NSMutableArray* result = [[NSMutableArray alloc] initWithArray:tempArray];
     
-    if (!self.currentUserList) {
-        self.currentUserList = result;
-    }
-    return result;
+    self.currentUserList = result;
 }
 
 -(void)setCurrentUser: (User*)newCurrentUser {
@@ -90,6 +91,7 @@ static UserDataManager* _selfSingleton = nil;
     newCurrentUser.isSelectedUser = [NSNumber numberWithBool:YES];
     NSError* __autoreleasing error;
     [_appDelegate.managedObjectContext save:&error];
+    self.currentUserList = nil;
 }
 
 -(User*)getFreshieUser {

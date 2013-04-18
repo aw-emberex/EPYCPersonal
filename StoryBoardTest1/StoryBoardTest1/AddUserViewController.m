@@ -42,4 +42,12 @@
     [self.delegate didCancelDialog];
 }
 
+-(IBAction)didAddUser:(id)sender {
+    User* dbUser = [self.delegate didRequestUser];
+    [dbUser setName:self.userNameTextField.text];
+    [self.delegate didAddUser:dbUser];
+    [self.userNameTextField resignFirstResponder];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

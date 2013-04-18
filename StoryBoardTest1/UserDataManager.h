@@ -20,6 +20,7 @@
 +(UserDataManager*) getUserDataManager;
 -(NSMutableArray*) getUsers;
 -(User*) getCurrentUser;
+-(User*)getFreshieUser;
 -(void)setCurrentUser: (User*)newCurrentUser;
 -(void)deleteUser:(User*)userToDelete;
 -(void)deleteUserAtIndex:(int)index;

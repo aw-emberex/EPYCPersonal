@@ -87,9 +87,13 @@
             }
         }
     }
-    
-    [cell setUserNameText:[[[_userDataManager getUsers] objectAtIndex:indexPath.row] name ]];
+    User* currentUser = [[_userDataManager getUsers] objectAtIndex:indexPath.row];
+    [cell setUserNameText:currentUser.name];
     [cell setNumberLabelText:indexPath.row];
+    NSLog(@"%@", currentUser.isSelectedUser);
+    if ([currentUser.isSelectedUser isEqualToNumber:[NSNumber numberWithInt:0]]) {
+        cell.starImageView.hidden = YES;
+    }
     return cell;
 }
 
@@ -97,6 +101,7 @@
     NSArray* users = [_userDataManager getUsers];
     User* newSelectedUser = [users objectAtIndex:indexPath.row];
     [_userDataManager setCurrentUser:newSelectedUser];
+    [self.usersTableView reloadData];
     [self updateLabels];
 }
 
@@ -122,8 +127,14 @@
     NSLog(@"cancelled");
 }
 
--(void)didAddUser:(User*)userToAdd {
-    [_userDataManager addNewUser:userToAdd];
+-(void)didAddUser:(User*)userAdded {
+    [_userDataManager setCurrentUser:userAdded];
+    [self.usersTableView reloadData];
+    [self updateLabels];
+}
+
+-(User*)didRequestUser {
+    return [_userDataManager getFreshieUser];
 }
 
 @end

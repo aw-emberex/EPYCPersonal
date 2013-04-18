@@ -79,15 +79,28 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EI2-wE-3tu">
-                                <rect key="frame" x="82" y="321" width="42" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Whr-sA-kBI">
+                                <rect key="frame" x="75" y="21" width="225" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b6j-Ju-1in">
+                                <rect key="frame" x="15" y="25" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Name:">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.88243036679999998" green="0.88243036679999998" blue="0.88243036679999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="New User" id="bj1-w2-6AO">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qpw-PE-9jm">
@@ -95,12 +108,19 @@
                                 <action selector="didCancel:" destination="D0F-k5-Nze" id="pgh-Qz-vEo"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="QDf-PP-5z7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" style="done" id="QDf-PP-5z7">
+                            <connections>
+                                <action selector="didAddUser:" destination="D0F-k5-Nze" id="yvT-eT-HwI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userNameTextField" destination="Whr-sA-kBI" id="FJK-Do-IT3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoM-ls-tIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="-737"/>
+            <point key="canvasLocation" x="814" y="-749"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yre-iy-mN5">
@@ -145,6 +165,7 @@
         <class className="AddUserViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddUserViewController.h"/>
             <relationships>
+                <relationship kind="action" name="didAddUser:"/>
                 <relationship kind="action" name="didCancel:"/>
             </relationships>
         </class>

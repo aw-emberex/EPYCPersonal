@@ -11,6 +11,8 @@
 
 @interface AddUserViewController : UIViewController
 -(IBAction)didCancel:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
+
 -(void)setDelegate:(id<UserDetailViewDelegate>)delegate;
 @property (readwrite, nonatomic) id <UserDetailViewDelegate> delegate;
 @end

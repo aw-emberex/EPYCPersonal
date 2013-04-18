@@ -7,10 +7,11 @@
 //
 
 #import "UserCell.h"
+#import "User.h"
 
 @implementation UserCell
 
-@synthesize textLabel, numberLabel;
+@synthesize textLabel, numberLabel, starImageView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -29,7 +30,7 @@
 }
 
 -(void) setNumberLabelText:(NSInteger)text {
-    self.numberLabel.text = [[NSString alloc] initWithFormat:@"# %d", text];
+    //self.numberLabel.text = [[NSString alloc] initWithFormat:@"# %d", text];
 }
 
 -(void) setUserNameText:(NSString*)text {
