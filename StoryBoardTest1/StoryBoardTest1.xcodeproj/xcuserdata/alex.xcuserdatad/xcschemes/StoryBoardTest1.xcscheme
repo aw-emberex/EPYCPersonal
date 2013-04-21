@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA2AF5121703FD91004E785E"
                BuildableName = "StoryBoardTest1.app"
-               BlueprintName = "EPYC Personal"
-               ReferencedContainer = "container:EPYC Personal.xcodeproj">
+               BlueprintName = "StoryBoardTest1"
+               ReferencedContainer = "container:StoryBoardTest1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA2AF5381703FD91004E785E"
                BuildableName = "StoryBoardTest1Tests.octest"
-               BlueprintName = "EPYC PersonalTests"
-               ReferencedContainer = "container:EPYC Personal.xcodeproj">
+               BlueprintName = "StoryBoardTest1Tests"
+               ReferencedContainer = "container:StoryBoardTest1.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA2AF5121703FD91004E785E"
             BuildableName = "StoryBoardTest1.app"
-            BlueprintName = "EPYC Personal"
-            ReferencedContainer = "container:EPYC Personal.xcodeproj">
+            BlueprintName = "StoryBoardTest1"
+            ReferencedContainer = "container:StoryBoardTest1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA2AF5121703FD91004E785E"
             BuildableName = "StoryBoardTest1.app"
-            BlueprintName = "EPYC Personal"
-            ReferencedContainer = "container:EPYC Personal.xcodeproj">
+            BlueprintName = "StoryBoardTest1"
+            ReferencedContainer = "container:StoryBoardTest1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA2AF5121703FD91004E785E"
             BuildableName = "StoryBoardTest1.app"
-            BlueprintName = "EPYC Personal"
-            ReferencedContainer = "container:EPYC Personal.xcodeproj">
+            BlueprintName = "StoryBoardTest1"
+            ReferencedContainer = "container:StoryBoardTest1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
