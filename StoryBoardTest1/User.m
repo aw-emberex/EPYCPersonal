@@ -11,6 +11,8 @@
 
 @implementation User
 
+//@synthesize name = _name;
+
 @dynamic isSelectedUser;
 @dynamic name;
 

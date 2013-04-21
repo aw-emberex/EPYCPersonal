@@ -69,14 +69,14 @@
 		FA25B3EF1716769900C16934 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "63-runner.png"; path = "StoryBoardTest1/Images/63-runner.png"; sourceTree = "<group>"; };
 		FA25B3F01716769900C16934 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "08-chat.png"; path = "StoryBoardTest1/Images/08-chat.png"; sourceTree = "<group>"; };
 		FA25B3F5171676A500C16934 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
-		FA2AF5131703FD91004E785E /* StoryBoardTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryBoardTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2AF5131703FD91004E785E /* EPYC Personal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EPYC Personal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2AF5161703FD91004E785E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA2AF5181703FD91004E785E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA2AF51A1703FD91004E785E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FA2AF51E1703FD91004E785E /* StoryBoardTest1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryBoardTest1-Info.plist"; sourceTree = "<group>"; };
+		FA2AF51E1703FD91004E785E /* EPYC Personal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPYC Personal-Info.plist"; sourceTree = "<group>"; };
 		FA2AF5201703FD91004E785E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA2AF5221703FD91004E785E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA2AF5241703FD91004E785E /* StoryBoardTest1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryBoardTest1-Prefix.pch"; sourceTree = "<group>"; };
+		FA2AF5241703FD91004E785E /* EPYC Personal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EPYC Personal-Prefix.pch"; sourceTree = "<group>"; };
 		FA2AF5251703FD91004E785E /* EPYCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCAppDelegate.h; sourceTree = "<group>"; };
 		FA2AF5261703FD91004E785E /* EPYCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCAppDelegate.m; sourceTree = "<group>"; };
 		FA2AF5281703FD91004E785E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -85,9 +85,9 @@
 		FA2AF52F1703FD91004E785E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FA2AF5311703FD91004E785E /* EPYCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPYCViewController.h; sourceTree = "<group>"; };
 		FA2AF5321703FD91004E785E /* EPYCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPYCViewController.m; sourceTree = "<group>"; };
-		FA2AF5391703FD91004E785E /* StoryBoardTest1Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryBoardTest1Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2AF5391703FD91004E785E /* EPYC PersonalTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EPYC PersonalTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2AF53A1703FD91004E785E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		FA2AF5421703FD91004E785E /* StoryBoardTest1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryBoardTest1Tests-Info.plist"; sourceTree = "<group>"; };
+		FA2AF5421703FD91004E785E /* EPYC PersonalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EPYC PersonalTests-Info.plist"; sourceTree = "<group>"; };
 		FA2AF5441703FD91004E785E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA2AF5461703FD91004E785E /* StoryBoardTest1Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryBoardTest1Tests.h; sourceTree = "<group>"; };
 		FA2AF5471703FD91004E785E /* StoryBoardTest1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryBoardTest1Tests.m; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 		FA2AF5141703FD91004E785E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA2AF5131703FD91004E785E /* StoryBoardTest1.app */,
-				FA2AF5391703FD91004E785E /* StoryBoardTest1Tests.octest */,
+				FA2AF5131703FD91004E785E /* EPYC Personal.app */,
+				FA2AF5391703FD91004E785E /* EPYC PersonalTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,10 +196,10 @@
 		FA2AF51D1703FD91004E785E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA2AF51E1703FD91004E785E /* StoryBoardTest1-Info.plist */,
+				FA2AF51E1703FD91004E785E /* EPYC Personal-Info.plist */,
 				FA2AF51F1703FD91004E785E /* InfoPlist.strings */,
 				FA2AF5221703FD91004E785E /* main.m */,
-				FA2AF5241703FD91004E785E /* StoryBoardTest1-Prefix.pch */,
+				FA2AF5241703FD91004E785E /* EPYC Personal-Prefix.pch */,
 				FA2AF5281703FD91004E785E /* Default.png */,
 				FA2AF52A1703FD91004E785E /* Default@2x.png */,
 				FA2AF52C1703FD91004E785E /* Default-568h@2x.png */,
@@ -220,7 +220,7 @@
 		FA2AF5411703FD91004E785E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA2AF5421703FD91004E785E /* StoryBoardTest1Tests-Info.plist */,
+				FA2AF5421703FD91004E785E /* EPYC PersonalTests-Info.plist */,
 				FA2AF5431703FD91004E785E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -247,9 +247,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA2AF5121703FD91004E785E /* StoryBoardTest1 */ = {
+		FA2AF5121703FD91004E785E /* EPYC Personal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA2AF54B1703FD91004E785E /* Build configuration list for PBXNativeTarget "StoryBoardTest1" */;
+			buildConfigurationList = FA2AF54B1703FD91004E785E /* Build configuration list for PBXNativeTarget "EPYC Personal" */;
 			buildPhases = (
 				FA2AF50F1703FD91004E785E /* Sources */,
 				FA2AF5101703FD91004E785E /* Frameworks */,
@@ -259,14 +259,14 @@
 			);
 			dependencies = (
 			);
-			name = StoryBoardTest1;
+			name = "EPYC Personal";
 			productName = StoryBoardTest1;
-			productReference = FA2AF5131703FD91004E785E /* StoryBoardTest1.app */;
+			productReference = FA2AF5131703FD91004E785E /* EPYC Personal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FA2AF5381703FD91004E785E /* StoryBoardTest1Tests */ = {
+		FA2AF5381703FD91004E785E /* EPYC PersonalTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA2AF54E1703FD91004E785E /* Build configuration list for PBXNativeTarget "StoryBoardTest1Tests" */;
+			buildConfigurationList = FA2AF54E1703FD91004E785E /* Build configuration list for PBXNativeTarget "EPYC PersonalTests" */;
 			buildPhases = (
 				FA2AF5341703FD91004E785E /* Sources */,
 				FA2AF5351703FD91004E785E /* Frameworks */,
@@ -278,9 +278,9 @@
 			dependencies = (
 				FA2AF53F1703FD91004E785E /* PBXTargetDependency */,
 			);
-			name = StoryBoardTest1Tests;
+			name = "EPYC PersonalTests";
 			productName = StoryBoardTest1Tests;
-			productReference = FA2AF5391703FD91004E785E /* StoryBoardTest1Tests.octest */;
+			productReference = FA2AF5391703FD91004E785E /* EPYC PersonalTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -293,7 +293,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Emberex;
 			};
-			buildConfigurationList = FA2AF50E1703FD91004E785E /* Build configuration list for PBXProject "StoryBoardTest1" */;
+			buildConfigurationList = FA2AF50E1703FD91004E785E /* Build configuration list for PBXProject "EPYC Personal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -305,8 +305,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA2AF5121703FD91004E785E /* StoryBoardTest1 */,
-				FA2AF5381703FD91004E785E /* StoryBoardTest1Tests */,
+				FA2AF5121703FD91004E785E /* EPYC Personal */,
+				FA2AF5381703FD91004E785E /* EPYC PersonalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,7 +397,7 @@
 /* Begin PBXTargetDependency section */
 		FA2AF53F1703FD91004E785E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA2AF5121703FD91004E785E /* StoryBoardTest1 */;
+			target = FA2AF5121703FD91004E785E /* EPYC Personal */;
 			targetProxy = FA2AF53E1703FD91004E785E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -490,9 +490,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StoryBoardTest1/StoryBoardTest1-Prefix.pch";
-				INFOPLIST_FILE = "StoryBoardTest1/StoryBoardTest1-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "StoryBoardTest1/EPYC Personal-Prefix.pch";
+				INFOPLIST_FILE = "StoryBoardTest1/EPYC Personal-Info.plist";
+				PRODUCT_NAME = "EPYC Personal";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -501,9 +501,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StoryBoardTest1/StoryBoardTest1-Prefix.pch";
-				INFOPLIST_FILE = "StoryBoardTest1/StoryBoardTest1-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "StoryBoardTest1/EPYC Personal-Prefix.pch";
+				INFOPLIST_FILE = "StoryBoardTest1/EPYC Personal-Info.plist";
+				PRODUCT_NAME = "EPYC Personal";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -518,8 +518,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoryBoardTest1/StoryBoardTest1-Prefix.pch";
-				INFOPLIST_FILE = "StoryBoardTest1Tests/StoryBoardTest1Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "StoryBoardTest1Tests/EPYC PersonalTests-Info.plist";
+				PRODUCT_NAME = "EPYC PersonalTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -535,8 +535,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoryBoardTest1/StoryBoardTest1-Prefix.pch";
-				INFOPLIST_FILE = "StoryBoardTest1Tests/StoryBoardTest1Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "StoryBoardTest1Tests/EPYC PersonalTests-Info.plist";
+				PRODUCT_NAME = "EPYC PersonalTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -545,7 +545,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA2AF50E1703FD91004E785E /* Build configuration list for PBXProject "StoryBoardTest1" */ = {
+		FA2AF50E1703FD91004E785E /* Build configuration list for PBXProject "EPYC Personal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA2AF5491703FD91004E785E /* Debug */,
@@ -554,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA2AF54B1703FD91004E785E /* Build configuration list for PBXNativeTarget "StoryBoardTest1" */ = {
+		FA2AF54B1703FD91004E785E /* Build configuration list for PBXNativeTarget "EPYC Personal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA2AF54C1703FD91004E785E /* Debug */,
@@ -563,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA2AF54E1703FD91004E785E /* Build configuration list for PBXNativeTarget "StoryBoardTest1Tests" */ = {
+		FA2AF54E1703FD91004E785E /* Build configuration list for PBXNativeTarget "EPYC PersonalTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA2AF54F1703FD91004E785E /* Debug */,

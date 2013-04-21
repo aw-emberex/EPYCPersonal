@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:StoryBoardTest1.xcodeproj">
+      location = "self:EPYC Personal.xcodeproj">
    </FileRef>
 </Workspace>
