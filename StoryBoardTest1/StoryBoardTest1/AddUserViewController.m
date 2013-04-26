@@ -42,12 +42,24 @@
     [self.delegate didCancelDialog];
 }
 
+-(BOOL) validateForm {
+    NSString* name = [[self.userNameTextField text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if ([name isEqualToString:@""]) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Must Provide Name" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+        return NO;
+    }
+    return YES;
+}
+
 -(IBAction)didAddUser:(id)sender {
-    User* dbUser = [self.delegate didRequestUser];
-    [dbUser setName:self.userNameTextField.text];
-    [self.delegate didAddUser:dbUser];
-    [self.userNameTextField resignFirstResponder];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([self validateForm]) {
+        User* dbUser = [self.delegate didRequestUser];
+        [dbUser setName:self.userNameTextField.text];
+        [self.delegate didAddUser:dbUser];
+        [self.userNameTextField resignFirstResponder];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 @end

@@ -21,6 +21,7 @@
 -(NSMutableArray*) getUsers;
 -(User*) getCurrentUser;
 -(User*)getFreshieUser;
+-(void)clearAllUsers;
 -(void)setCurrentUser: (User*)newCurrentUser;
 -(void)deleteUser:(User*)userToDelete;
 -(void)deleteUserAtIndex:(int)index;

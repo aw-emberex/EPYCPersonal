@@ -35,26 +35,13 @@ static UserDataManager* _selfSingleton = nil;
         //other stuff here
         _userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
     }
-    //[self addNewUserWithName:@"alex"];
-    //User* test = [[User alloc] initWithEntity:_userEntity insertIntoManagedObjectContext:_appDelegate.managedObjectContext];
-    //test.name = @"LOBATO";
-//    [self addNewUser:test];
     [self addNewUserWithName:@"SUPER DERP!"];
-    //NSLog(@"All Users %@",[self getUsers]);
     return self;
 };
 
 -(User*) getCurrentUser { //cache this until set
     NSFetchRequest* newFetch = [[NSFetchRequest alloc]init];
-    //BAD
     NSPredicate* pred = [NSPredicate predicateWithFormat:@"isSelectedUser == true"];
-//    NSPredicate* pred2 = [NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
-//        bool test = [bindings objectForKey:@"isSelectedUser"];
-//        if (test) {
-//            return YES;
-//        }
-//        return NO;
-//    }];
     [newFetch setEntity:_userEntity];
     [newFetch setPredicate:pred];
     
@@ -132,6 +119,17 @@ static UserDataManager* _selfSingleton = nil;
 -(void)deleteUserAtIndex:(int)index {
     User* user = [self.currentUserList objectAtIndex:index];
     [self deleteUser:user];
+}
+
+-(void) clearAllUsers {
+    NSMutableArray* allUsers = [self getUsers];
+    
+    [[[NSSet alloc] initWithArray:allUsers] enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        NSLog(@"deleting %@", obj);
+        [self.appDelegate.managedObjectContext deleteObject:obj];
+    }];
+    self.currentUserList = nil;
+    [self getUsers];
 }
 
 @end

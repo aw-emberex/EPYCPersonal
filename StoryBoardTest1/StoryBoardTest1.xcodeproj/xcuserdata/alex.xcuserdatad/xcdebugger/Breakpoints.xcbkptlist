@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "UserDataManager.m"
-         timestampString = "387875035.146228"
+         timestampString = "388214821.617459"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
          landmarkName = "-getCurrentUser"
          landmarkType = "5">
       </FileBreakpoint>
@@ -144,6 +144,19 @@
          startingLineNumber = "93"
          endingLineNumber = "93"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "StoryBoardTest1Tests/DBTests.m"
+         timestampString = "388649430.196147"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
+         landmarkName = "-testClearUsers"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
