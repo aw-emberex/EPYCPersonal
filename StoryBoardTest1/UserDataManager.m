@@ -95,8 +95,7 @@ static UserDataManager* _selfSingleton = nil;
 }
 
 -(void) addNewUser:(User*)newUser {
-    User* freshieUser = [self getFreshieUser];
-    freshieUser = newUser;
+    User* freshieUser = newUser;
     freshieUser.name = @"derp";
     NSError* __autoreleasing error;
     [_appDelegate.managedObjectContext save:&error];

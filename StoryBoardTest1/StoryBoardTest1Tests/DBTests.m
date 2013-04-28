@@ -25,17 +25,24 @@ static EPYCAppDelegate* _appDelegate = nil;
     NSLog(@"calling setup");
     [super setUp];
     
-    NSFetchRequest* newFetch = [[NSFetchRequest alloc]init];
-    [newFetch setEntity:[NSEntityDescription entityForName:@"SquigglePoint" inManagedObjectContext:_appDelegate.managedObjectContext]];
+    NSFetchRequest* squigglepointfetch = [[NSFetchRequest alloc]init];
+    [squigglepointfetch setEntity:[NSEntityDescription entityForName:@"SquigglePoint" inManagedObjectContext:_appDelegate.managedObjectContext]];
+    
+    NSFetchRequest* squiggleFetch = [[NSFetchRequest alloc]init];
+    [squiggleFetch setEntity:[NSEntityDescription entityForName:@"Squiggle" inManagedObjectContext:_appDelegate.managedObjectContext]];
     
     NSError* __autoreleasing error2 = nil;
-    NSArray* result = [_appDelegate.managedObjectContext executeFetchRequest:newFetch error:&error2];
+    NSArray* result = [_appDelegate.managedObjectContext executeFetchRequest:squigglepointfetch error:&error2];
+    NSArray* result2 = [_appDelegate.managedObjectContext executeFetchRequest:squiggleFetch error:&error2];
     
-    NSSet* toDelete =[[NSSet alloc] initWithArray:result];
+    NSMutableSet* toDelete =[[NSMutableSet alloc] initWithArray:result];
+    [toDelete addObjectsFromArray:result2];
+    
     [toDelete enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
         NSLog(@"Deleting!");
         [_appDelegate.managedObjectContext deleteObject:obj];
-    }];    
+    }];
+    [_appDelegate.managedObjectContext save:&error2];
 }
 
 - (void)tearDown
@@ -72,6 +79,7 @@ static EPYCAppDelegate* _appDelegate = nil;
     NSFetchRequest* newFetch = [[NSFetchRequest alloc]init];
     [newFetch setEntity:[NSEntityDescription entityForName:@"SquigglePoint" inManagedObjectContext:_appDelegate.managedObjectContext]];
     
+    //get point that was just set to core data
     NSError* __autoreleasing error2 = nil;
     NSArray* result = [_appDelegate.managedObjectContext executeFetchRequest:newFetch error:&error2];
     STAssertNotNil(testPoint, @"should be valid point");
@@ -80,10 +88,24 @@ static EPYCAppDelegate* _appDelegate = nil;
     STAssertNotNil(pointRead, @"not nil");
     STAssertEqualObjects(pointRead.xPoint, [NSNumber numberWithInt:2], @"should be 2");
     STAssertEqualObjects(pointRead.yPoint, [NSNumber numberWithInt:221], @"should be 221");
+    
+    Squiggle* testSquiggle = (Squiggle*)[NSEntityDescription insertNewObjectForEntityForName:@"Squiggle" inManagedObjectContext:_appDelegate.managedObjectContext];
+    [testSquiggle setLineWidth:[NSNumber numberWithInt:1]];
+    [testSquiggle addPointsObject:testPoint];
+    [_appDelegate.managedObjectContext save:&error2];
+    
+    NSFetchRequest* squiggleFetch = [[NSFetchRequest alloc] init];
+    [squiggleFetch setEntity:[NSEntityDescription entityForName:@"Squiggle" inManagedObjectContext:_appDelegate.managedObjectContext]];
+    NSArray* squiggles = [_appDelegate.managedObjectContext executeFetchRequest:squiggleFetch error:&error2];
+    STAssertEquals([squiggles count], 1U, @"Should only be 1 squiggle");
+    Squiggle* readSquiggle = [squiggles objectAtIndex:0U];
+    STAssertEqualObjects(readSquiggle.lineWidth, [NSNumber numberWithInt:1], @"line width should be right");
+    STAssertEquals([[readSquiggle points] count], 1U, @"should have one have 1 point");
+    
+    NSOrderedSet* squiggleSet = [[NSOrderedSet alloc] initWithSet:readSquiggle.points];
+    SquigglePoint* firstPoint = [squiggleSet objectAtIndex:0];
+    STAssertEqualObjects(firstPoint.xPoint, [NSNumber numberWithInt:2], @"point should have been saved to 2");
 }
 
-- (void) testAddUser {
-    STAssertTrue(YES, @"A");
-}
 
 @end

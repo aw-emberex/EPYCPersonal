@@ -10,4 +10,16 @@
 
 @implementation GameManager
 
+static GameManager* _instance = nil;
+
++(GameManager*) getInstance {
+    if (_instance == nil) {
+        _instance = [[self alloc] init];
+    }
+    return _instance;
+}
+
+
+
+
 @end

@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoryBoardTest1Tests/DBTests.m"
-         timestampString = "388649430.196147"
+         timestampString = "388788903.170883"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
+         startingLineNumber = "54"
+         endingLineNumber = "54"
          landmarkName = "-testClearUsers"
          landmarkType = "5">
       </FileBreakpoint>

@@ -13,16 +13,6 @@
 		FA1880E4170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */; };
 		FA1880EC170A9CB000AA6634 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1880EB170A9CB000AA6634 /* User.m */; };
 		FA1880ED170A9CB000AA6634 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1880EB170A9CB000AA6634 /* User.m */; };
-		FA25B3F11716769900C16934 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25B3EF1716769900C16934 /* 63-runner.png */; };
-		FA25B3F21716769900C16934 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25B3EF1716769900C16934 /* 63-runner.png */; };
-		FA25B3F31716769900C16934 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25B3F01716769900C16934 /* 08-chat.png */; };
-		FA25B3F41716769900C16934 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = FA25B3F01716769900C16934 /* 08-chat.png */; };
-		FA25B3F6171676A500C16934 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = FA25B3F5171676A500C16934 /* Images */; };
-		FA25B3F7171676A500C16934 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = FA25B3F5171676A500C16934 /* Images */; };
-		FA29628B172A4D4B000D0FB8 /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29628A172A4D4B000D0FB8 /* SquigglePoint.m */; };
-		FA29628C172A4D4B000D0FB8 /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29628A172A4D4B000D0FB8 /* SquigglePoint.m */; };
-		FA29628F172A4D52000D0FB8 /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29628E172A4D52000D0FB8 /* Squiggle.m */; };
-		FA296290172A4D52000D0FB8 /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29628E172A4D52000D0FB8 /* Squiggle.m */; };
 		FA2AF5171703FD91004E785E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AF5161703FD91004E785E /* UIKit.framework */; };
 		FA2AF5191703FD91004E785E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AF5181703FD91004E785E /* Foundation.framework */; };
 		FA2AF51B1703FD91004E785E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AF51A1703FD91004E785E /* CoreGraphics.framework */; };
@@ -44,8 +34,12 @@
 		FA2AF560170401A1004E785E /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* Tab2ViewController.m */; };
 		FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
-		FAC399F0171FBC3900AB2E9F /* star.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FAC399EF171FBC3900AB2E9F /* star.jpeg */; };
-		FAC399F1171FBC3900AB2E9F /* star.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FAC399EF171FBC3900AB2E9F /* star.jpeg */; };
+		FA3A0D7F172C732700643888 /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D7E172C732700643888 /* SquigglePoint.m */; };
+		FA3A0D80172C732700643888 /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D7E172C732700643888 /* SquigglePoint.m */; };
+		FA3A0D83172C732700643888 /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D82172C732700643888 /* Squiggle.m */; };
+		FA3A0D84172C732700643888 /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D82172C732700643888 /* Squiggle.m */; };
+		FA3A0D88172C7FC300643888 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D87172C7FC300643888 /* GameManager.m */; };
+		FA3A0D89172C7FC300643888 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D87172C7FC300643888 /* GameManager.m */; };
 		FAD8BFD31708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAD8BFD41708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAE2F3731712753B0006F499 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE2F3721712753B0006F499 /* UserCell.m */; };
@@ -71,14 +65,7 @@
 		FA1880E5170A9BE100AA6634 /* StoryboardDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		FA1880EA170A9CB000AA6634 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		FA1880EB170A9CB000AA6634 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
-		FA25B3EF1716769900C16934 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "63-runner.png"; path = "StoryBoardTest1/Images/63-runner.png"; sourceTree = "<group>"; };
-		FA25B3F01716769900C16934 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "08-chat.png"; path = "StoryBoardTest1/Images/08-chat.png"; sourceTree = "<group>"; };
-		FA25B3F5171676A500C16934 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
-		FA296288172A49FD000D0FB8 /* StoryboardDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StoryboardDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
-		FA296289172A4D4B000D0FB8 /* SquigglePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquigglePoint.h; sourceTree = "<group>"; };
-		FA29628A172A4D4B000D0FB8 /* SquigglePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquigglePoint.m; sourceTree = "<group>"; };
-		FA29628D172A4D52000D0FB8 /* Squiggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Squiggle.h; sourceTree = "<group>"; };
-		FA29628E172A4D52000D0FB8 /* Squiggle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Squiggle.m; sourceTree = "<group>"; };
+		FA296288172A49FD000D0FB8 /* StoryboardDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
 		FA2AF5131703FD91004E785E /* StoryBoardTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryBoardTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2AF5161703FD91004E785E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA2AF5181703FD91004E785E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,7 +95,13 @@
 		FA386B61171E6E0600E5129A /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		FA386B62171E6E0600E5129A /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewDelegate.h; sourceTree = "<group>"; };
-		FAC399EF171FBC3900AB2E9F /* star.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = star.jpeg; sourceTree = "<group>"; };
+		FA3A0D7D172C732700643888 /* SquigglePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquigglePoint.h; sourceTree = "<group>"; };
+		FA3A0D7E172C732700643888 /* SquigglePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquigglePoint.m; sourceTree = "<group>"; };
+		FA3A0D81172C732700643888 /* Squiggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Squiggle.h; sourceTree = "<group>"; };
+		FA3A0D82172C732700643888 /* Squiggle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Squiggle.m; sourceTree = "<group>"; };
+		FA3A0D85172C7A3A00643888 /* StoryboardDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StoryboardDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
+		FA3A0D86172C7FC300643888 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
+		FA3A0D87172C7FC300643888 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
 		FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataManager.h; path = ../UserDataManager.h; sourceTree = "<group>"; };
 		FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataManager.m; path = ../UserDataManager.m; sourceTree = "<group>"; };
 		FAE2F3711712753B0006F499 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
@@ -147,10 +140,6 @@
 		FA2AF50A1703FD91004E785E = {
 			isa = PBXGroup;
 			children = (
-				FA29628D172A4D52000D0FB8 /* Squiggle.h */,
-				FA29628E172A4D52000D0FB8 /* Squiggle.m */,
-				FA25B3EF1716769900C16934 /* 63-runner.png */,
-				FA25B3F01716769900C16934 /* 08-chat.png */,
 				FA2AF51C1703FD91004E785E /* StoryBoardTest1 */,
 				FA2AF5401703FD91004E785E /* StoryBoardTest1Tests */,
 				FA2AF5151703FD91004E785E /* Frameworks */,
@@ -182,28 +171,18 @@
 		FA2AF51C1703FD91004E785E /* StoryBoardTest1 */ = {
 			isa = PBXGroup;
 			children = (
-				FAC399EF171FBC3900AB2E9F /* star.jpeg */,
-				FA25B3F5171676A500C16934 /* Images */,
+				FA3A0D8E172DD2E600643888 /* View Controllers */,
+				FA3A0D8D172DD2C000643888 /* ManagedObjects */,
 				FAE2F375171275CE0006F499 /* Custom UI Objects */,
-				FA1880EA170A9CB000AA6634 /* User.h */,
 				FA386B65171E6EBC00E5129A /* Custom Delegate Interfaces */,
 				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
-				FA386B62171E6E0600E5129A /* AddUserViewController.m */,
-				FA386B61171E6E0600E5129A /* AddUserViewController.h */,
-				FA1880EB170A9CB000AA6634 /* User.m */,
 				FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */,
 				FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */,
 				FA2AF5251703FD91004E785E /* EPYCAppDelegate.h */,
 				FA2AF5261703FD91004E785E /* EPYCAppDelegate.m */,
 				FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */,
-				FA296289172A4D4B000D0FB8 /* SquigglePoint.h */,
-				FA29628A172A4D4B000D0FB8 /* SquigglePoint.m */,
-				FA2AF5511703FEDB004E785E /* UsersViewController.h */,
-				FA2AF5521703FEDB004E785E /* UsersViewController.m */,
-				FA2AF55D170401A1004E785E /* Tab2ViewController.h */,
-				FA2AF55E170401A1004E785E /* Tab2ViewController.m */,
-				FA2AF5311703FD91004E785E /* EPYCViewController.h */,
-				FA2AF5321703FD91004E785E /* EPYCViewController.m */,
+				FA3A0D86172C7FC300643888 /* GameManager.h */,
+				FA3A0D87172C7FC300643888 /* GameManager.m */,
 				FA2AF51D1703FD91004E785E /* Supporting Files */,
 			);
 			path = StoryBoardTest1;
@@ -250,6 +229,34 @@
 				FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */,
 			);
 			name = "Custom Delegate Interfaces";
+			sourceTree = "<group>";
+		};
+		FA3A0D8D172DD2C000643888 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				FA1880EA170A9CB000AA6634 /* User.h */,
+				FA1880EB170A9CB000AA6634 /* User.m */,
+				FA3A0D7D172C732700643888 /* SquigglePoint.h */,
+				FA3A0D81172C732700643888 /* Squiggle.h */,
+				FA3A0D82172C732700643888 /* Squiggle.m */,
+				FA3A0D7E172C732700643888 /* SquigglePoint.m */,
+			);
+			name = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		FA3A0D8E172DD2E600643888 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA386B62171E6E0600E5129A /* AddUserViewController.m */,
+				FA386B61171E6E0600E5129A /* AddUserViewController.h */,
+				FA2AF5511703FEDB004E785E /* UsersViewController.h */,
+				FA2AF5521703FEDB004E785E /* UsersViewController.m */,
+				FA2AF55D170401A1004E785E /* Tab2ViewController.h */,
+				FA2AF55E170401A1004E785E /* Tab2ViewController.m */,
+				FA2AF5311703FD91004E785E /* EPYCViewController.h */,
+				FA2AF5321703FD91004E785E /* EPYCViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		FAE2F375171275CE0006F499 /* Custom UI Objects */ = {
@@ -340,10 +347,6 @@
 				FA2AF52D1703FD91004E785E /* Default-568h@2x.png in Resources */,
 				FA2AF5301703FD91004E785E /* MainStoryboard.storyboard in Resources */,
 				FAE2F377171276060006F499 /* UserCell.xib in Resources */,
-				FA25B3F11716769900C16934 /* 63-runner.png in Resources */,
-				FA25B3F31716769900C16934 /* 08-chat.png in Resources */,
-				FA25B3F6171676A500C16934 /* Images in Resources */,
-				FAC399F0171FBC3900AB2E9F /* star.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,10 +356,6 @@
 			files = (
 				FA2AF5451703FD91004E785E /* InfoPlist.strings in Resources */,
 				FAE2F378171276060006F499 /* UserCell.xib in Resources */,
-				FA25B3F21716769900C16934 /* 63-runner.png in Resources */,
-				FA25B3F41716769900C16934 /* 08-chat.png in Resources */,
-				FA25B3F7171676A500C16934 /* Images in Resources */,
-				FAC399F1171FBC3900AB2E9F /* star.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +392,9 @@
 				FA1880EC170A9CB000AA6634 /* User.m in Sources */,
 				FAE2F3731712753B0006F499 /* UserCell.m in Sources */,
 				FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */,
-				FA29628B172A4D4B000D0FB8 /* SquigglePoint.m in Sources */,
-				FA29628F172A4D52000D0FB8 /* Squiggle.m in Sources */,
+				FA3A0D7F172C732700643888 /* SquigglePoint.m in Sources */,
+				FA3A0D83172C732700643888 /* Squiggle.m in Sources */,
+				FA3A0D88172C7FC300643888 /* GameManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,8 +410,9 @@
 				FAE2F3741712753B0006F499 /* UserCell.m in Sources */,
 				FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */,
 				FAE333B21723ADAE00FE979D /* DBTests.m in Sources */,
-				FA29628C172A4D4B000D0FB8 /* SquigglePoint.m in Sources */,
-				FA296290172A4D52000D0FB8 /* Squiggle.m in Sources */,
+				FA3A0D80172C732700643888 /* SquigglePoint.m in Sources */,
+				FA3A0D84172C732700643888 /* Squiggle.m in Sources */,
+				FA3A0D89172C7FC300643888 /* GameManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,11 +602,12 @@
 		FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				FA3A0D85172C7A3A00643888 /* StoryboardDataModel 4.xcdatamodel */,
 				FA296288172A49FD000D0FB8 /* StoryboardDataModel 3.xcdatamodel */,
 				FA1880E5170A9BE100AA6634 /* StoryboardDataModel 2.xcdatamodel */,
 				FA1880E2170A99DC00AA6634 /* StoryboardDataModel.xcdatamodel */,
 			);
-			currentVersion = FA296288172A49FD000D0FB8 /* StoryboardDataModel 3.xcdatamodel */;
+			currentVersion = FA3A0D85172C7A3A00643888 /* StoryboardDataModel 4.xcdatamodel */;
 			name = StoryboardDataModel.xcdatamodeld;
 			path = ../StoryboardDataModel.xcdatamodeld;
 			sourceTree = "<group>";

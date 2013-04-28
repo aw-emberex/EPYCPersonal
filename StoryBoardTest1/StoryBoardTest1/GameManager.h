@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Squiggle.h"
+#import "SquigglePoint.h"
+
 
 @interface GameManager : NSObject
+
++(GameManager*) getInstance;
 
 @end
