@@ -14,6 +14,6 @@
 @interface GameManager : NSObject
 
 +(GameManager*) getInstance;
--(NSSet)getGameEntries;
+-(NSOrderedSet*)getGameEntries;
 
 @end

@@ -19,4 +19,8 @@ static GameManager* _instance = nil;
     return _instance;
 }
 
+-(NSOrderedSet*)getGameEntries; {
+    return nil;
+}
+
 @end
