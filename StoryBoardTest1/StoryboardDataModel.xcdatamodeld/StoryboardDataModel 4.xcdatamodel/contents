@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Squiggle" representedClassName="Squiggle" syncable="YES">
+        <attribute name="lineWidth" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="points" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SquigglePoint" inverseName="owningSquiggle" inverseEntity="SquigglePoint" syncable="YES"/>
+    </entity>
+    <entity name="SquigglePoint" representedClassName="SquigglePoint" syncable="YES">
+        <attribute name="xPoint" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="yPoint" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="owningSquiggle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Squiggle" inverseName="points" inverseEntity="Squiggle" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="isSelectedUser" optional="YES" attributeType="Boolean" defaultValueString="NO" elementID="lastSelectedUser" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Squiggle" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="SquigglePoint" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="User" positionX="-558" positionY="9" width="128" height="75"/>
+    </elements>
+</model>
