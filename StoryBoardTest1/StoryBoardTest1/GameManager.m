@@ -19,7 +19,4 @@ static GameManager* _instance = nil;
     return _instance;
 }
 
-
-
-
 @end

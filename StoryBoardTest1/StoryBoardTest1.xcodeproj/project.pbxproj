@@ -40,6 +40,10 @@
 		FA3A0D84172C732700643888 /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D82172C732700643888 /* Squiggle.m */; };
 		FA3A0D88172C7FC300643888 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D87172C7FC300643888 /* GameManager.m */; };
 		FA3A0D89172C7FC300643888 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D87172C7FC300643888 /* GameManager.m */; };
+		FA3A0D91172DD74500643888 /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D90172DD74500643888 /* GameData.m */; };
+		FA3A0D92172DD74500643888 /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D90172DD74500643888 /* GameData.m */; };
+		FA3A0D95172DD76800643888 /* GameEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D94172DD76800643888 /* GameEntry.m */; };
+		FA3A0D96172DD76800643888 /* GameEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A0D94172DD76800643888 /* GameEntry.m */; };
 		FAD8BFD31708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAD8BFD41708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAE2F3731712753B0006F499 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE2F3721712753B0006F499 /* UserCell.m */; };
@@ -102,6 +106,10 @@
 		FA3A0D85172C7A3A00643888 /* StoryboardDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StoryboardDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
 		FA3A0D86172C7FC300643888 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
 		FA3A0D87172C7FC300643888 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
+		FA3A0D8F172DD74500643888 /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameData.h; path = ../GameData.h; sourceTree = "<group>"; };
+		FA3A0D90172DD74500643888 /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameData.m; path = ../GameData.m; sourceTree = "<group>"; };
+		FA3A0D93172DD76800643888 /* GameEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntry.h; sourceTree = "<group>"; };
+		FA3A0D94172DD76800643888 /* GameEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEntry.m; sourceTree = "<group>"; };
 		FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataManager.h; path = ../UserDataManager.h; sourceTree = "<group>"; };
 		FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataManager.m; path = ../UserDataManager.m; sourceTree = "<group>"; };
 		FAE2F3711712753B0006F499 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
@@ -234,6 +242,10 @@
 		FA3A0D8D172DD2C000643888 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A0D93172DD76800643888 /* GameEntry.h */,
+				FA3A0D94172DD76800643888 /* GameEntry.m */,
+				FA3A0D8F172DD74500643888 /* GameData.h */,
+				FA3A0D90172DD74500643888 /* GameData.m */,
 				FA1880EA170A9CB000AA6634 /* User.h */,
 				FA1880EB170A9CB000AA6634 /* User.m */,
 				FA3A0D7D172C732700643888 /* SquigglePoint.h */,
@@ -395,6 +407,8 @@
 				FA3A0D7F172C732700643888 /* SquigglePoint.m in Sources */,
 				FA3A0D83172C732700643888 /* Squiggle.m in Sources */,
 				FA3A0D88172C7FC300643888 /* GameManager.m in Sources */,
+				FA3A0D91172DD74500643888 /* GameData.m in Sources */,
+				FA3A0D95172DD76800643888 /* GameEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +427,8 @@
 				FA3A0D80172C732700643888 /* SquigglePoint.m in Sources */,
 				FA3A0D84172C732700643888 /* Squiggle.m in Sources */,
 				FA3A0D89172C7FC300643888 /* GameManager.m in Sources */,
+				FA3A0D92172DD74500643888 /* GameData.m in Sources */,
+				FA3A0D96172DD76800643888 /* GameEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

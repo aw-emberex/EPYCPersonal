@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="GameEntry" syncable="YES">
+    <entity name="GameData" representedClassName="GameData" syncable="YES">
+        <relationship name="gameEntries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="GameEntry" inverseName="owningGameData" inverseEntity="GameEntry" syncable="YES"/>
+    </entity>
+    <entity name="GameEntry" representedClassName="GameEntry" syncable="YES">
         <attribute name="phraseText" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="squiggle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Squiggle" inverseName="owningGameEntry" inverseEntity="Squiggle" syncable="YES"/>
+        <relationship name="owningGameData" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GameData" inverseName="gameEntries" inverseEntity="GameData" syncable="YES"/>
+        <relationship name="squiggle" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Squiggle" inverseName="owningGameEntry" inverseEntity="Squiggle" syncable="YES"/>
     </entity>
     <entity name="Squiggle" representedClassName="Squiggle" syncable="YES">
         <attribute name="lineWidth" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <relationship name="owningGameEntry" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GameEntry" inverseName="squiggle" inverseEntity="GameEntry" syncable="YES"/>
-        <relationship name="points" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SquigglePoint" inverseName="owningSquiggle" inverseEntity="SquigglePoint" syncable="YES"/>
+        <relationship name="points" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="SquigglePoint" inverseName="owningSquiggle" inverseEntity="SquigglePoint" syncable="YES"/>
     </entity>
     <entity name="SquigglePoint" representedClassName="SquigglePoint" syncable="YES">
         <attribute name="xPoint" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -22,6 +26,7 @@
         <element name="Squiggle" positionX="160" positionY="192" width="128" height="90"/>
         <element name="SquigglePoint" positionX="160" positionY="192" width="128" height="90"/>
         <element name="User" positionX="-558" positionY="9" width="128" height="75"/>
-        <element name="GameEntry" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="GameEntry" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="GameData" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>
