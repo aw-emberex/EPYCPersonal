@@ -1,6 +1,6 @@
 //
 //  GameEntry.m
-//  StoryBoardTest1
+//  EPYCPersonal
 //
 //  Created by Alex Wait on 4/28/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
@@ -14,7 +14,7 @@
 @implementation GameEntry
 
 @dynamic phraseText;
-@dynamic squiggle;
 @dynamic owningGameData;
+@dynamic squiggle;
 
 @end

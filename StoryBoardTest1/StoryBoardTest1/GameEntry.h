@@ -1,6 +1,6 @@
 //
 //  GameEntry.h
-//  StoryBoardTest1
+//  EPYCPersonal
 //
 //  Created by Alex Wait on 4/28/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
@@ -14,8 +14,8 @@
 @interface GameEntry : NSManagedObject
 
 @property (nonatomic, retain) NSString * phraseText;
-@property (nonatomic, retain) NSOrderedSet *squiggle;
 @property (nonatomic, retain) GameData *owningGameData;
+@property (nonatomic, retain) NSOrderedSet *squiggle;
 @end
 
 @interface GameEntry (CoreDataGeneratedAccessors)

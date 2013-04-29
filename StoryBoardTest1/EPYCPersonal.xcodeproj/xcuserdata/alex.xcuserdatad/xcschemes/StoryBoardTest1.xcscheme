@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA2AF5121703FD91004E785E"
-               BuildableName = "StoryBoardTest1.app"
+               BuildableName = "EPYCPersonal.app"
                BlueprintName = "EPYCPersonal"
                ReferencedContainer = "container:EPYCPersonal.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA2AF5381703FD91004E785E"
-               BuildableName = "StoryBoardTest1Tests.octest"
+               BuildableName = "EPYCPersonalTests.octest"
                BlueprintName = "EPYCPersonalTests"
                ReferencedContainer = "container:EPYCPersonal.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA2AF5121703FD91004E785E"
-            BuildableName = "StoryBoardTest1.app"
+            BuildableName = "EPYCPersonal.app"
             BlueprintName = "EPYCPersonal"
             ReferencedContainer = "container:EPYCPersonal.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA2AF5121703FD91004E785E"
-            BuildableName = "StoryBoardTest1.app"
+            BuildableName = "EPYCPersonal.app"
             BlueprintName = "EPYCPersonal"
             ReferencedContainer = "container:EPYCPersonal.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA2AF5121703FD91004E785E"
-            BuildableName = "StoryBoardTest1.app"
+            BuildableName = "EPYCPersonal.app"
             BlueprintName = "EPYCPersonal"
             ReferencedContainer = "container:EPYCPersonal.xcodeproj">
          </BuildableReference>

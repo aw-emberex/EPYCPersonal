@@ -9,11 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "Squiggle.h"
 #import "SquigglePoint.h"
+#import "GameEntry.h"
+#import "EPYCAppDelegate.h"
+#import <CoreData/CoreData.h>
 
 
-@interface GameManager : NSObject
+@interface GameManager : NSObject {
+    
+}
 
 +(GameManager*) getInstance;
 -(NSOrderedSet*)getGameEntries;
+@property (readonly, nonatomic) NSEntityDescription* squiggleEntity;
+@property (readonly, nonatomic) NSEntityDescription* squigglePointEntity;
+@property (readonly, nonatomic) NSEntityDescription* gameEntryEntity;
+@property (readonly, nonatomic) EPYCAppDelegate* appDelegate;
+@property (readonly, nonatomic) NSManagedObjectContext* managedObjectContent;
 
 @end

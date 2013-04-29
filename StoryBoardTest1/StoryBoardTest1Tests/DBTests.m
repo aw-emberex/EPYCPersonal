@@ -91,7 +91,8 @@ static EPYCAppDelegate* _appDelegate = nil;
     
     Squiggle* testSquiggle = (Squiggle*)[NSEntityDescription insertNewObjectForEntityForName:@"Squiggle" inManagedObjectContext:_appDelegate.managedObjectContext];
     [testSquiggle setLineWidth:[NSNumber numberWithInt:1]];
-    [testSquiggle addPointsObject:testPoint];
+    //[testSquiggle addPointsObject:testPoint];
+    testPoint.owningSquiggle = testSquiggle;
     [_appDelegate.managedObjectContext save:&error2];
     
     NSFetchRequest* squiggleFetch = [[NSFetchRequest alloc] init];
@@ -102,7 +103,7 @@ static EPYCAppDelegate* _appDelegate = nil;
     STAssertEqualObjects(readSquiggle.lineWidth, [NSNumber numberWithInt:1], @"line width should be right");
     STAssertEquals([[readSquiggle points] count], 1U, @"should have one have 1 point");
     
-    NSOrderedSet* squiggleSet = [[NSOrderedSet alloc] initWithSet:readSquiggle.points];
+    NSOrderedSet* squiggleSet = readSquiggle.points;
     SquigglePoint* firstPoint = [squiggleSet objectAtIndex:0];
     STAssertEqualObjects(firstPoint.xPoint, [NSNumber numberWithInt:2], @"point should have been saved to 2");
 }
