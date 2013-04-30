@@ -11,6 +11,8 @@
 #import "EPYCAppDelegate.h"
 #import "Squiggle.h"
 #import "SquigglePoint.h"
+#import "GameManager.h"
+#import "GameData.h"
 
 @implementation DBTests
 
@@ -54,6 +56,13 @@ static EPYCAppDelegate* _appDelegate = nil;
     NSLog(@"%@', ", [userManager getUsers]);
     NSInteger test = [[userManager getUsers] count];
     STAssertTrue(test == 0, @"No users should be in DB after setup is called");
+}
+
+-(void) testMainGameData {
+    GameManager* manager = [GameManager getInstance];
+    GameData* gameData = [manager mainGameDataInstance];
+    STAssertNotNil(gameData, @"should have game data");
+    STAssertTrue([[gameData gameEntries] count] != 0U, @"a");
 }
 
 -(void) testAllSquigglesShouldBeGone {
