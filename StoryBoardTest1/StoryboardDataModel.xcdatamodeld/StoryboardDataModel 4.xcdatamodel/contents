@@ -23,10 +23,10 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="GameData" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="GameEntry" positionX="160" positionY="192" width="128" height="90"/>
         <element name="Squiggle" positionX="160" positionY="192" width="128" height="90"/>
         <element name="SquigglePoint" positionX="160" positionY="192" width="128" height="90"/>
         <element name="User" positionX="-558" positionY="9" width="128" height="75"/>
-        <element name="GameEntry" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="GameData" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>

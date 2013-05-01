@@ -7,6 +7,7 @@
 //
 
 #import "GameManager.h"
+#import "GameData.h"
 
 @implementation GameManager
 
@@ -23,7 +24,9 @@ static GameManager* _instance = nil;
 }
 
 -(GameEntry *)createNewGameEntry {
-    return nil;
+    GameEntry* entry = (GameEntry*)[NSEntityDescription insertNewObjectForEntityForName:@"GameEntry" inManagedObjectContext:managedObjectContent];
+    [entry setOwningGameData:_mainGameDataInstance];
+    return entry;
 }
 
 - (id)init
@@ -42,7 +45,10 @@ static GameManager* _instance = nil;
 }
 
 -(GameData *)getMainGameData {
-    return mainGameDataInstance;
+    if (_mainGameDataInstance == nil) {
+        [self loadMainGameData];
+    }
+    return _mainGameDataInstance;
 }
 
 -(void) loadMainGameData {
@@ -50,11 +56,18 @@ static GameManager* _instance = nil;
     NSArray* result = (NSArray*)[managedObjectContent executeFetchRequest:[NSFetchRequest fetchRequestWithEntityName:@"GameData"] error:&error];
 
     if ([result count] == 0) {
+        _mainGameDataInstance = (GameData*)[NSEntityDescription insertNewObjectForEntityForName:@"GameData" inManagedObjectContext:managedObjectContent];
         NSLog(@"OMG %@", error);
-        abort();
+        [self saveContext];
     } else {
-        //TODO: Insert new game data instance, set ID to 1?
+        _mainGameDataInstance = [result objectAtIndex:0];
     }
+}
+
+-(void)deleteAllGameData {
+    [managedObjectContent deleteObject:(NSManagedObject*)_mainGameDataInstance];
+    [self saveContext];
+    [self loadMainGameData];
 }
 
 -(void) saveContext {
