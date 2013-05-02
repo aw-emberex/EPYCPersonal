@@ -2,7 +2,7 @@
 //  Squiggle.h
 //  EPYCPersonal
 //
-//  Created by Alex Wait on 4/28/13.
+//  Created by Alex Wait on 5/1/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
@@ -31,5 +31,7 @@
 - (void)addPoints:(NSOrderedSet *)values;
 - (void)removePoints:(NSOrderedSet *)values;
 
-
+//custom methods
+-(void)addCGPoints: (NSArray*) points;
+-(void)addCGPoint: (CGPoint) point;
 @end

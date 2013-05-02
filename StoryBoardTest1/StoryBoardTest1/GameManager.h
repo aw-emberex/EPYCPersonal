@@ -16,15 +16,17 @@
 
 
 @interface GameManager : NSObject {
-    GameData* mainGameDataInstance;
 }
 
 +(GameManager*) getInstance;
 -(NSOrderedSet*)getGameEntries;
 -(GameEntry*)createNewGameEntry;
 -(void)deleteAllGameData;
+-(void)saveContext;
+-(GameData *)getMainGameData;
 
 @property (readwrite, nonatomic) GameData* mainGameDataInstance;
+@property (readwrite, nonatomic) GameEntry* currentGameEntry;
 @property (readwrite, nonatomic) NSEntityDescription* squiggleEntity;
 @property (readwrite, nonatomic) NSEntityDescription* squigglePointEntity;
 @property (readwrite, nonatomic) NSEntityDescription* gameEntryEntity;

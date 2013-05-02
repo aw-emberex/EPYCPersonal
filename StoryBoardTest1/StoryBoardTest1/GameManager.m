@@ -15,6 +15,7 @@ static GameManager* _instance = nil;
 
 @synthesize appDelegate,gameEntryEntity,managedObjectContent, squiggleEntity,squigglePointEntity;
 @synthesize mainGameDataInstance = _mainGameDataInstance;
+@synthesize currentGameEntry = _currentGameEntry;
 
 +(GameManager*) getInstance {
     if (_instance == nil) {
@@ -26,6 +27,10 @@ static GameManager* _instance = nil;
 -(GameEntry *)createNewGameEntry {
     GameEntry* entry = (GameEntry*)[NSEntityDescription insertNewObjectForEntityForName:@"GameEntry" inManagedObjectContext:managedObjectContent];
     [entry setOwningGameData:_mainGameDataInstance];
+    _currentGameEntry = entry;
+    Squiggle* entrySquiggle = (Squiggle*)[NSEntityDescription insertNewObjectForEntityForName:@"Squiggle" inManagedObjectContext:managedObjectContent];
+    entry.phraseText = @"";
+    entrySquiggle.owningGameEntry = entry;
     return entry;
 }
 
@@ -45,9 +50,9 @@ static GameManager* _instance = nil;
 }
 
 -(GameData *)getMainGameData {
-    if (_mainGameDataInstance == nil) {
+    //if (_mainGameDataInstance == nil) {
         [self loadMainGameData];
-    }
+    //}
     return _mainGameDataInstance;
 }
 
