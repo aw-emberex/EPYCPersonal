@@ -75,7 +75,7 @@
     return [[_userDataManager getUsers] count];
 }
 
--(UserCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UserCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Users Table"];
     
     if (!cell) {
@@ -92,7 +92,9 @@
     [cell setNumberLabelText:indexPath.row];
     NSLog(@"%@", currentUser.isSelectedUser);
     if ([currentUser.isSelectedUser isEqualToNumber:[NSNumber numberWithInt:0]]) {
-        cell.starImageView.hidden = YES;
+        [cell setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:255 alpha:1]];
+        [cell setHighlighted:YES animated:YES];
+        //cell.starImageView.hidden = YES;
     }
     return cell;
 }
