@@ -18,12 +18,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Squiggle.h"
+#import "GameManager.h"
 
 @interface MainView : UIView {
-  NSMutableDictionary *squiggles;	// sguiggles in progress
-  NSMutableArray *finishedSquiggles;	// finished squiggles
-  UIColor *color;		// the current drawing color
-  float lineWidth;	// the current drawing line width
+    NSMutableDictionary *squiggles;	// sguiggles in progress
+    NSMutableArray *finishedSquiggles;	// finished squiggles
+    UIColor *color;		// the current drawing color
+    float lineWidth;	// the current drawing line width
+    GameManager* gameManager;
 }
 
 // declare color and linewidth as properties
@@ -31,7 +33,7 @@
 @property float lineWidth;
 
 // draw the given Squiggle into the given graphics context
-- (void)drawSquiggle:(NSMutableArray*)points inContext:(CGContextRef)context;
+- (void)drawSquiggle:(Squiggle*)points inContext:(CGContextRef)context;
 - (void)resetView;	// clear all squiggles from the view
 
 

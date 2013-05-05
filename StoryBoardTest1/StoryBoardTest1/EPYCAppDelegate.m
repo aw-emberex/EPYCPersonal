@@ -18,14 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    UITabBarController* tabBar = (UITabBarController*)self.window.rootViewController;
-    UsersViewController* usersController = [[tabBar viewControllers] objectAtIndex:0];
-    
-//    Tab1ViewController* usersListViewController = [[usersController viewControllers] objectAtIndex:0];
-    
-    NSLog(@"test: %@", [usersController test]);
-    
     return YES;
 }
 							

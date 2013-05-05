@@ -34,6 +34,11 @@ static GameManager* _instance = nil;
     return entry;
 }
 
+-(Squiggle*)createNewSquiggle {
+    Squiggle* squiggle = (Squiggle*)[NSEntityDescription insertNewObjectForEntityForName:@"Squiggle" inManagedObjectContext:appDelegate.managedObjectContext];
+    return squiggle;
+}
+
 - (id)init
 {
     self = [super init];

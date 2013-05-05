@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"did load view tab 2 FRESHIES");
 	// Do any additional setup after loading the view.
 }
 

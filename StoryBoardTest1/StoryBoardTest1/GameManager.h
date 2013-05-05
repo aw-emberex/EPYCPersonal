@@ -21,9 +21,11 @@
 +(GameManager*) getInstance;
 -(NSOrderedSet*)getGameEntries;
 -(GameEntry*)createNewGameEntry;
+-(Squiggle*)createNewSquiggle;
 -(void)deleteAllGameData;
 -(void)saveContext;
 -(GameData *)getMainGameData;
+
 
 @property (readwrite, nonatomic) GameData* mainGameDataInstance;
 @property (readwrite, nonatomic) GameEntry* currentGameEntry;

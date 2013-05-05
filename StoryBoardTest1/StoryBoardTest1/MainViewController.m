@@ -55,7 +55,7 @@
 //  [self presentModalViewController:controller animated:YES];
   
   // set the sliders on the flipside to the current values in view
-  MainView *view = (MainView *)self.view;
+ // MainView *view = (MainView *)self.view;
 //  [controller setColor:view.color lineWidth:view.lineWidth];
 //  [controller release];
 }
