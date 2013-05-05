@@ -94,7 +94,7 @@
     if ([currentUser.isSelectedUser isEqualToNumber:[NSNumber numberWithInt:0]]) {
         [cell setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:255 alpha:1]];
         [cell setHighlighted:YES animated:YES];
-        //cell.starImageView.hidden = YES;
+         cell.starImageView.hidden = YES;
     }
     return cell;
 }

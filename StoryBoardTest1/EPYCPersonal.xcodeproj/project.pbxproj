@@ -32,6 +32,8 @@
 		FA2AF560170401A1004E785E /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* Tab2ViewController.m */; };
 		FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
+		FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */; };
+		FA44B3FB1735DDDD006295C2 /* EPYCTabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */; };
 		FA5A64891731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648A1731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A648C1731E60B000D703D /* SquigglePoint.m */; };
@@ -108,6 +110,8 @@
 		FA386B62171E6E0600E5129A /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewDelegate.h; sourceTree = "<group>"; };
 		FA3A0D85172C7A3A00643888 /* StoryboardDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
+		FA44B3F81735DDDD006295C2 /* EPYCTabsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPYCTabsController.h; sourceTree = "<group>"; };
+		FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPYCTabsController.m; sourceTree = "<group>"; };
 		FA5A64871731E60B000D703D /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameData.h; path = ../GameData.h; sourceTree = "<group>"; };
 		FA5A64881731E60B000D703D /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameData.m; path = ../GameData.m; sourceTree = "<group>"; };
 		FA5A648B1731E60B000D703D /* SquigglePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquigglePoint.h; path = ../SquigglePoint.h; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 		FA3A0D8E172DD2E600643888 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA44B3F81735DDDD006295C2 /* EPYCTabsController.h */,
+				FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */,
 				FA386B62171E6E0600E5129A /* AddUserViewController.m */,
 				FA386B61171E6E0600E5129A /* AddUserViewController.h */,
 				FA2AF5511703FEDB004E785E /* UsersViewController.h */,
@@ -449,6 +455,7 @@
 				FA5A64991731E60B000D703D /* GameEntry.m in Sources */,
 				FA96AB131732354D008676EC /* MainView.m in Sources */,
 				FA96AB151732354D008676EC /* MainViewController.m in Sources */,
+				FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +478,7 @@
 				FA5A649A1731E60B000D703D /* GameEntry.m in Sources */,
 				FA96AB141732354D008676EC /* MainView.m in Sources */,
 				FA96AB161732354D008676EC /* MainViewController.m in Sources */,
+				FA44B3FB1735DDDD006295C2 /* EPYCTabsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
