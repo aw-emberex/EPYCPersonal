@@ -6,11 +6,11 @@
     <entity name="GameEntry" representedClassName="GameEntry" syncable="YES">
         <attribute name="phraseText" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="owningGameData" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GameData" inverseName="gameEntries" inverseEntity="GameData" syncable="YES"/>
-        <relationship name="squiggle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="Squiggle" inverseName="owningGameEntry" inverseEntity="Squiggle" syncable="YES"/>
+        <relationship name="squiggles" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Squiggle" inverseName="owningGameEntry" inverseEntity="Squiggle" syncable="YES"/>
     </entity>
     <entity name="Squiggle" representedClassName="Squiggle" syncable="YES">
         <attribute name="lineWidth" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="owningGameEntry" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GameEntry" inverseName="squiggle" inverseEntity="GameEntry" syncable="YES"/>
+        <relationship name="owningGameEntry" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GameEntry" inverseName="squiggles" inverseEntity="GameEntry" syncable="YES"/>
         <relationship name="points" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="SquigglePoint" inverseName="owningSquiggle" inverseEntity="SquigglePoint" syncable="YES"/>
     </entity>
     <entity name="SquigglePoint" representedClassName="SquigglePoint" syncable="YES">

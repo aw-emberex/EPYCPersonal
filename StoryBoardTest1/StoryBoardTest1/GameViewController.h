@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Tab2ViewController : UIViewController
+@interface GameViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIViewController* userDataSource;
 
 

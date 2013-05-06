@@ -28,12 +28,18 @@
 		FA2AF5451703FD91004E785E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA2AF5431703FD91004E785E /* InfoPlist.strings */; };
 		FA2AF5481703FD91004E785E /* StoryBoardTest1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF5471703FD91004E785E /* StoryBoardTest1Tests.m */; };
 		FA2AF5531703FEDB004E785E /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF5521703FEDB004E785E /* UsersViewController.m */; };
-		FA2AF55F170401A1004E785E /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* Tab2ViewController.m */; };
-		FA2AF560170401A1004E785E /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* Tab2ViewController.m */; };
+		FA2AF55F170401A1004E785E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* GameViewController.m */; };
+		FA2AF560170401A1004E785E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* GameViewController.m */; };
 		FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */; };
 		FA44B3FB1735DDDD006295C2 /* EPYCTabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */; };
+		FA44B3FD1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */; };
+		FA44B3FE1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */; };
+		FA44B400173741BE006295C2 /* EPYCbig.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FF173741BE006295C2 /* EPYCbig.png */; };
+		FA44B402173741C3006295C2 /* epycsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B401173741C3006295C2 /* epycsmall.png */; };
+		FA44B405173743D6006295C2 /* GameEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B404173743D6006295C2 /* GameEntry.m */; };
+		FA44B406173743D6006295C2 /* GameEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B404173743D6006295C2 /* GameEntry.m */; };
 		FA5A64891731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648A1731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A648C1731E60B000D703D /* SquigglePoint.m */; };
@@ -42,8 +48,6 @@
 		FA5A64921731E60B000D703D /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64901731E60B000D703D /* Squiggle.m */; };
 		FA5A64951731E60B000D703D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64941731E60B000D703D /* User.m */; };
 		FA5A64961731E60B000D703D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64941731E60B000D703D /* User.m */; };
-		FA5A64991731E60B000D703D /* GameEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64981731E60B000D703D /* GameEntry.m */; };
-		FA5A649A1731E60B000D703D /* GameEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64981731E60B000D703D /* GameEntry.m */; };
 		FA696616172E3B9100DB01E9 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = FA696613172E3B9100DB01E9 /* 63-runner.png */; };
 		FA696617172E3B9100DB01E9 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = FA696613172E3B9100DB01E9 /* 63-runner.png */; };
 		FA696618172E3B9100DB01E9 /* 08-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = FA696614172E3B9100DB01E9 /* 08-chat.png */; };
@@ -53,9 +57,7 @@
 		FA696646172E40DD00DB01E9 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA696644172E40DD00DB01E9 /* GameManager.m */; };
 		FA696647172E40DD00DB01E9 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA696644172E40DD00DB01E9 /* GameManager.m */; };
 		FA96AB131732354D008676EC /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96AB0F1732354C008676EC /* MainView.m */; };
-		FA96AB141732354D008676EC /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96AB0F1732354C008676EC /* MainView.m */; };
 		FA96AB151732354D008676EC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96AB121732354C008676EC /* MainViewController.m */; };
-		FA96AB161732354D008676EC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96AB121732354C008676EC /* MainViewController.m */; };
 		FAD8BFD31708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAD8BFD41708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAE2F3731712753B0006F499 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE2F3721712753B0006F499 /* UserCell.m */; };
@@ -104,14 +106,20 @@
 		FA2AF5471703FD91004E785E /* StoryBoardTest1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryBoardTest1Tests.m; sourceTree = "<group>"; };
 		FA2AF5511703FEDB004E785E /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
 		FA2AF5521703FEDB004E785E /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
-		FA2AF55D170401A1004E785E /* Tab2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab2ViewController.h; sourceTree = "<group>"; };
-		FA2AF55E170401A1004E785E /* Tab2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab2ViewController.m; sourceTree = "<group>"; };
+		FA2AF55D170401A1004E785E /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		FA2AF55E170401A1004E785E /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		FA386B61171E6E0600E5129A /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		FA386B62171E6E0600E5129A /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewDelegate.h; sourceTree = "<group>"; };
 		FA3A0D85172C7A3A00643888 /* StoryboardDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
 		FA44B3F81735DDDD006295C2 /* EPYCTabsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPYCTabsController.h; sourceTree = "<group>"; };
 		FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPYCTabsController.m; sourceTree = "<group>"; };
+		FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Appigo-Todo-Application-Icon.png"; sourceTree = "<group>"; };
+		FA44B3FF173741BE006295C2 /* EPYCbig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EPYCbig.png; path = ../EPYCbig.png; sourceTree = "<group>"; };
+		FA44B401173741C3006295C2 /* epycsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = epycsmall.png; path = ../epycsmall.png; sourceTree = "<group>"; };
+		FA44B403173743D6006295C2 /* GameEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEntry.h; sourceTree = "<group>"; };
+		FA44B404173743D6006295C2 /* GameEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEntry.m; sourceTree = "<group>"; };
+		FA44B40817374732006295C2 /* EPYCDrawingViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPYCDrawingViewDelegate.h; sourceTree = "<group>"; };
 		FA5A64871731E60B000D703D /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameData.h; path = ../GameData.h; sourceTree = "<group>"; };
 		FA5A64881731E60B000D703D /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameData.m; path = ../GameData.m; sourceTree = "<group>"; };
 		FA5A648B1731E60B000D703D /* SquigglePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquigglePoint.h; path = ../SquigglePoint.h; sourceTree = "<group>"; };
@@ -120,8 +128,6 @@
 		FA5A64901731E60B000D703D /* Squiggle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Squiggle.m; path = ../Squiggle.m; sourceTree = "<group>"; };
 		FA5A64931731E60B000D703D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		FA5A64941731E60B000D703D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
-		FA5A64971731E60B000D703D /* GameEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameEntry.h; path = ../GameEntry.h; sourceTree = "<group>"; };
-		FA5A64981731E60B000D703D /* GameEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameEntry.m; path = ../GameEntry.m; sourceTree = "<group>"; };
 		FA696613172E3B9100DB01E9 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "63-runner.png"; path = "Images/63-runner.png"; sourceTree = "<group>"; };
 		FA696614172E3B9100DB01E9 /* 08-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "08-chat.png"; path = "Images/08-chat.png"; sourceTree = "<group>"; };
 		FA696615172E3B9100DB01E9 /* star.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = star.jpeg; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 				FAE2F375171275CE0006F499 /* Custom UI Objects */,
 				FA386B65171E6EBC00E5129A /* Custom Delegate Interfaces */,
 				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
+				FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */,
 				FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */,
 				FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */,
 				FA2AF5251703FD91004E785E /* EPYCAppDelegate.h */,
@@ -219,6 +226,8 @@
 		FA2AF51D1703FD91004E785E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA44B401173741C3006295C2 /* epycsmall.png */,
+				FA44B3FF173741BE006295C2 /* EPYCbig.png */,
 				FA696613172E3B9100DB01E9 /* 63-runner.png */,
 				FA696614172E3B9100DB01E9 /* 08-chat.png */,
 				FA696615172E3B9100DB01E9 /* star.jpeg */,
@@ -258,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */,
+				FA44B40817374732006295C2 /* EPYCDrawingViewDelegate.h */,
 			);
 			name = "Custom Delegate Interfaces";
 			sourceTree = "<group>";
@@ -265,8 +275,8 @@
 		FA3A0D8D172DD2C000643888 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				FA5A64971731E60B000D703D /* GameEntry.h */,
-				FA5A64981731E60B000D703D /* GameEntry.m */,
+				FA44B403173743D6006295C2 /* GameEntry.h */,
+				FA44B404173743D6006295C2 /* GameEntry.m */,
 				FA5A64931731E60B000D703D /* User.h */,
 				FA5A64941731E60B000D703D /* User.m */,
 				FA5A648F1731E60B000D703D /* Squiggle.h */,
@@ -288,10 +298,10 @@
 				FA386B61171E6E0600E5129A /* AddUserViewController.h */,
 				FA2AF5511703FEDB004E785E /* UsersViewController.h */,
 				FA2AF5521703FEDB004E785E /* UsersViewController.m */,
-				FA2AF55D170401A1004E785E /* Tab2ViewController.h */,
+				FA2AF55D170401A1004E785E /* GameViewController.h */,
 				FA696644172E40DD00DB01E9 /* GameManager.m */,
 				FA696645172E40DD00DB01E9 /* GameManager.h */,
-				FA2AF55E170401A1004E785E /* Tab2ViewController.m */,
+				FA2AF55E170401A1004E785E /* GameViewController.m */,
 				FA2AF5311703FD91004E785E /* EPYCViewController.h */,
 				FA2AF5321703FD91004E785E /* EPYCViewController.m */,
 			);
@@ -400,6 +410,9 @@
 				FA696616172E3B9100DB01E9 /* 63-runner.png in Resources */,
 				FA696618172E3B9100DB01E9 /* 08-chat.png in Resources */,
 				FA69661A172E3B9100DB01E9 /* star.jpeg in Resources */,
+				FA44B3FD1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */,
+				FA44B400173741BE006295C2 /* EPYCbig.png in Resources */,
+				FA44B402173741C3006295C2 /* epycsmall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +425,7 @@
 				FA696617172E3B9100DB01E9 /* 63-runner.png in Resources */,
 				FA696619172E3B9100DB01E9 /* 08-chat.png in Resources */,
 				FA69661B172E3B9100DB01E9 /* star.jpeg in Resources */,
+				FA44B3FE1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +456,7 @@
 				FA2AF5271703FD91004E785E /* EPYCAppDelegate.m in Sources */,
 				FA2AF5331703FD91004E785E /* EPYCViewController.m in Sources */,
 				FA2AF5531703FEDB004E785E /* UsersViewController.m in Sources */,
-				FA2AF55F170401A1004E785E /* Tab2ViewController.m in Sources */,
+				FA2AF55F170401A1004E785E /* GameViewController.m in Sources */,
 				FAD8BFD31708EEF1002BAF35 /* UserDataManager.m in Sources */,
 				FA1880E3170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */,
 				FAE2F3731712753B0006F499 /* UserCell.m in Sources */,
@@ -452,10 +466,10 @@
 				FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */,
 				FA5A64911731E60B000D703D /* Squiggle.m in Sources */,
 				FA5A64951731E60B000D703D /* User.m in Sources */,
-				FA5A64991731E60B000D703D /* GameEntry.m in Sources */,
 				FA96AB131732354D008676EC /* MainView.m in Sources */,
 				FA96AB151732354D008676EC /* MainViewController.m in Sources */,
 				FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */,
+				FA44B405173743D6006295C2 /* GameEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2AF5481703FD91004E785E /* StoryBoardTest1Tests.m in Sources */,
-				FA2AF560170401A1004E785E /* Tab2ViewController.m in Sources */,
+				FA2AF560170401A1004E785E /* GameViewController.m in Sources */,
 				FAD8BFD41708EEF1002BAF35 /* UserDataManager.m in Sources */,
 				FA1880E4170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */,
 				FAE2F3741712753B0006F499 /* UserCell.m in Sources */,
@@ -475,10 +489,8 @@
 				FA5A648E1731E60B000D703D /* SquigglePoint.m in Sources */,
 				FA5A64921731E60B000D703D /* Squiggle.m in Sources */,
 				FA5A64961731E60B000D703D /* User.m in Sources */,
-				FA5A649A1731E60B000D703D /* GameEntry.m in Sources */,
-				FA96AB141732354D008676EC /* MainView.m in Sources */,
-				FA96AB161732354D008676EC /* MainViewController.m in Sources */,
 				FA44B3FB1735DDDD006295C2 /* EPYCTabsController.m in Sources */,
+				FA44B406173743D6006295C2 /* GameEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

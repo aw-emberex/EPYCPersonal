@@ -15,6 +15,10 @@
 
 @synthesize color;
 @synthesize lineWidth;
+@synthesize squiggles;
+@synthesize finishedSquiggles;
+@synthesize drawingViewDelegate;
+@synthesize previousSquiggles;
 
 - (id) initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -40,12 +44,22 @@
   return self;
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+- (void)updateSquigglesAndRedraw: (NSMutableArray*) someSquiggles {
+//    [someSquiggles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//        Squiggle* squiggle = (Squiggle*)obj;
+//    }];
+    [finishedSquiggles addObjectsFromArray:someSquiggles];
+    CGRect blah;
+    [self drawRect:blah];
+}
+
 - (void)drawRect:(CGRect)rect {
-  // Drawing code.
-  CGContextRef context = UIGraphicsGetCurrentContext();    
-    NSLog(@"%@ %@", squiggles, finishedSquiggles);
+  CGContextRef context = UIGraphicsGetCurrentContext();
+
+    for (Squiggle *squiggle in previousSquiggles) {
+        [self drawSquiggle:squiggle inContext:context];
+    }
+    
     for (Squiggle *squiggle in finishedSquiggles) {
         [self drawSquiggle:squiggle inContext:context];
     }
@@ -59,7 +73,6 @@
 
 // draws the given squiggle into the given context
 - (void)drawSquiggle:(Squiggle*)someSquiggle inContext:(CGContextRef)context {
-  // set the drawing color to the squiggle's color
     UIColor *squiggleColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];//squiggle.strokeColor;
     CGColorRef	colorRef = [squiggleColor CGColor];	// get the CGColor
     CGContextSetStrokeColorWithColor(context, colorRef);
@@ -67,7 +80,6 @@
     // set the line width to the squiggle's line width
     CGContextSetLineWidth(context, 3);
    
-    // move to the point
     CGPoint firstPoint;
     SquigglePoint* firstSquigglePoint = [[someSquiggle points] objectAtIndex:0];
     firstPoint.x = [firstSquigglePoint.xPoint floatValue];
@@ -75,7 +87,6 @@
     
     CGContextMoveToPoint(context, firstPoint.x, firstPoint.y);
   
-    // draw a line from each point to the next in order
     [someSquiggle.points enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         SquigglePoint* value = (SquigglePoint*)obj;
         CGPoint point;	// declare a new point
@@ -108,9 +119,9 @@
 }
 //// clear the painting if the user touched the "Clear" button
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-  // if the user touched the Clear button
-  if (buttonIndex ==1 )
-    [self resetView];	// clear the screen
+    if (buttonIndex ==1 ) {
+        [self resetView];
+    }
 }
 
 // determines if this view can become the first responder
@@ -127,18 +138,17 @@
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Screen?" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Clear", nil];
     [alert show];
-  }// end if
+  }
   [super motionEnded:motion withEvent:event];
-} // end method
+}
 
 // called whenever the user places a finger on the screen
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   NSArray *array = [ touches allObjects];	// get all the new touches
-  // loop through each new touch
   for (UITouch *touch in array ) {
-    // create and configure a new squiggle
-      Squiggle *squiggle = [gameManager createNewSquiggle];
-
+    Squiggle *squiggle = [gameManager createNewSquiggle];
+    [self.drawingViewDelegate createdNewSquiggle:squiggle];
+      
     CGPoint currentPoint = [touch locationInView:self];
       [squiggle addCGPoint:currentPoint];
     // the key for each touch is the value of the pointer
@@ -159,8 +169,8 @@
   for (UITouch *touch in array) {
     // get the unique key for this touch
     
-      NSValue *touchValue2 = [NSValue valueWithPointer:CFBridgingRetain(touch)];
-    NSString *key2 = [NSString stringWithFormat:@"%@", touchValue2];
+    NSValue *touchValue = [NSValue valueWithPointer:CFBridgingRetain(touch)];
+    NSString *key2 = [NSString stringWithFormat:@"%@", touchValue];
     // fetch the squiggle this touch should be added to using the key
     Squiggle *squiggle = [squiggles valueForKey:key2];
     
@@ -168,8 +178,6 @@
     CGPoint current = [touch locationInView:self];
     CGPoint previous = [touch previousLocationInView:self];
     [squiggle addCGPoint:current];	// add the new point to the squiggle
-      
-    //finishedSquiggles addObject:[NSValue]
     
     // screen needs to be redrawn
     CGPoint lower, higher;

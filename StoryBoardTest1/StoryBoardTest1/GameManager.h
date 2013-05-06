@@ -20,7 +20,7 @@
 
 +(GameManager*) getInstance;
 -(NSOrderedSet*)getGameEntries;
--(GameEntry*)createNewGameEntry;
+-(GameEntry*)requestLatestGameEntry;
 -(Squiggle*)createNewSquiggle;
 -(void)deleteAllGameData;
 -(void)saveContext;

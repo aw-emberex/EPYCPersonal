@@ -14,13 +14,58 @@
 
 #pragma mark - UIViewController
 
+static EPYCAppDelegate* _appDelegate = nil;
+
+
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
   return (toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+-(IBAction)cancelledDrawing:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"Dismissed!");
+        [self cancelledDrawing];
+    }];
+}
+
+-(IBAction)wantsToSaveDrawing:(id)sender {
+    GameManager* manager = [GameManager getInstance];
+    GameEntry* newestEntry = [manager requestLatestGameEntry];
+    [createdSquiggles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        Squiggle* currentSquiggle = (Squiggle*)obj;
+        currentSquiggle.owningGameEntry = newestEntry;
+        NSLog(@"saving......%@", currentSquiggle);
+
+    }];
+    [manager saveContext];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)createdNewSquiggle:(Squiggle *)squiggle {
+    NSLog(@"created %@", squiggle);
+    [createdSquiggles addObject:squiggle];
+}
+
+-(void)cancelledDrawing {
+    [createdSquiggles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        Squiggle* squiggle = (Squiggle*)obj;
+        NSLog(@"deleting %@", squiggle);
+        [_appDelegate.managedObjectContext deleteObject:squiggle];
+    }];
+    GameManager* manager = [GameManager getInstance];
+    [manager saveContext];
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-  [super viewDidLoad];	
+  [super viewDidLoad];
+    _appDelegate = (EPYCAppDelegate *)[[UIApplication sharedApplication] delegate];
+    createdSquiggles = [[NSMutableArray alloc] init];
+    self.mainView.drawingViewDelegate = self;
+    GameEntry* latestGameEntry = [[GameManager getInstance] requestLatestGameEntry]; //get from game manager
+    NSLog(@"Latest Game Entry! %@", latestGameEntry);
+    NSArray* savedSquiggles = [[latestGameEntry squiggles] array];
+    [self.mainView setPreviousSquiggles:savedSquiggles];
 }
 
 - (void)didReceiveMemoryWarning {

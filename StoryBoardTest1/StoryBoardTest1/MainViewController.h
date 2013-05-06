@@ -18,11 +18,16 @@
 
 //#import "FlipsideViewController.h"
 #import "Squiggle.h"
+#import "EPYCDrawingViewDelegate.h"
+#import "MainView.h"
 
-@interface MainViewController : UIViewController {
-	
+@interface MainViewController : UIViewController <EPYCDrawingViewDelegate> {
+	NSMutableArray* createdSquiggles;
 }
 
-- (IBAction)showInfo:(id)sender;
+-(IBAction)showInfo:(id)sender;
+-(IBAction)cancelledDrawing:(id)sender;
+-(IBAction)wantsToSaveDrawing:(id)sender;
+@property (strong, nonatomic) IBOutlet MainView *mainView;
 
 @end

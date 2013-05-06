@@ -2,7 +2,7 @@
 //  GameEntry.m
 //  EPYCPersonal
 //
-//  Created by Alex Wait on 5/1/13.
+//  Created by Alex Wait on 5/5/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
@@ -15,6 +15,6 @@
 
 @dynamic phraseText;
 @dynamic owningGameData;
-@dynamic squiggle;
+@dynamic squiggles;
 
 @end

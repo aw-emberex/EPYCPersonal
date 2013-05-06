@@ -51,7 +51,7 @@ static EPYCAppDelegate* _appDelegate = nil;
     GameData* gameData = [manager getMainGameData];
     STAssertNotNil(gameData, @"should have game data");
     STAssertEquals([[gameData gameEntries] count], 0U, @"shouldn't be any game entries");
-    STAssertNotNil([manager createNewGameEntry], @"new entry should be valid");
+    STAssertNotNil([manager requestLatestGameEntry], @"new entry should be valid");
     gameData = [manager mainGameDataInstance];
     NSLog(@"AAAAAA %@", [gameData gameEntries]);
     STAssertEquals([(NSOrderedSet*)[gameData gameEntries] count], 1U, @"shouldn't be any game entries");
@@ -62,13 +62,13 @@ static EPYCAppDelegate* _appDelegate = nil;
     CGPoint testCGPoint;
     testCGPoint.x = 123;
     testCGPoint.y = 456;
-    [[newEntry squiggle] addCGPoint:testCGPoint];
+    [[[newEntry squiggles] objectAtIndex:0] addCGPoint:testCGPoint];
     
     
     //get game data again
     GameData* gameData2 = [manager getMainGameData];
     GameEntry* newEntry2 = (GameEntry*)[(NSOrderedSet*)[gameData2 gameEntries] objectAtIndex:0];
-    Squiggle* someSquiggle = (Squiggle*)newEntry2.squiggle;
+    Squiggle* someSquiggle = [[newEntry2 squiggles] objectAtIndex:0];
     NSOrderedSet* pointsSet = [someSquiggle points];
     STAssertEquals([pointsSet count], 1U, @"New Squiggle should have one point!");
     SquigglePoint* firstPoint = (SquigglePoint*)[pointsSet objectAtIndex:0U];

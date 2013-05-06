@@ -6,13 +6,14 @@
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
-#import "Tab2ViewController.h"
+#import "GameViewController.h"
+#import "MainViewController.h"
 
-@interface Tab2ViewController ()
+@interface GameViewController ()
 
 @end
 
-@implementation Tab2ViewController
+@implementation GameViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +34,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"launchDrawingApp"]) {
+//        UINavigationController* nav = segue.destinationViewController;
+//        MainViewController* segueDestination = [[nav viewControllers] objectAtIndex:0];
+//        [segueDestination setDelegate:self];
+        NSLog(@"SUCCESS");
+    }
 }
 
 @end

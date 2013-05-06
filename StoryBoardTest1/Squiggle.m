@@ -39,4 +39,8 @@
     [newPoint setOwningSquiggle:self];
 }
 
+-(NSString*) description {
+    return [NSString stringWithFormat:@"Points Length: %d, owningGameEntry %@", [self.points count], self.owningGameEntry];
+}
+
 @end

@@ -24,13 +24,19 @@ static GameManager* _instance = nil;
     return _instance;
 }
 
--(GameEntry *)createNewGameEntry {
+-(GameEntry *)requestLatestGameEntry {
+    _currentGameEntry = (GameEntry*)[[self.mainGameDataInstance gameEntries] lastObject];
+    if (!_currentGameEntry) {
+        _currentGameEntry = [self createNewGameEntry];
+    }
+    NSLog(@"Latest Game Entry is %@", _currentGameEntry);
+    NSLog(@"Squiggles %@, %d", _currentGameEntry.squiggles, [_currentGameEntry.squiggles count]);
+    return _currentGameEntry;
+}
+
+-(GameEntry*)createNewGameEntry {
     GameEntry* entry = (GameEntry*)[NSEntityDescription insertNewObjectForEntityForName:@"GameEntry" inManagedObjectContext:managedObjectContent];
     [entry setOwningGameData:_mainGameDataInstance];
-    _currentGameEntry = entry;
-    Squiggle* entrySquiggle = (Squiggle*)[NSEntityDescription insertNewObjectForEntityForName:@"Squiggle" inManagedObjectContext:managedObjectContent];
-    entry.phraseText = @"";
-    entrySquiggle.owningGameEntry = entry;
     return entry;
 }
 
@@ -63,7 +69,10 @@ static GameManager* _instance = nil;
 
 -(void) loadMainGameData {
     NSError* __autoreleasing error;
-    NSArray* result = (NSArray*)[managedObjectContent executeFetchRequest:[NSFetchRequest fetchRequestWithEntityName:@"GameData"] error:&error];
+    NSFetchRequest* fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameData"];
+    [fetch setReturnsObjectsAsFaults:NO];
+
+    NSArray* result = (NSArray*)[managedObjectContent executeFetchRequest:fetch error:&error];
 
     if ([result count] == 0) {
         _mainGameDataInstance = (GameData*)[NSEntityDescription insertNewObjectForEntityForName:@"GameData" inManagedObjectContext:managedObjectContent];
@@ -71,6 +80,8 @@ static GameManager* _instance = nil;
         [self saveContext];
     } else {
         _mainGameDataInstance = [result objectAtIndex:0];
+        NSLog(@"%@", _mainGameDataInstance);
+        NSLog(@"%d", [_mainGameDataInstance.gameEntries count]);
     }
 }
 
