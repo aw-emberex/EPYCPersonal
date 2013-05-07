@@ -20,12 +20,13 @@
 #import "Squiggle.h"
 #import "EPYCDrawingViewDelegate.h"
 #import "MainView.h"
+#import "MBButtonMenuViewController.h"
 
-@interface MainViewController : UIViewController <EPYCDrawingViewDelegate> {
+@interface MainViewController : UIViewController <EPYCDrawingViewDelegate, MBButtonMenuViewControllerDelegate> {
 	NSMutableArray* createdSquiggles;
+    MBButtonMenuViewController* colorsMenu;
 }
 
--(IBAction)showInfo:(id)sender;
 -(IBAction)cancelledDrawing:(id)sender;
 -(IBAction)wantsToSaveDrawing:(id)sender;
 @property (strong, nonatomic) IBOutlet MainView *mainView;

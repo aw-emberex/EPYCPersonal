@@ -66,6 +66,9 @@ static EPYCAppDelegate* _appDelegate = nil;
     NSLog(@"Latest Game Entry! %@", latestGameEntry);
     NSArray* savedSquiggles = [[latestGameEntry squiggles] array];
     [self.mainView setPreviousSquiggles:savedSquiggles];
+    NSArray* colors = @[@"Red", @"Green", @"Blue", @"Black"];
+    colorsMenu = [[MBButtonMenuViewController alloc] initWithButtonTitles:colors];
+    [colorsMenu setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,23 +92,24 @@ static EPYCAppDelegate* _appDelegate = nil;
   // e.g. self.myOutlet = nil;
 }
 
-#pragma mark - Public
-
-- (IBAction)showInfo:(id)sender {    
-  
-//  FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
-//  controller.delegate = self;
-//  
-//  controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-//  [self presentModalViewController:controller animated:YES];
-  
-  // set the sliders on the flipside to the current values in view
- // MainView *view = (MainView *)self.view;
-//  [controller setColor:view.color lineWidth:view.lineWidth];
-//  [controller release];
+-(IBAction)didSelectLineButton:(id)sender {
+    
 }
 
-#pragma mark - FlipsideViewControllerDelegate
+-(IBAction)didSelectColorsButton:(id)sender {
+    [colorsMenu showInView:[self mainView]];
+}
+
+-(void)buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index {
+    NSLog(@"Did click!");
+    [colorsMenu hide];
+}
+
+-(void)buttonMenuViewControllerDidCancel:(MBButtonMenuViewController *)buttonMenu {
+    //do nothing for now! :)
+    [colorsMenu hide];
+}
+
 
 - (void)setColor:(UIColor *)color{
   MainView *view = (MainView *)self.view;
@@ -122,10 +126,5 @@ static EPYCAppDelegate* _appDelegate = nil;
   MainView *view = (MainView *)self.view;
   [view resetView];
 }
-
-//- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
-//  [self dismissModalViewControllerAnimated:YES];
-//}
-
 
 @end
