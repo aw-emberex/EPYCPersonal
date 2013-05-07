@@ -7,7 +7,7 @@
 //
 
 #import "GameViewController.h"
-#import "MainViewController.h"
+#import "DrawingViewController.h"
 
 @interface GameViewController ()
 

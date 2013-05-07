@@ -6,10 +6,10 @@
 //  Copyright Edward 2010. All rights reserved.
 //
 
-#import "MainViewController.h"
-#import "MainView.h"
+#import "DrawingViewController.h"
+#import "DrawingView.h"
 
-@implementation MainViewController
+@implementation DrawingViewController
 
 
 #pragma mark - UIViewController
@@ -150,18 +150,18 @@ static EPYCAppDelegate* _appDelegate = nil;
 
 
 - (void)setColor:(UIColor *)color{
-  MainView *view = (MainView *)self.view;
+  DrawingView *view = (DrawingView *)self.view;
   view.color = color;
 }
 
 - (void)setLineWidth:(float)width {
-  MainView *view = (MainView *)self.view;
+  DrawingView *view = (DrawingView *)self.view;
   [view setLineWidth:width];
   NSLog(@"Line width: %f", view.lineWidth);
 }
 
 - (void)resetView {
-  MainView *view = (MainView *)self.view;
+  DrawingView *view = (DrawingView *)self.view;
   [view resetView];
 }
 

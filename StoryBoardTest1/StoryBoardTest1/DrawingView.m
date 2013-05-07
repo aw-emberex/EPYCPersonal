@@ -8,10 +8,10 @@
 //  Adapted for EPYC by Alex Wait 5/4/2013
 //
 
-#import "MainView.h"
+#import "DrawingView.h"
 
 
-@implementation MainView
+@implementation DrawingView
 
 @synthesize color;
 @synthesize lineWidth;

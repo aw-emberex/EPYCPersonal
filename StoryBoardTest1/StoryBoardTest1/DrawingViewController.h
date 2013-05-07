@@ -1,9 +1,9 @@
 //
-//  MainView.h
+//  MainViewController.h
 //  Painter
 //
-//  Created by Edward Chiang on 2010/12/10.
-//  Copyright 2010 Edward in Action. All rights reserved.
+//  Created by Edward Chiang on 2010/11/20.
+//  Copyright Edward 2010. All rights reserved.
 //
 
 /*
@@ -16,30 +16,20 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
+//#import "FlipsideViewController.h"
 #import "Squiggle.h"
-#import "GameManager.h"
 #import "EPYCDrawingViewDelegate.h"
-#import <AudioToolbox/AudioToolbox.h>
-#import <AVFoundation/AVFoundation.h>
+#import "DrawingView.h"
+#import "MBButtonMenuViewController.h"
 
-@interface MainView : UIView {
-    UIColor *color;		// the current drawing color
-    float lineWidth;	// the current drawing line width
-    GameManager* gameManager;
-    AVAudioPlayer* shakePlayer;
+@interface DrawingViewController : UIViewController <EPYCDrawingViewDelegate, MBButtonMenuViewControllerDelegate> {
+	NSMutableArray* createdSquiggles;
+    MBButtonMenuViewController* colorsMenu;
+    MBButtonMenuViewController* lineWidthMenu;
 }
 
-// declare color and linewidth as properties
-@property (nonatomic, retain) UIColor *color;
-@property (nonatomic, retain) NSMutableDictionary *squiggles;
-@property (nonatomic, retain) NSMutableArray *finishedSquiggles;
-@property (nonatomic, retain) NSArray* previousSquiggles;
-@property (nonatomic, retain) id <EPYCDrawingViewDelegate> drawingViewDelegate;
-@property float lineWidth;
-
-// draw the given Squiggle into the given graphics context
-- (void)drawSquiggle:(Squiggle*)points inContext:(CGContextRef)context;
-- (void)resetView;	// clear all squiggles from the view
+-(IBAction)cancelledDrawing:(id)sender;
+-(IBAction)wantsToSaveDrawing:(id)sender;
+@property (strong, nonatomic) IBOutlet DrawingView *mainView;
 
 @end

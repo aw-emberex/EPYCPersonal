@@ -59,8 +59,8 @@
 		FA69661B172E3B9100DB01E9 /* star.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FA696615172E3B9100DB01E9 /* star.jpeg */; };
 		FA696646172E40DD00DB01E9 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA696644172E40DD00DB01E9 /* GameManager.m */; };
 		FA696647172E40DD00DB01E9 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA696644172E40DD00DB01E9 /* GameManager.m */; };
-		FA96AB131732354D008676EC /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96AB0F1732354C008676EC /* MainView.m */; };
-		FA96AB151732354D008676EC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96AB121732354C008676EC /* MainViewController.m */; };
+		FA96AB131732354D008676EC /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96AB0F1732354C008676EC /* DrawingView.m */; };
+		FA96AB151732354D008676EC /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96AB121732354C008676EC /* DrawingViewController.m */; };
 		FAD8BFD31708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAD8BFD41708EEF1002BAF35 /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */; };
 		FAE2F3731712753B0006F499 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE2F3721712753B0006F499 /* UserCell.m */; };
@@ -141,10 +141,10 @@
 		FA696615172E3B9100DB01E9 /* star.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = star.jpeg; sourceTree = "<group>"; };
 		FA696644172E40DD00DB01E9 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameManager.m; sourceTree = "<group>"; };
 		FA696645172E40DD00DB01E9 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameManager.h; sourceTree = "<group>"; };
-		FA96AB0F1732354C008676EC /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
-		FA96AB101732354C008676EC /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
-		FA96AB111732354C008676EC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		FA96AB121732354C008676EC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FA96AB0F1732354C008676EC /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		FA96AB101732354C008676EC /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		FA96AB111732354C008676EC /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
+		FA96AB121732354C008676EC /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
 		FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataManager.h; path = ../UserDataManager.h; sourceTree = "<group>"; };
 		FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataManager.m; path = ../UserDataManager.m; sourceTree = "<group>"; };
 		FAE2F3711712753B0006F499 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
@@ -327,10 +327,10 @@
 		FA96AB0E1732276C008676EC /* PainterImports */ = {
 			isa = PBXGroup;
 			children = (
-				FA96AB0F1732354C008676EC /* MainView.m */,
-				FA96AB101732354C008676EC /* MainView.h */,
-				FA96AB111732354C008676EC /* MainViewController.h */,
-				FA96AB121732354C008676EC /* MainViewController.m */,
+				FA96AB0F1732354C008676EC /* DrawingView.m */,
+				FA96AB101732354C008676EC /* DrawingView.h */,
+				FA96AB111732354C008676EC /* DrawingViewController.h */,
+				FA96AB121732354C008676EC /* DrawingViewController.m */,
 			);
 			name = PainterImports;
 			sourceTree = "<group>";
@@ -482,8 +482,8 @@
 				FA5A64891731E60B000D703D /* GameData.m in Sources */,
 				FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */,
 				FA5A64951731E60B000D703D /* User.m in Sources */,
-				FA96AB131732354D008676EC /* MainView.m in Sources */,
-				FA96AB151732354D008676EC /* MainViewController.m in Sources */,
+				FA96AB131732354D008676EC /* DrawingView.m in Sources */,
+				FA96AB151732354D008676EC /* DrawingViewController.m in Sources */,
 				FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */,
 				FA44B405173743D6006295C2 /* GameEntry.m in Sources */,
 				FA37830E1738B273007E78E7 /* MBButtonMenuViewController.m in Sources */,
