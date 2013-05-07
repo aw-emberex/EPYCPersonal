@@ -51,6 +51,13 @@
 -(void) setLineColor: (UIColor*) color {
     CGFloat blue, red, green, alpha; //not using alpha atm
     [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    self.colorRed = [NSNumber numberWithFloat:red];
+    self.colorBlue = [NSNumber numberWithFloat:blue];
+    self.colorGreen = [NSNumber numberWithFloat:green];
+}
+
+-(UIColor*)getSquiggleColor {
+    return [UIColor colorWithRed:[self.colorRed floatValue] green:[self.colorGreen floatValue] blue:[self.colorBlue floatValue] alpha:1];
 }
 
 @end

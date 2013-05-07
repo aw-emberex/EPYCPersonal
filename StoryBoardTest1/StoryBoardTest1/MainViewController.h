@@ -25,6 +25,7 @@
 @interface MainViewController : UIViewController <EPYCDrawingViewDelegate, MBButtonMenuViewControllerDelegate> {
 	NSMutableArray* createdSquiggles;
     MBButtonMenuViewController* colorsMenu;
+    MBButtonMenuViewController* lineWidthMenu;
 }
 
 -(IBAction)cancelledDrawing:(id)sender;

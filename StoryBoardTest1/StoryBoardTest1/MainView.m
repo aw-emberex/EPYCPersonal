@@ -49,15 +49,6 @@
   return self;
 }
 
-- (void)updateSquigglesAndRedraw: (NSMutableArray*) someSquiggles {
-//    [someSquiggles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//        Squiggle* squiggle = (Squiggle*)obj;
-//    }];
-    [finishedSquiggles addObjectsFromArray:someSquiggles];
-    CGRect blah;
-    [self drawRect:blah];
-}
-
 - (void)drawRect:(CGRect)rect {
   CGContextRef context = UIGraphicsGetCurrentContext();
 
@@ -78,12 +69,12 @@
 
 // draws the given squiggle into the given context
 - (void)drawSquiggle:(Squiggle*)someSquiggle inContext:(CGContextRef)context {
-    UIColor *squiggleColor = self.color;
+    UIColor *squiggleColor = [someSquiggle getSquiggleColor];
     CGColorRef	colorRef = [squiggleColor CGColor];	// get the CGColor
     CGContextSetStrokeColorWithColor(context, colorRef);
   
     // set the line width to the squiggle's line width
-    CGContextSetLineWidth(context, 3);
+    CGContextSetLineWidth(context, [[someSquiggle lineWidth] floatValue]);
    
     CGPoint firstPoint;
     SquigglePoint* firstSquigglePoint = [[someSquiggle points] objectAtIndex:0];
@@ -166,6 +157,8 @@
   for (UITouch *touch in array ) {
     Squiggle *squiggle = [gameManager createNewSquiggle];
     [self.drawingViewDelegate createdNewSquiggle:squiggle];
+    [squiggle setLineColor:self.color];
+    [squiggle setLineWidth:[NSNumber numberWithFloat:self.lineWidth]];
       
     CGPoint currentPoint = [touch locationInView:self];
       [squiggle addCGPoint:currentPoint];

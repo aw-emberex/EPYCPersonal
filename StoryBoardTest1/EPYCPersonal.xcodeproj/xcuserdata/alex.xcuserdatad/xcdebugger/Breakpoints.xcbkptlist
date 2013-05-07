@@ -125,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoryBoardTest1/MainViewController.m"
-         timestampString = "389592762.096522"
+         timestampString = "389598717.117922"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "102"
+         endingLineNumber = "102"
          landmarkName = "-didSelectColorsButton:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -144,19 +144,6 @@
          startingLineNumber = "78"
          endingLineNumber = "78"
          landmarkName = "-loadMainGameData"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "StoryBoardTest1/MainViewController.m"
-         timestampString = "389593286.037622"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
-         landmarkName = "-buttonMenuViewController:buttonTappedAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -41,6 +41,5 @@
 // draw the given Squiggle into the given graphics context
 - (void)drawSquiggle:(Squiggle*)points inContext:(CGContextRef)context;
 - (void)resetView;	// clear all squiggles from the view
-- (void)updateSquigglesAndRedraw: (NSMutableArray*) someSquiggles;
 
 @end

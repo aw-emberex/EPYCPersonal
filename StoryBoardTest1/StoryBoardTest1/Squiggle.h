@@ -37,5 +37,6 @@
 //custom methods
 -(void)addCGPoints: (NSArray*) points;
 -(void)addCGPoint: (CGPoint) point;
--(void) setLineColor: (UIColor*) color;
+-(void)setLineColor: (UIColor*) color;
+-(UIColor*)getSquiggleColor;
 @end

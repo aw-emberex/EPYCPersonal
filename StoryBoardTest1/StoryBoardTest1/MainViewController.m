@@ -68,7 +68,10 @@ static EPYCAppDelegate* _appDelegate = nil;
     [self.mainView setPreviousSquiggles:savedSquiggles];
     NSArray* colors = @[@"Red", @"Green", @"Blue", @"Black"];
     colorsMenu = [[MBButtonMenuViewController alloc] initWithButtonTitles:colors];
+    NSArray* lineWidths = @[@"2", @"3", @"5", @"7", @"8"];
+    lineWidthMenu = [[MBButtonMenuViewController alloc] initWithButtonTitles:lineWidths];
     [colorsMenu setDelegate:self];
+    [lineWidthMenu setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,7 +96,7 @@ static EPYCAppDelegate* _appDelegate = nil;
 }
 
 -(IBAction)didSelectLineButton:(id)sender {
-    
+    [lineWidthMenu showInView:[self mainView]];
 }
 
 -(IBAction)didSelectColorsButton:(id)sender {
@@ -102,24 +105,47 @@ static EPYCAppDelegate* _appDelegate = nil;
 
 -(void)buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index {
     NSLog(@"Did click!");
-    [colorsMenu hide];
-    if (index == 0U) {
-        [self setColor:[UIColor colorWithRed:255 green:0 blue:0 alpha:1] ];
-    }
-    else if (index == 1U) {
-        [self setColor:[UIColor colorWithRed:0 green:255 blue:0 alpha:1] ];
-    }
-    else if (index == 2U) {
-        [self setColor:[UIColor colorWithRed:0 green:0 blue:255 alpha:1] ];
-    }
-    else if (index == 3U) {
-        [self setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1] ];
+    if (buttonMenu == colorsMenu) {        
+        [colorsMenu hide];
+        if (index == 0U) {
+            [self setColor:[UIColor colorWithRed:255 green:0 blue:0 alpha:1] ];
+        }
+        else if (index == 1U) {
+            [self setColor:[UIColor colorWithRed:0 green:255 blue:0 alpha:1] ];
+        }
+        else if (index == 2U) {
+            [self setColor:[UIColor colorWithRed:0 green:0 blue:255 alpha:1] ];
+        }
+        else if (index == 3U) {
+            [self setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1] ];
+        }
+    } else if (buttonMenu == lineWidthMenu) {
+        //NSArray* lineWidths = @[@"2", @"3", @"5", @"7", @"8"];
+        [lineWidthMenu hide];
+        switch (index) {
+            case 0:
+                [self setLineWidth:2];
+                break;
+            case 1:
+                [self setLineWidth:3];
+                break;
+            case 2:
+                [self setLineWidth:5];
+                break;
+            case 3:
+                [self setLineWidth:7];
+                break;
+            case 4:
+                [self setLineWidth:8];
+                break;
+        }
     }
 }
 
 -(void)buttonMenuViewControllerDidCancel:(MBButtonMenuViewController *)buttonMenu {
     //do nothing for now! :)
     [colorsMenu hide];
+    [lineWidthMenu hide];
 }
 
 
