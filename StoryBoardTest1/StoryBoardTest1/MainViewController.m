@@ -103,6 +103,18 @@ static EPYCAppDelegate* _appDelegate = nil;
 -(void)buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index {
     NSLog(@"Did click!");
     [colorsMenu hide];
+    if (index == 0U) {
+        [self setColor:[UIColor colorWithRed:255 green:0 blue:0 alpha:1] ];
+    }
+    else if (index == 1U) {
+        [self setColor:[UIColor colorWithRed:0 green:255 blue:0 alpha:1] ];
+    }
+    else if (index == 2U) {
+        [self setColor:[UIColor colorWithRed:0 green:0 blue:255 alpha:1] ];
+    }
+    else if (index == 3U) {
+        [self setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1] ];
+    }
 }
 
 -(void)buttonMenuViewControllerDidCancel:(MBButtonMenuViewController *)buttonMenu {

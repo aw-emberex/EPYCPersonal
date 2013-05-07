@@ -34,6 +34,7 @@
 		FA3783061738A0A1007E78E7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3783051738A0A1007E78E7 /* AudioToolbox.framework */; };
 		FA3783081738A0D5007E78E7 /* shakeSoundShort1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA3783071738A0D5007E78E7 /* shakeSoundShort1.mp3 */; };
 		FA37830E1738B273007E78E7 /* MBButtonMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37830D1738B273007E78E7 /* MBButtonMenuViewController.m */; };
+		FA3783111738BA4A007E78E7 /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3783101738BA4A007E78E7 /* Squiggle.m */; };
 		FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */; };
@@ -48,8 +49,6 @@
 		FA5A648A1731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A648C1731E60B000D703D /* SquigglePoint.m */; };
 		FA5A648E1731E60B000D703D /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A648C1731E60B000D703D /* SquigglePoint.m */; };
-		FA5A64911731E60B000D703D /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64901731E60B000D703D /* Squiggle.m */; };
-		FA5A64921731E60B000D703D /* Squiggle.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64901731E60B000D703D /* Squiggle.m */; };
 		FA5A64951731E60B000D703D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64941731E60B000D703D /* User.m */; };
 		FA5A64961731E60B000D703D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64941731E60B000D703D /* User.m */; };
 		FA696616172E3B9100DB01E9 /* 63-runner.png in Resources */ = {isa = PBXBuildFile; fileRef = FA696613172E3B9100DB01E9 /* 63-runner.png */; };
@@ -117,6 +116,8 @@
 		FA3783071738A0D5007E78E7 /* shakeSoundShort1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = shakeSoundShort1.mp3; path = ../shakeSoundShort1.mp3; sourceTree = "<group>"; };
 		FA37830C1738B273007E78E7 /* MBButtonMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBButtonMenuViewController.h; sourceTree = "<group>"; };
 		FA37830D1738B273007E78E7 /* MBButtonMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBButtonMenuViewController.m; sourceTree = "<group>"; };
+		FA37830F1738BA4A007E78E7 /* Squiggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Squiggle.h; sourceTree = "<group>"; };
+		FA3783101738BA4A007E78E7 /* Squiggle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Squiggle.m; sourceTree = "<group>"; };
 		FA386B61171E6E0600E5129A /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		FA386B62171E6E0600E5129A /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewDelegate.h; sourceTree = "<group>"; };
@@ -133,8 +134,6 @@
 		FA5A64881731E60B000D703D /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameData.m; path = ../GameData.m; sourceTree = "<group>"; };
 		FA5A648B1731E60B000D703D /* SquigglePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquigglePoint.h; path = ../SquigglePoint.h; sourceTree = "<group>"; };
 		FA5A648C1731E60B000D703D /* SquigglePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SquigglePoint.m; path = ../SquigglePoint.m; sourceTree = "<group>"; };
-		FA5A648F1731E60B000D703D /* Squiggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Squiggle.h; path = ../Squiggle.h; sourceTree = "<group>"; };
-		FA5A64901731E60B000D703D /* Squiggle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Squiggle.m; path = ../Squiggle.m; sourceTree = "<group>"; };
 		FA5A64931731E60B000D703D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		FA5A64941731E60B000D703D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		FA696613172E3B9100DB01E9 /* 63-runner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "63-runner.png"; path = "Images/63-runner.png"; sourceTree = "<group>"; };
@@ -292,12 +291,12 @@
 		FA3A0D8D172DD2C000643888 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				FA37830F1738BA4A007E78E7 /* Squiggle.h */,
+				FA3783101738BA4A007E78E7 /* Squiggle.m */,
 				FA44B403173743D6006295C2 /* GameEntry.h */,
 				FA44B404173743D6006295C2 /* GameEntry.m */,
 				FA5A64931731E60B000D703D /* User.h */,
 				FA5A64941731E60B000D703D /* User.m */,
-				FA5A648F1731E60B000D703D /* Squiggle.h */,
-				FA5A64901731E60B000D703D /* Squiggle.m */,
 				FA5A648B1731E60B000D703D /* SquigglePoint.h */,
 				FA5A648C1731E60B000D703D /* SquigglePoint.m */,
 				FA5A64871731E60B000D703D /* GameData.h */,
@@ -482,13 +481,13 @@
 				FA696646172E40DD00DB01E9 /* GameManager.m in Sources */,
 				FA5A64891731E60B000D703D /* GameData.m in Sources */,
 				FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */,
-				FA5A64911731E60B000D703D /* Squiggle.m in Sources */,
 				FA5A64951731E60B000D703D /* User.m in Sources */,
 				FA96AB131732354D008676EC /* MainView.m in Sources */,
 				FA96AB151732354D008676EC /* MainViewController.m in Sources */,
 				FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */,
 				FA44B405173743D6006295C2 /* GameEntry.m in Sources */,
 				FA37830E1738B273007E78E7 /* MBButtonMenuViewController.m in Sources */,
+				FA3783111738BA4A007E78E7 /* Squiggle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +505,6 @@
 				FA696647172E40DD00DB01E9 /* GameManager.m in Sources */,
 				FA5A648A1731E60B000D703D /* GameData.m in Sources */,
 				FA5A648E1731E60B000D703D /* SquigglePoint.m in Sources */,
-				FA5A64921731E60B000D703D /* Squiggle.m in Sources */,
 				FA5A64961731E60B000D703D /* User.m in Sources */,
 				FA44B3FB1735DDDD006295C2 /* EPYCTabsController.m in Sources */,
 				FA44B406173743D6006295C2 /* GameEntry.m in Sources */,

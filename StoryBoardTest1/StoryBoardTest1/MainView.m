@@ -78,7 +78,7 @@
 
 // draws the given squiggle into the given context
 - (void)drawSquiggle:(Squiggle*)someSquiggle inContext:(CGContextRef)context {
-    UIColor *squiggleColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];//squiggle.strokeColor;
+    UIColor *squiggleColor = self.color;
     CGColorRef	colorRef = [squiggleColor CGColor];	// get the CGColor
     CGContextSetStrokeColorWithColor(context, colorRef);
   

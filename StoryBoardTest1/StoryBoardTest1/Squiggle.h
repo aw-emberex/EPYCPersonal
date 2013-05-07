@@ -2,7 +2,7 @@
 //  Squiggle.h
 //  EPYCPersonal
 //
-//  Created by Alex Wait on 5/1/13.
+//  Created by Alex Wait on 5/6/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
@@ -14,6 +14,9 @@
 @interface Squiggle : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * lineWidth;
+@property (nonatomic, retain) NSNumber * colorRed;
+@property (nonatomic, retain) NSNumber * colorGreen;
+@property (nonatomic, retain) NSNumber * colorBlue;
 @property (nonatomic, retain) GameEntry *owningGameEntry;
 @property (nonatomic, retain) NSOrderedSet *points;
 @end
@@ -34,4 +37,5 @@
 //custom methods
 -(void)addCGPoints: (NSArray*) points;
 -(void)addCGPoint: (CGPoint) point;
+-(void) setLineColor: (UIColor*) color;
 @end
