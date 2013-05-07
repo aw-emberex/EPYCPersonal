@@ -30,6 +30,11 @@
         lineWidth = 5;
         gameManager = [GameManager getInstance];
         [self setMultipleTouchEnabled:YES];
+        NSString* shakeSoundPath = [NSString stringWithFormat:@"%@/shakeSoundShort1.mp3", [[NSBundle mainBundle] resourcePath]];
+        NSURL* url = [NSURL fileURLWithPath:shakeSoundPath];
+        shakePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        [shakePlayer setNumberOfLoops:-1];
+        [shakePlayer prepareToPlay];
     }
     return self;
 }
@@ -129,12 +134,25 @@
   return YES;
 }
 
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (event.subtype == UIEventSubtypeMotionShake) {
+        NSLog(@"started!");
+        [shakePlayer play];
+    }
+}
+
+-(void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    [shakePlayer stop];
+}
+
 //// called when a motion event, such as a shake, ends
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
   // if a shake event ended
+    NSLog(@"ended!");
   if (event.subtype == UIEventSubtypeMotionShake){
     // create an alert prompting the user about clearing the painting
     NSString *message = @"Are you sure you want to clear the screen?";
+      [shakePlayer stop];
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Screen?" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Clear", nil];
     [alert show];

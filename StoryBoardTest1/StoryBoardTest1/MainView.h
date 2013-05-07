@@ -20,11 +20,14 @@
 #import "Squiggle.h"
 #import "GameManager.h"
 #import "EPYCDrawingViewDelegate.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface MainView : UIView {
     UIColor *color;		// the current drawing color
     float lineWidth;	// the current drawing line width
     GameManager* gameManager;
+    AVAudioPlayer* shakePlayer;
 }
 
 // declare color and linewidth as properties

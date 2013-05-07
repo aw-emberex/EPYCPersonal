@@ -30,6 +30,9 @@
 		FA2AF5531703FEDB004E785E /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF5521703FEDB004E785E /* UsersViewController.m */; };
 		FA2AF55F170401A1004E785E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* GameViewController.m */; };
 		FA2AF560170401A1004E785E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF55E170401A1004E785E /* GameViewController.m */; };
+		FA3783041738A09B007E78E7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3783031738A09B007E78E7 /* AVFoundation.framework */; };
+		FA3783061738A0A1007E78E7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3783051738A0A1007E78E7 /* AudioToolbox.framework */; };
+		FA3783081738A0D5007E78E7 /* shakeSoundShort1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA3783071738A0D5007E78E7 /* shakeSoundShort1.mp3 */; };
 		FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */; };
@@ -108,6 +111,9 @@
 		FA2AF5521703FEDB004E785E /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 		FA2AF55D170401A1004E785E /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		FA2AF55E170401A1004E785E /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		FA3783031738A09B007E78E7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FA3783051738A0A1007E78E7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FA3783071738A0D5007E78E7 /* shakeSoundShort1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = shakeSoundShort1.mp3; path = ../shakeSoundShort1.mp3; sourceTree = "<group>"; };
 		FA386B61171E6E0600E5129A /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		FA386B62171E6E0600E5129A /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3783061738A0A1007E78E7 /* AudioToolbox.framework in Frameworks */,
+				FA3783041738A09B007E78E7 /* AVFoundation.framework in Frameworks */,
 				FA05BFB31708DA8900F6B7CA /* CoreData.framework in Frameworks */,
 				FA2AF5171703FD91004E785E /* UIKit.framework in Frameworks */,
 				FA2AF5191703FD91004E785E /* Foundation.framework in Frameworks */,
@@ -194,6 +202,8 @@
 		FA2AF5151703FD91004E785E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA3783051738A0A1007E78E7 /* AudioToolbox.framework */,
+				FA3783031738A09B007E78E7 /* AVFoundation.framework */,
 				FA05BFB11708D97C00F6B7CA /* CoreData.framework */,
 				FA2AF5161703FD91004E785E /* UIKit.framework */,
 				FA2AF5181703FD91004E785E /* Foundation.framework */,
@@ -206,6 +216,7 @@
 		FA2AF51C1703FD91004E785E /* StoryBoardTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				FA3783071738A0D5007E78E7 /* shakeSoundShort1.mp3 */,
 				FA96AB0E1732276C008676EC /* PainterImports */,
 				FA3A0D8E172DD2E600643888 /* View Controllers */,
 				FA3A0D8D172DD2C000643888 /* ManagedObjects */,
@@ -413,6 +424,7 @@
 				FA44B3FD1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */,
 				FA44B400173741BE006295C2 /* EPYCbig.png in Resources */,
 				FA44B402173741C3006295C2 /* epycsmall.png in Resources */,
+				FA3783081738A0D5007E78E7 /* shakeSoundShort1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
