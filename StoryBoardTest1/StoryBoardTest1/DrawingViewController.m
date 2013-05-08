@@ -34,6 +34,9 @@ static EPYCAppDelegate* _appDelegate = nil;
     [createdSquiggles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         Squiggle* currentSquiggle = (Squiggle*)obj;
         currentSquiggle.owningGameEntry = newestEntry;
+        CGRect mainView = [self.mainView frame];
+        [newestEntry setOriginalViewportX:[NSNumber numberWithFloat:mainView.size.width]];
+        [newestEntry setOriginalViewportY:[NSNumber numberWithFloat:mainView.size.height]];
         NSLog(@"saving......%@", currentSquiggle);
 
     }];
@@ -150,18 +153,18 @@ static EPYCAppDelegate* _appDelegate = nil;
 
 
 - (void)setColor:(UIColor *)color{
-  DrawingView *view = (DrawingView *)self.view;
+  DrawingView *view = (DrawingView *)self.mainView;
   view.color = color;
 }
 
 - (void)setLineWidth:(float)width {
-  DrawingView *view = (DrawingView *)self.view;
+  DrawingView *view = (DrawingView *)self.mainView;
   [view setLineWidth:width];
   NSLog(@"Line width: %f", view.lineWidth);
 }
 
 - (void)resetView {
-  DrawingView *view = (DrawingView *)self.view;
+  DrawingView *view = (DrawingView *)self.mainView;
   [view resetView];
 }
 

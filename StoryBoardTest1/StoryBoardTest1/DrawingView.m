@@ -72,6 +72,19 @@
     UIColor *squiggleColor = [someSquiggle getSquiggleColor];
     CGColorRef	colorRef = [squiggleColor CGColor];	// get the CGColor
     CGContextSetStrokeColorWithColor(context, colorRef);
+    
+    float originalWidth = [someSquiggle.owningGameEntry.originalViewportX floatValue];
+    float originalHeight = [someSquiggle.owningGameEntry.originalViewportY floatValue];
+    
+    float currentWidth = self.frame.size.width;
+    float currentHeight = self.frame.size.height;
+    
+    float widthRatio = currentWidth/originalWidth;
+    float heightRatio = currentHeight/originalHeight;
+
+    if (heightRatio == INFINITY) heightRatio = 1;
+    if (widthRatio == INFINITY) widthRatio = 1;
+    
   
     // set the line width to the squiggle's line width
     CGContextSetLineWidth(context, [[someSquiggle lineWidth] floatValue]);
@@ -86,8 +99,8 @@
     [someSquiggle.points enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         SquigglePoint* value = (SquigglePoint*)obj;
         CGPoint point;	// declare a new point
-        point.x = [value.xPoint floatValue];
-        point.y = [value.yPoint floatValue];
+        point.x = [value.xPoint floatValue] * widthRatio;
+        point.y = [value.yPoint floatValue] * heightRatio;
     
         // draw a line to the new point
         CGContextAddLineToPoint(context, point.x, point.y);

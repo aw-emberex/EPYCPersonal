@@ -2,7 +2,7 @@
 //  GameEntry.h
 //  EPYCPersonal
 //
-//  Created by Alex Wait on 5/5/13.
+//  Created by Alex Wait on 5/7/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
@@ -14,6 +14,8 @@
 @interface GameEntry : NSManagedObject
 
 @property (nonatomic, retain) NSString * phraseText;
+@property (nonatomic, retain) NSNumber * originalViewportX;
+@property (nonatomic, retain) NSNumber * originalViewportY;
 @property (nonatomic, retain) GameData *owningGameData;
 @property (nonatomic, retain) NSOrderedSet *squiggles;
 @end

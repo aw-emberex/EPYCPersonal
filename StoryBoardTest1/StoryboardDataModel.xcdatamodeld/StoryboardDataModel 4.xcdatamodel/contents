@@ -4,6 +4,8 @@
         <relationship name="gameEntries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="GameEntry" inverseName="owningGameData" inverseEntity="GameEntry" syncable="YES"/>
     </entity>
     <entity name="GameEntry" representedClassName="GameEntry" syncable="YES">
+        <attribute name="originalViewportX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="originalViewportY" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="phraseText" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="owningGameData" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="GameData" inverseName="gameEntries" inverseEntity="GameData" syncable="YES"/>
         <relationship name="squiggles" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Squiggle" inverseName="owningGameEntry" inverseEntity="Squiggle" syncable="YES"/>
@@ -27,7 +29,7 @@
     </entity>
     <elements>
         <element name="GameData" positionX="160" positionY="192" width="128" height="60"/>
-        <element name="GameEntry" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="GameEntry" positionX="160" positionY="192" width="128" height="120"/>
         <element name="Squiggle" positionX="160" positionY="192" width="128" height="135"/>
         <element name="SquigglePoint" positionX="160" positionY="192" width="128" height="90"/>
         <element name="User" positionX="-558" positionY="9" width="128" height="75"/>
