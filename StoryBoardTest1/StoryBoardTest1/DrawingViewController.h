@@ -21,6 +21,8 @@
 #import "EPYCDrawingViewDelegate.h"
 #import "DrawingView.h"
 #import "MBButtonMenuViewController.h"
+#import "../Tapku/src/TapkuLibrary/TapkuLibrary.h"
+
 
 @interface DrawingViewController : UIViewController <EPYCDrawingViewDelegate, MBButtonMenuViewControllerDelegate> {
 	NSMutableArray* createdSquiggles;

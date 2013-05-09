@@ -108,38 +108,47 @@ static EPYCAppDelegate* _appDelegate = nil;
 
 -(void)buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index {
     NSLog(@"Did click!");
+    
     if (buttonMenu == colorsMenu) {        
         [colorsMenu hide];
         if (index == 0U) {
             [self setColor:[UIColor colorWithRed:255 green:0 blue:0 alpha:1] ];
+            [[TKAlertCenter defaultCenter] postAlertWithMessage:@"You Picked Red"];
         }
         else if (index == 1U) {
             [self setColor:[UIColor colorWithRed:0 green:255 blue:0 alpha:1] ];
+            [[TKAlertCenter defaultCenter] postAlertWithMessage:@"You Picked Green"];
         }
         else if (index == 2U) {
             [self setColor:[UIColor colorWithRed:0 green:0 blue:255 alpha:1] ];
+            [[TKAlertCenter defaultCenter] postAlertWithMessage:@"You Picked Blue"];
         }
         else if (index == 3U) {
             [self setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1] ];
+            [[TKAlertCenter defaultCenter] postAlertWithMessage:@"You Picked Black"];
         }
     } else if (buttonMenu == lineWidthMenu) {
-        //NSArray* lineWidths = @[@"2", @"3", @"5", @"7", @"8"];
         [lineWidthMenu hide];
         switch (index) {
             case 0:
                 [self setLineWidth:2];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Line Thickness 2"];
                 break;
             case 1:
                 [self setLineWidth:3];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Line Thickness 3"];
                 break;
             case 2:
                 [self setLineWidth:5];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Line Thickness 5"];
                 break;
             case 3:
                 [self setLineWidth:7];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Line Thickness 7"];
                 break;
             case 4:
                 [self setLineWidth:8];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:@"Line Thickness 8"];
                 break;
         }
     }
