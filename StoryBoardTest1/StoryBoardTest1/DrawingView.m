@@ -19,6 +19,7 @@
 @synthesize finishedSquiggles;
 @synthesize drawingViewDelegate;
 @synthesize previousSquiggles;
+@synthesize respondsToTouches;
 
 - (id) initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -35,6 +36,7 @@
         shakePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         [shakePlayer setNumberOfLoops:-1];
         [shakePlayer prepareToPlay];
+        self.respondsToTouches = YES;
     }
     return self;
 }
@@ -113,6 +115,7 @@
 
 // called when the user lefts a finger from the screen
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (!self.respondsToTouches) return;
     [touches enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
         UITouch* touch = (UITouch*)obj;
    
@@ -135,7 +138,7 @@
 
 // determines if this view can become the first responder
 - (BOOL)canBecomeFirstResponder { 
-  return YES;
+  return NO;
 }
 
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -153,6 +156,8 @@
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
   // if a shake event ended
     NSLog(@"ended!");
+    if (!self.respondsToTouches) return;
+
   if (event.subtype == UIEventSubtypeMotionShake){
     // create an alert prompting the user about clearing the painting
     NSString *message = @"Are you sure you want to clear the screen?";
@@ -166,6 +171,7 @@
 
 // called whenever the user places a finger on the screen
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (!self.respondsToTouches) return;  
   NSArray *array = [ touches allObjects];	// get all the new touches
   for (UITouch *touch in array ) {
     Squiggle *squiggle = [gameManager createNewSquiggle];
@@ -188,6 +194,7 @@
 
 // called whenever the user drags a finger on the screen
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (!self.respondsToTouches) return;
   NSArray *array = [touches allObjects];	// get all the moved touches
   // loop through all the touches
   for (UITouch *touch in array) {

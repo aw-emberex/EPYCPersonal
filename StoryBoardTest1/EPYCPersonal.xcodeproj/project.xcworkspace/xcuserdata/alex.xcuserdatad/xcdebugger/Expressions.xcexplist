@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[GameManager requestLatestGameEntry]:GameManager.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mainGameDataInstance">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController didSelectColorsButton:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self view]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

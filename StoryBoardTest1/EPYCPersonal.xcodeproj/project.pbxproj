@@ -68,6 +68,10 @@
 		FAE2F377171276060006F499 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE2F376171276060006F499 /* UserCell.xib */; };
 		FAE2F378171276060006F499 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE2F376171276060006F499 /* UserCell.xib */; };
 		FAE333B21723ADAE00FE979D /* DBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE333B11723ADAE00FE979D /* DBTests.m */; };
+		FAF85F9D173B5F4700142EDB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF85F9C173B5F4700142EDB /* QuartzCore.framework */; };
+		FAF85F9F173B5F4E00142EDB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF85F9E173B5F4E00142EDB /* MapKit.framework */; };
+		FAF85FEA173B63ED00142EDB /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAF85FE9173B63ED00142EDB /* TapkuLibrary.bundle */; };
+		FAF85FED173B640D00142EDB /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF85FE6173B63D400142EDB /* libTapkuLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = FA2AF5121703FD91004E785E;
 			remoteInfo = StoryBoardTest1;
+		};
+		FAF85FE5173B63D400142EDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF85FE0173B63D400142EDB /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		FAF85FE7173B63D400142EDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF85FE0173B63D400142EDB /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
+			remoteInfo = LogicTests;
+		};
+		FAF85FEB173B640300142EDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF85FE0173B63D400142EDB /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -152,6 +177,10 @@
 		FAE2F376171276060006F499 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserCell.xib; path = ../UserCell.xib; sourceTree = "<group>"; };
 		FAE333B01723ADAE00FE979D /* DBTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTests.h; sourceTree = "<group>"; };
 		FAE333B11723ADAE00FE979D /* DBTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTests.m; sourceTree = "<group>"; };
+		FAF85F9C173B5F4700142EDB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FAF85F9E173B5F4E00142EDB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FAF85FE0173B63D400142EDB /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = Tapku/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		FAF85FE9173B63ED00142EDB /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = Tapku/src/TapkuLibrary.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +188,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF85FED173B640D00142EDB /* libTapkuLibrary.a in Frameworks */,
+				FAF85F9F173B5F4E00142EDB /* MapKit.framework in Frameworks */,
+				FAF85F9D173B5F4700142EDB /* QuartzCore.framework in Frameworks */,
 				FA3783061738A0A1007E78E7 /* AudioToolbox.framework in Frameworks */,
 				FA3783041738A09B007E78E7 /* AVFoundation.framework in Frameworks */,
 				FA05BFB31708DA8900F6B7CA /* CoreData.framework in Frameworks */,
@@ -204,6 +236,9 @@
 		FA2AF5151703FD91004E785E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAF85FE0173B63D400142EDB /* TapkuLibrary.xcodeproj */,
+				FAF85F9E173B5F4E00142EDB /* MapKit.framework */,
+				FAF85F9C173B5F4700142EDB /* QuartzCore.framework */,
 				FA3783051738A0A1007E78E7 /* AudioToolbox.framework */,
 				FA3783031738A09B007E78E7 /* AVFoundation.framework */,
 				FA05BFB11708D97C00F6B7CA /* CoreData.framework */,
@@ -273,6 +308,7 @@
 		FA2AF5411703FD91004E785E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FAF85FE9173B63ED00142EDB /* TapkuLibrary.bundle */,
 				FA2AF5421703FD91004E785E /* EPYCPersonalTests-Info.plist */,
 				FA2AF5431703FD91004E785E /* InfoPlist.strings */,
 			);
@@ -345,6 +381,15 @@
 			name = "Custom UI Objects";
 			sourceTree = "<group>";
 		};
+		FAF85FE1173B63D400142EDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAF85FE6173B63D400142EDB /* libTapkuLibrary.a */,
+				FAF85FE8173B63D400142EDB /* LogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,6 +404,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FAF85FEC173B640300142EDB /* PBXTargetDependency */,
 			);
 			name = EPYCPersonal;
 			productName = StoryBoardTest1;
@@ -404,6 +450,12 @@
 			mainGroup = FA2AF50A1703FD91004E785E;
 			productRefGroup = FA2AF5141703FD91004E785E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FAF85FE1173B63D400142EDB /* Products */;
+					ProjectRef = FAF85FE0173B63D400142EDB /* TapkuLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FA2AF5121703FD91004E785E /* EPYCPersonal */,
@@ -411,6 +463,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FAF85FE6173B63D400142EDB /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = FAF85FE5173B63D400142EDB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FAF85FE8173B63D400142EDB /* LogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LogicTests.octest;
+			remoteRef = FAF85FE7173B63D400142EDB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FA2AF5111703FD91004E785E /* Resources */ = {
@@ -430,6 +499,7 @@
 				FA44B400173741BE006295C2 /* EPYCbig.png in Resources */,
 				FA44B402173741C3006295C2 /* epycsmall.png in Resources */,
 				FA3783081738A0D5007E78E7 /* shakeSoundShort1.mp3 in Resources */,
+				FAF85FEA173B63ED00142EDB /* TapkuLibrary.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +588,11 @@
 			isa = PBXTargetDependency;
 			target = FA2AF5121703FD91004E785E /* EPYCPersonal */;
 			targetProxy = FA2AF53E1703FD91004E785E /* PBXContainerItemProxy */;
+		};
+		FAF85FEC173B640300142EDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = FAF85FEB173B640300142EDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -608,9 +683,18 @@
 		FA2AF54C1703FD91004E785E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoryBoardTest1/EPYCPersonal-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/StoryBoardTest1/Tapku/src/";
 				INFOPLIST_FILE = "StoryBoardTest1/EPYCPersonal-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = EPYCPersonal;
 				WRAPPER_EXTENSION = app;
 			};
@@ -619,9 +703,18 @@
 		FA2AF54D1703FD91004E785E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoryBoardTest1/EPYCPersonal-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/StoryBoardTest1/Tapku/src/";
 				INFOPLIST_FILE = "StoryBoardTest1/EPYCPersonal-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = EPYCPersonal;
 				WRAPPER_EXTENSION = app;
 			};

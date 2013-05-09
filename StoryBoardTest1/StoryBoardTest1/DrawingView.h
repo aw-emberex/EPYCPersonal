@@ -36,6 +36,7 @@
 @property (nonatomic, retain) NSMutableArray *finishedSquiggles;
 @property (nonatomic, retain) NSArray* previousSquiggles;
 @property (nonatomic, retain) id <EPYCDrawingViewDelegate> drawingViewDelegate;
+@property (nonatomic, readwrite) Boolean respondsToTouches;
 @property float lineWidth;
 
 // draw the given Squiggle into the given graphics context
