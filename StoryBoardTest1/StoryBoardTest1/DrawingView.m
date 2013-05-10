@@ -37,6 +37,7 @@
         [shakePlayer setNumberOfLoops:-1];
         [shakePlayer prepareToPlay];
         self.respondsToTouches = YES;
+        [self becomeFirstResponder];
     }
     return self;
 }
@@ -138,7 +139,7 @@
 
 // determines if this view can become the first responder
 - (BOOL)canBecomeFirstResponder { 
-  return NO;
+  return YES;
 }
 
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
