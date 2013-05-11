@@ -190,11 +190,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoryBoardTest1/DrawingView.m"
-         timestampString = "389840922.82591"
+         timestampString = "389999225.923847"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "146"
-         endingLineNumber = "146"
+         startingLineNumber = "147"
+         endingLineNumber = "147"
          landmarkName = "-motionBegan:withEvent:"
          landmarkType = "5">
       </FileBreakpoint>

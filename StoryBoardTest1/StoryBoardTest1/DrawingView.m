@@ -122,6 +122,7 @@
    
         NSValue *touchValue2 = [NSValue valueWithPointer:CFBridgingRetain(touch)];
         NSString *key2 = [NSString stringWithFormat:@"%@", touchValue2];
+        CFBridgingRelease((__bridge CFTypeRef)(touch));
         
         // retrieve the squiggle for this touch using the key
         Squiggle *squiggle = [squiggles valueForKey:key2];
@@ -187,6 +188,8 @@
     // add the new touch to the dictionary under a unique key
     NSValue *touchValue = [NSValue valueWithPointer:CFBridgingRetain(touch)];
     NSString *key = [NSString stringWithFormat:@"%@", touchValue];
+    CFBridgingRelease((__bridge CFTypeRef)(touch));
+
 
     [squiggles setValue:squiggle forKey:key];
   }
@@ -209,6 +212,8 @@
     // get the current and previous touch locations
     CGPoint current = [touch locationInView:self];
     CGPoint previous = [touch previousLocationInView:self];
+    CFBridgingRelease((__bridge CFTypeRef)(touch));
+  
     [squiggle addCGPoint:current];	// add the new point to the squiggle
     
     // screen needs to be redrawn
