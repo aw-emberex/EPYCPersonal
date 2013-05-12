@@ -119,19 +119,19 @@ static EPYCAppDelegate* _appDelegate = nil;
     if (buttonMenu == colorsMenu) {        
         [colorsMenu hide];
         if (index == 0U) {
-            [self setColor:[UIColor colorWithRed:255 green:0 blue:0 alpha:1] ];
+            [self setColor:[UIColor redColor] ];
             [[TKAlertCenter defaultCenter] postAlertWithMessage:@"You Picked Red"];
         }
         else if (index == 1U) {
-            [self setColor:[UIColor colorWithRed:0 green:255 blue:0 alpha:1] ];
+            [self setColor:[UIColor greenColor] ];
             [[TKAlertCenter defaultCenter] postAlertWithMessage:@"You Picked Green"];
         }
         else if (index == 2U) {
-            [self setColor:[UIColor colorWithRed:0 green:0 blue:255 alpha:1] ];
+            [self setColor:[UIColor blueColor] ];
             [[TKAlertCenter defaultCenter] postAlertWithMessage:@"You Picked Blue"];
         }
         else if (index == 3U) {
-            [self setColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1] ];
+            [self setColor:[UIColor blackColor] ];
             [[TKAlertCenter defaultCenter] postAlertWithMessage:@"You Picked Black"];
         }
     } else if (buttonMenu == lineWidthMenu) {

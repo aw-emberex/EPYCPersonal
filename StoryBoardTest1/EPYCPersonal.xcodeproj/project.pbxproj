@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DBA157A1E922D2C74CE848B /* GameDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */; };
+		2DBA1E9265DB9F045525CB37 /* GCPagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA11BC94EAEBEB35C460CA /* GCPagedScrollView.m */; };
 		FA05BFB21708D97C00F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05BFB11708D97C00F6B7CA /* CoreData.framework */; };
 		FA05BFB31708DA8900F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05BFB11708D97C00F6B7CA /* CoreData.framework */; };
 		FA1880E3170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */; };
@@ -43,6 +45,7 @@
 		FA44B3FE1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */; };
 		FA44B400173741BE006295C2 /* EPYCbig.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FF173741BE006295C2 /* EPYCbig.png */; };
 		FA44B402173741C3006295C2 /* epycsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B401173741C3006295C2 /* epycsmall.png */; };
+		FA468DF717402A58006C57B8 /* ALScrollViewPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = FA468DF617402A58006C57B8 /* ALScrollViewPaging.m */; };
 		FA5A64891731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648A1731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A648C1731E60B000D703D /* SquigglePoint.m */; };
@@ -106,6 +109,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DBA11BC94EAEBEB35C460CA /* GCPagedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPagedScrollView.m; sourceTree = "<group>"; };
+		2DBA1581A2B1A3191AB0E954 /* GCPagedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPagedScrollView.h; sourceTree = "<group>"; };
+		2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataViewController.m; sourceTree = "<group>"; };
+		2DBA1E846178106790E82A80 /* GameDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataViewController.h; sourceTree = "<group>"; };
 		FA05BFB11708D97C00F6B7CA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FA1880E2170A99DC00AA6634 /* StoryboardDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoryboardDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FA1880E5170A9BE100AA6634 /* StoryboardDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -153,6 +160,8 @@
 		FA44B3FF173741BE006295C2 /* EPYCbig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EPYCbig.png; path = ../EPYCbig.png; sourceTree = "<group>"; };
 		FA44B401173741C3006295C2 /* epycsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = epycsmall.png; path = ../epycsmall.png; sourceTree = "<group>"; };
 		FA44B40817374732006295C2 /* EPYCDrawingViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPYCDrawingViewDelegate.h; sourceTree = "<group>"; };
+		FA468DF517402A58006C57B8 /* ALScrollViewPaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALScrollViewPaging.h; sourceTree = "<group>"; };
+		FA468DF617402A58006C57B8 /* ALScrollViewPaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALScrollViewPaging.m; sourceTree = "<group>"; };
 		FA5A64871731E60B000D703D /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameData.h; path = ../GameData.h; sourceTree = "<group>"; };
 		FA5A64881731E60B000D703D /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameData.m; path = ../GameData.m; sourceTree = "<group>"; };
 		FA5A648B1731E60B000D703D /* SquigglePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquigglePoint.h; path = ../SquigglePoint.h; sourceTree = "<group>"; };
@@ -377,6 +386,12 @@
 				FAE2F376171276060006F499 /* UserCell.xib */,
 				FAE2F3711712753B0006F499 /* UserCell.h */,
 				FAE2F3721712753B0006F499 /* UserCell.m */,
+				2DBA1581A2B1A3191AB0E954 /* GCPagedScrollView.h */,
+				2DBA11BC94EAEBEB35C460CA /* GCPagedScrollView.m */,
+				FA468DF517402A58006C57B8 /* ALScrollViewPaging.h */,
+				FA468DF617402A58006C57B8 /* ALScrollViewPaging.m */,
+				2DBA1E846178106790E82A80 /* GameDataViewController.h */,
+				2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */,
 			);
 			name = "Custom UI Objects";
 			sourceTree = "<group>";
@@ -558,6 +573,9 @@
 				FA37830E1738B273007E78E7 /* MBButtonMenuViewController.m in Sources */,
 				FA3783111738BA4A007E78E7 /* Squiggle.m in Sources */,
 				FA5CA2AF173A0CA600F7594A /* GameEntry.m in Sources */,
+				2DBA1E9265DB9F045525CB37 /* GCPagedScrollView.m in Sources */,
+				2DBA157A1E922D2C74CE848B /* GameDataViewController.m in Sources */,
+				FA468DF717402A58006C57B8 /* ALScrollViewPaging.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

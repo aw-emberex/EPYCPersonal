@@ -135,11 +135,52 @@
                     <connections>
                         <segue destination="EXS-gX-iLo" kind="relationship" relationship="viewControllers" id="pdW-AN-zto"/>
                         <segue destination="3vn-0n-gbq" kind="relationship" relationship="viewControllers" id="9xI-aT-E2F"/>
+                        <segue destination="i2z-Tm-kxC" kind="relationship" relationship="viewControllers" id="d9A-Z5-yHx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmN-ec-ZUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-440" y="-422"/>
+        </scene>
+        <!--Game Data View Controller - Test-->
+        <scene sceneID="Plf-Iy-j0R">
+            <objects>
+                <viewController id="i2z-Tm-kxC" customClass="GameDataViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uZf-b6-LAf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Custom Views Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s51-H6-K4p">
+                                <rect key="frame" x="57" y="16" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" id="dqv-2z-b34">
+                                <rect key="frame" x="30" y="69" width="119" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="fzh-lF-bnn">
+                                <rect key="frame" x="141" y="382" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.51511393439999997" blue="0.54816110799999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88243036679999998" green="0.88243036679999998" blue="0.88243036679999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Test" id="cGV-qg-3mN"/>
+                    <connections>
+                        <outlet property="mainView" destination="dqv-2z-b34" id="cao-fh-354"/>
+                        <outlet property="myPageControl" destination="fzh-lF-bnn" id="ZVx-74-r0w"/>
+                        <outlet property="someLabel" destination="s51-H6-K4p" id="Cyc-ag-XDO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgF-Yg-CEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-477" y="356"/>
         </scene>
         <!--Game View Controller - Game-->
         <scene sceneID="yoY-Ft-5Ys">
@@ -246,12 +287,29 @@
             </objects>
             <point key="canvasLocation" x="469" y="-60"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="wlg-4v-rfS">
+            <objects>
+                <viewController id="7R6-Pb-H6S" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JQu-E2-hTd" customClass="GCPagedScrollView">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19A-R2-2sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="08-chat.png" width="24" height="22"/>
         <image name="63-runner.png" width="18" height="25"/>
     </resources>
     <classes>
+        <class className="ALScrollViewPaging" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALScrollViewPaging.h"/>
+        </class>
         <class className="AddUserViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddUserViewController.h"/>
             <relationships>
@@ -275,6 +333,18 @@
         </class>
         <class className="EPYCTabsController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EPYCTabsController.h"/>
+        </class>
+        <class className="GCPagedScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GCPagedScrollView.h"/>
+        </class>
+        <class className="GameDataViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDataViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="myPageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="ALScrollViewPaging"/>
+                <relationship kind="outlet" name="someLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="GameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>

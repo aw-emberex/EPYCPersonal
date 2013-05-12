@@ -26,7 +26,6 @@ static UserDataManager* _selfSingleton = nil;
         }
         return _selfSingleton;
     }
-    return nil;
 }
 
 - (id) init {

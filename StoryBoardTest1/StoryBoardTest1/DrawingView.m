@@ -36,6 +36,7 @@
         shakePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         [shakePlayer setNumberOfLoops:-1];
         [shakePlayer prepareToPlay];
+        [shakePlayer setNumberOfLoops:-1];
         self.respondsToTouches = YES;
         [self becomeFirstResponder];
     }

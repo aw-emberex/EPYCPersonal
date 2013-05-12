@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[MainViewController didSelectColorsButton:]:MainViewController.m">
+         contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
-               value = "[self view]">
+               value = "self.mainView.frame ">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -22,10 +22,40 @@
          contextName = "-[GameManager saveContext]:GameManager.m">
       </ContextState>
       <ContextState
+         contextName = "-[GCPagedScrollView updateViewPositionAndPageControl]:GCPagedScrollView.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController didSelectColorsButton:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self view]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GCPagedScrollView layoutSubviews]:GCPagedScrollView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.scrollIndicatorInsets">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[DBTests testMainGameData]:DBTests.m">
          <PersistentStrings>
             <PersistentString
                value = "[newEntry squiggles]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GCPagedScrollView initWithFrame:]:GCPagedScrollView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.contentOffset">
+            </PersistentString>
+            <PersistentString
+               value = "self.frame.size">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
