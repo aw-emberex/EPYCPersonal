@@ -55,8 +55,17 @@ static EPYCAppDelegate* _appDelegate = nil;
         NSLog(@"deleting %@", squiggle);
         [_appDelegate.managedObjectContext deleteObject:squiggle];
     }];
+    [createdSquiggles removeAllObjects];
     GameManager* manager = [GameManager getInstance];
     [manager saveContext];
+}
+
+-(void)erasedDrawing {
+    GameEntry* latest = [[GameManager getInstance] requestLatestGameEntry];
+    [latest.squiggles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        Squiggle* squiggle = (Squiggle*)obj;
+        [_appDelegate.managedObjectContext deleteObject:squiggle];
+    }];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -106,9 +115,7 @@ static EPYCAppDelegate* _appDelegate = nil;
     [colorsMenu showInView:[self mainView]];
 }
 
--(void)buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index {
-    NSLog(@"Did click!");
-    
+-(void)buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index {    
     if (buttonMenu == colorsMenu) {        
         [colorsMenu hide];
         if (index == 0U) {

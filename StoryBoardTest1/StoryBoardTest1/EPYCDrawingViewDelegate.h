@@ -13,5 +13,6 @@
 
 -(void)createdNewSquiggle:(Squiggle*)squiggle;
 -(void)cancelledDrawing;
+-(void)erasedDrawing;
 
 @end

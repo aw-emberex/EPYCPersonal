@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[MainViewController didSelectColorsButton:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self view]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[GameManager requestLatestGameEntry]:GameManager.m">
          <PersistentStrings>
             <PersistentString
@@ -11,10 +19,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MainViewController didSelectColorsButton:]:MainViewController.m">
+         contextName = "-[GameManager saveContext]:GameManager.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[DBTests testMainGameData]:DBTests.m">
          <PersistentStrings>
             <PersistentString
-               value = "[self view]">
+               value = "[newEntry squiggles]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

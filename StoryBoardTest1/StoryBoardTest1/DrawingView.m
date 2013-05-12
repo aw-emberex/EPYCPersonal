@@ -135,6 +135,8 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex ==1 ) {
         [self resetView];
+        [self.drawingViewDelegate erasedDrawing];
+        [self.drawingViewDelegate cancelledDrawing];
     }
 }
 
@@ -162,10 +164,10 @@
 
   if (event.subtype == UIEventSubtypeMotionShake){
     // create an alert prompting the user about clearing the painting
-    NSString *message = @"Are you sure you want to clear the screen?";
+    NSString *message = @"Are you sure you want erase the screen?";
       [shakePlayer stop];
 
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Screen?" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Clear", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erase Screen?" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Erase", nil];
     [alert show];
   }
   [super motionEnded:motion withEvent:event];

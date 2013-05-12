@@ -59,6 +59,8 @@ static EPYCAppDelegate* _appDelegate = nil;
     GameEntry* newEntry = (GameEntry*)[(NSOrderedSet*)[gameData gameEntries] objectAtIndex:0];
     NSLog(@"Entry %@", newEntry);
     STAssertNotNil(newEntry, @"Should have valid squiggle");
+    Squiggle* newSquiggle = [manager createNewSquiggle];
+    newSquiggle.owningGameEntry = newEntry;
     CGPoint testCGPoint;
     testCGPoint.x = 123;
     testCGPoint.y = 456;
