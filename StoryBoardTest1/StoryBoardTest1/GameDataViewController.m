@@ -28,48 +28,28 @@
 {
     [super viewDidLoad];
     ALScrollViewPaging* scrollView;
-    scrollView = [[ALScrollViewPaging alloc] initWithFrame:self.mainView.frame];
+    scrollView = [[ALScrollViewPaging alloc] initWithFrame:self.mainView.frame andWithPageControl:self.myPageControl];
     self.scrollView = scrollView;
     [self.view addSubview:self.scrollView];
 
     NSMutableArray * testArray = [[NSMutableArray alloc] initWithCapacity:2];
-    [testArray addObject:[self addThing]];
-    [testArray addObject:[self addThing]];
-    [testArray addObject:[self addThing]];
-    [testArray addObject:[self addThing]];
-    [testArray addObject:[self addThing]];
+    [testArray addObject:[self addThing:1]];
+    [testArray addObject:[self addThing:2]];
+    [testArray addObject:[self addThing:3]];
+    [testArray addObject:[self addThing:4]];
+    [testArray addObject:[self addThing:5]];
 
     [self.scrollView addPages:testArray];
 
-    [self.scrollView setHasPageControl:YES];
-
-
-
-
-    //[self.mainView addSubview:scrollView];
-    
-
-//    // dCGRect test = CGRectMake(0, 0, 300, 300);
-//    GCPagedScrollView* scrollView = [[GCPagedScrollView alloc] initWithFrame:self.mainView.frame withPageControl:self.myPageControl];
-//
-//    //[self s]
-//    [self.mainView addSubview:scrollView];
-//    self.scrollView = scrollView;
-//   // [self.scrollView setBackgroundColor:[UIColor blackColor]];
-//
-//
-//    [self addThing];
-//    [self addThing];
-//    [self addThing];
-//    [self addThing];
+    //[self.scrollView setHasPageControl:YES];
 }
 
--(UIView*) addThing {
+-(UIView*) addThing:(NSInteger)someInt {
     UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width+0,
             self.scrollView.frame.size.height+0)];
 
     UILabel* numberLabel = [[UILabel alloc] initWithFrame:view.bounds];
-    numberLabel.text = [NSString stringWithFormat:@"%d", 1];
+    numberLabel.text = [NSString stringWithFormat:@"%d", someInt];
     [numberLabel setTextColor:[UIColor redColor]];
     [view setBackgroundColor:[UIColor greenColor]];
     [view setAlpha:1];

@@ -9,11 +9,17 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "ALScrollViewPaging.h"
 
-@implementation ALScrollViewPaging
+@implementation ALScrollViewPaging {
+@private
+    int _currentPage;
+}
 
 const int kDotWidth = 7;
 
 #pragma mark - Init
+
+@synthesize currentPage = _currentPage;
+@synthesize externalPageControl = _externalPageControl;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -26,6 +32,15 @@ const int kDotWidth = 7;
         pageControlBeingUsed = NO;
         self.bounces = NO;
         pageControl = [[UIPageControl alloc] init];
+    }
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame andWithPageControl:(UIPageControl *)blahPageControl {
+    self = [self initWithFrame:frame];
+    if (self) {
+        self.externalPageControl = blahPageControl;
+        [self.externalPageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
     }
     return self;
 }
@@ -104,6 +119,7 @@ const int kDotWidth = 7;
         [view setFrame:frame];
         [self addSubview:view];
     }
+    self.externalPageControl.numberOfPages = [pages count];
     self.contentSize = CGSizeMake(self.frame.size.width * numberOfPages, self.frame.size.height);
 }
 
@@ -113,7 +129,7 @@ const int kDotWidth = 7;
 - (void)changePage:(id)sender {
     //update the scroll view to the appropriate page
 	CGRect frame;
-	frame.origin.x = self.frame.size.width * self.currentPage;
+	frame.origin.x = self.frame.size.width * (self.externalPageControl.currentPage);
 	frame.origin.y = 0;
 	frame.size = self.frame.size;
 	[self scrollRectToVisible:frame animated:YES];
@@ -130,6 +146,7 @@ const int kDotWidth = 7;
 		NSInteger page = floor((self.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
 		self.currentPage = page;
         pageControl.currentPage = self.currentPage;
+        _externalPageControl.currentPage = self.currentPage;
 	}
 }
 

@@ -158,12 +158,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" id="dqv-2z-b34">
-                                <rect key="frame" x="30" y="69" width="119" height="113"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="fzh-lF-bnn">
-                                <rect key="frame" x="141" y="382" width="38" height="36"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="fzh-lF-bnn">
+                                <rect key="frame" x="141" y="370" width="38" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.51511393439999997" blue="0.54816110799999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -313,7 +313,6 @@
         <class className="AddUserViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddUserViewController.h"/>
             <relationships>
-                <relationship kind="action" name="didAddUser:"/>
                 <relationship kind="action" name="didCancel:"/>
                 <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
             </relationships>
