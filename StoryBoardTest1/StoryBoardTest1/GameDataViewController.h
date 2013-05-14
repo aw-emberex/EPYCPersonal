@@ -18,5 +18,4 @@
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UIPageControl *myPageControl;
 
-- (UIView*)addThing;
 @end
