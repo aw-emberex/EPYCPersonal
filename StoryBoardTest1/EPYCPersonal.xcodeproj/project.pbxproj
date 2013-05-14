@@ -46,6 +46,8 @@
 		FA44B400173741BE006295C2 /* EPYCbig.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FF173741BE006295C2 /* EPYCbig.png */; };
 		FA44B402173741C3006295C2 /* epycsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B401173741C3006295C2 /* epycsmall.png */; };
 		FA468DF717402A58006C57B8 /* ALScrollViewPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = FA468DF617402A58006C57B8 /* ALScrollViewPaging.m */; };
+		FA4C194E1742007E00916165 /* GameDataTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4C194D1742007E00916165 /* GameDataTableCell.xib */; };
+		FA4C19521742019C00916165 /* GameDataEntryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4C19511742019C00916165 /* GameDataEntryTableViewController.m */; };
 		FA5A64891731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648A1731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A648C1731E60B000D703D /* SquigglePoint.m */; };
@@ -162,6 +164,9 @@
 		FA44B40817374732006295C2 /* EPYCDrawingViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPYCDrawingViewDelegate.h; sourceTree = "<group>"; };
 		FA468DF517402A58006C57B8 /* ALScrollViewPaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALScrollViewPaging.h; sourceTree = "<group>"; };
 		FA468DF617402A58006C57B8 /* ALScrollViewPaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALScrollViewPaging.m; sourceTree = "<group>"; };
+		FA4C194D1742007E00916165 /* GameDataTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameDataTableCell.xib; sourceTree = "<group>"; };
+		FA4C19501742019C00916165 /* GameDataEntryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataEntryTableViewController.h; sourceTree = "<group>"; };
+		FA4C19511742019C00916165 /* GameDataEntryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataEntryTableViewController.m; sourceTree = "<group>"; };
 		FA5A64871731E60B000D703D /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameData.h; path = ../GameData.h; sourceTree = "<group>"; };
 		FA5A64881731E60B000D703D /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameData.m; path = ../GameData.m; sourceTree = "<group>"; };
 		FA5A648B1731E60B000D703D /* SquigglePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquigglePoint.h; path = ../SquigglePoint.h; sourceTree = "<group>"; };
@@ -270,7 +275,6 @@
 				FA3A0D8D172DD2C000643888 /* ManagedObjects */,
 				FAE2F375171275CE0006F499 /* Custom UI Objects */,
 				FA386B65171E6EBC00E5129A /* Custom Delegate Interfaces */,
-				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
 				FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */,
 				FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */,
 				FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */,
@@ -336,6 +340,7 @@
 		FA3A0D8D172DD2C000643888 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				FA4C194D1742007E00916165 /* GameDataTableCell.xib */,
 				FA5CA2AD173A0CA600F7594A /* GameEntry.h */,
 				FA5CA2AE173A0CA600F7594A /* GameEntry.m */,
 				FA37830F1738BA4A007E78E7 /* Squiggle.h */,
@@ -383,6 +388,9 @@
 		FAE2F375171275CE0006F499 /* Custom UI Objects */ = {
 			isa = PBXGroup;
 			children = (
+				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
+				FA4C19501742019C00916165 /* GameDataEntryTableViewController.h */,
+				FA4C19511742019C00916165 /* GameDataEntryTableViewController.m */,
 				FAE2F376171276060006F499 /* UserCell.xib */,
 				FAE2F3711712753B0006F499 /* UserCell.h */,
 				FAE2F3721712753B0006F499 /* UserCell.m */,
@@ -515,6 +523,7 @@
 				FA44B402173741C3006295C2 /* epycsmall.png in Resources */,
 				FA3783081738A0D5007E78E7 /* shakeSoundShort1.mp3 in Resources */,
 				FAF85FEA173B63ED00142EDB /* TapkuLibrary.bundle in Resources */,
+				FA4C194E1742007E00916165 /* GameDataTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +585,7 @@
 				2DBA1E9265DB9F045525CB37 /* GCPagedScrollView.m in Sources */,
 				2DBA157A1E922D2C74CE848B /* GameDataViewController.m in Sources */,
 				FA468DF717402A58006C57B8 /* ALScrollViewPaging.m in Sources */,
+				FA4C19521742019C00916165 /* GameDataEntryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
