@@ -157,7 +157,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" id="dqv-2z-b34">
+                            <view contentMode="scaleToFill" id="dqv-2z-b34">
                                 <rect key="frame" x="0.0" y="70" width="320" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>

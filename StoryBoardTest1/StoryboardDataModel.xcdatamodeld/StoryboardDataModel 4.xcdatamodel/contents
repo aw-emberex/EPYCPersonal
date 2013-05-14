@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="GameData" representedClassName="GameData" syncable="YES">
-        <relationship name="gameEntries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="GameEntry" inverseName="owningGameData" inverseEntity="GameEntry" syncable="YES"/>
+        <relationship name="gameEntries" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="GameEntry" inverseName="owningGameData" inverseEntity="GameEntry" syncable="YES"/>
     </entity>
     <entity name="GameEntry" representedClassName="GameEntry" syncable="YES">
         <attribute name="originalViewportX" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>

@@ -86,7 +86,7 @@ static GameManager* _instance = nil;
 }
 
 -(void)deleteAllGameData {
-    [managedObjectContent deleteObject:(NSManagedObject*)_mainGameDataInstance];
+    [managedObjectContent deleteObject:_mainGameDataInstance];
     [self saveContext];
     [self loadMainGameData];
 }
@@ -108,3 +108,4 @@ static GameManager* _instance = nil;
 }
 
 @end
+

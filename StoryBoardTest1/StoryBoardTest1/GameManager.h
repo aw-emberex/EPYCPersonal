@@ -21,6 +21,7 @@
 +(GameManager*) getInstance;
 -(NSOrderedSet*)getGameEntries;
 -(GameEntry*)requestLatestGameEntry;
+-(GameEntry*)createNewGameEntry;
 -(Squiggle*)createNewSquiggle;
 -(void)deleteAllGameData;
 -(void)saveContext;

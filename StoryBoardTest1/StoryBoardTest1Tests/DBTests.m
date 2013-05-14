@@ -18,6 +18,7 @@
 
 static UserDataManager* userManager = nil;
 static EPYCAppDelegate* _appDelegate = nil;
+static GameManager* gameManager = nil;
 
 - (void)setUp
 {
@@ -26,7 +27,9 @@ static EPYCAppDelegate* _appDelegate = nil;
     [userManager clearAllUsers];
     NSLog(@"calling setup");
     [super setUp];
-    //delete main game data, should delete all data it owns as well 
+    //delete main game data, should delete all data it owns as well
+    gameManager = [GameManager getInstance];
+    [gameManager deleteAllGameData];
 }
 
 - (void)tearDown
@@ -47,6 +50,7 @@ static EPYCAppDelegate* _appDelegate = nil;
 }
 
 -(void) testMainGameData {
+    [gameManager deleteAllGameData];
     GameManager* manager = [GameManager getInstance];
     GameData* gameData = [manager getMainGameData];
     STAssertNotNil(gameData, @"should have game data");
@@ -54,9 +58,9 @@ static EPYCAppDelegate* _appDelegate = nil;
     STAssertNotNil([manager requestLatestGameEntry], @"new entry should be valid");
     gameData = [manager mainGameDataInstance];
     NSLog(@"AAAAAA %@", [gameData gameEntries]);
-    STAssertEquals([(NSOrderedSet*)[gameData gameEntries] count], 1U, @"shouldn't be any game entries");
+    STAssertEquals([[gameData gameEntries] count], 1U, @"shouldn't be any game entries");
     
-    GameEntry* newEntry = (GameEntry*)[(NSOrderedSet*)[gameData gameEntries] objectAtIndex:0];
+    GameEntry* newEntry = (GameEntry*)[[gameData gameEntries] objectAtIndex:0];
     NSLog(@"Entry %@", newEntry);
     STAssertNotNil(newEntry, @"Should have valid squiggle");
     Squiggle* newSquiggle = [manager createNewSquiggle];
@@ -69,13 +73,29 @@ static EPYCAppDelegate* _appDelegate = nil;
     
     //get game data again
     GameData* gameData2 = [manager getMainGameData];
-    GameEntry* newEntry2 = (GameEntry*)[(NSOrderedSet*)[gameData2 gameEntries] objectAtIndex:0];
+    GameEntry* newEntry2 = (GameEntry*)[[gameData2 gameEntries] objectAtIndex:0];
     Squiggle* someSquiggle = [[newEntry2 squiggles] objectAtIndex:0];
     NSOrderedSet* pointsSet = [someSquiggle points];
     STAssertEquals([pointsSet count], 1U, @"New Squiggle should have one point!");
     SquigglePoint* firstPoint = (SquigglePoint*)[pointsSet objectAtIndex:0U];
     STAssertEqualObjects(firstPoint.xPoint, [NSNumber numberWithInt:123], @"points should be saved right");
     STAssertEqualObjects(firstPoint.yPoint, [NSNumber numberWithInt:456], @"points should be saved right");
+    
+    //now test saving game entry
+
+    {
+        GameEntry* secondGameEntry;
+        secondGameEntry = [manager createNewGameEntry];
+        [manager saveContext];
+        STAssertNotNil(secondGameEntry, @"Second Game Should Be Valid");
+        NSLog(@"second gameEntry %@", secondGameEntry);
+        STAssertEquals([[manager getGameEntries] count], 2U, @"Should be two entries now");
+
+
+
+    }
+
+
 }
 
 @end
