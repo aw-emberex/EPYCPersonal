@@ -29,6 +29,9 @@
 
 
 @property (readwrite, nonatomic) GameData* mainGameDataInstance;
+
+- (NSMutableOrderedSet *)getAllGameData;
+
 @property (readwrite, nonatomic) GameEntry* currentGameEntry;
 @property (readwrite, nonatomic) NSEntityDescription* squiggleEntity;
 @property (readwrite, nonatomic) NSEntityDescription* squigglePointEntity;

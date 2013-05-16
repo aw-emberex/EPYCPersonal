@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameDataEntryTableViewController : UITableViewController
+@interface GameDataEntryTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {}
+
+@property NSMutableOrderedSet * allGameDataSets;
 
 @end

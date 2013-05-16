@@ -32,6 +32,7 @@ const int kDotWidth = 7;
         pageControlBeingUsed = NO;
         self.bounces = NO;
         pageControl = [[UIPageControl alloc] init];
+        [self setShowsHorizontalScrollIndicator:NO];
     }
     return self;
 }

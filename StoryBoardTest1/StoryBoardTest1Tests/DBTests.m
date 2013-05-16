@@ -84,14 +84,16 @@ static GameManager* gameManager = nil;
     //now test saving game entry
 
     {
-        GameEntry* secondGameEntry;
-        secondGameEntry = [manager createNewGameEntry];
+        GameEntry* gameData2;
+        gameData2 = [manager createNewGameEntry];
         [manager saveContext];
-        STAssertNotNil(secondGameEntry, @"Second Game Should Be Valid");
-        NSLog(@"second gameEntry %@", secondGameEntry);
+        STAssertNotNil(gameData2, @"Second Game Should Be Valid");
+        NSLog(@"second gameEntry %@", gameData2);
         STAssertEquals([[manager getGameEntries] count], 2U, @"Should be two entries now");
 
-
+        //should have some game data entries
+        NSMutableOrderedSet * allGameData = [manager getAllGameData];
+        STAssertTrue([allGameData count] > 0, @"There should be a non zero amount of gata datas");
 
     }
 

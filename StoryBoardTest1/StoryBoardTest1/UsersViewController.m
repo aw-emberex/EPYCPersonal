@@ -52,10 +52,6 @@
     }
 }
 
--(NSArray*) viewControllers {
-    return [self viewControllers];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -87,6 +83,7 @@
             }
         }
     }
+
     User* currentUser = [[_userDataManager getUsers] objectAtIndex:indexPath.row];
     [cell setUserNameText:currentUser.name];
     [cell setNumberLabelText:indexPath.row];

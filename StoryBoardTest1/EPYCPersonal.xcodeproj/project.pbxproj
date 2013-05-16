@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2DBA157A1E922D2C74CE848B /* GameDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */; };
-		2DBA1E9265DB9F045525CB37 /* GCPagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA11BC94EAEBEB35C460CA /* GCPagedScrollView.m */; };
 		FA05BFB21708D97C00F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05BFB11708D97C00F6B7CA /* CoreData.framework */; };
 		FA05BFB31708DA8900F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05BFB11708D97C00F6B7CA /* CoreData.framework */; };
 		FA1880E3170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */; };
 		FA1880E4170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */; };
+		FA25F80D1744A92900B7C5DE /* GameDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA25F80C1744A92900B7C5DE /* GameDataCell.m */; };
 		FA2AF5171703FD91004E785E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AF5161703FD91004E785E /* UIKit.framework */; };
 		FA2AF5191703FD91004E785E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AF5181703FD91004E785E /* Foundation.framework */; };
 		FA2AF51B1703FD91004E785E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2AF51A1703FD91004E785E /* CoreGraphics.framework */; };
@@ -41,8 +41,8 @@
 		FA386B64171E6E0600E5129A /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA386B62171E6E0600E5129A /* AddUserViewController.m */; };
 		FA44B3FA1735DDDD006295C2 /* EPYCTabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */; };
 		FA44B3FB1735DDDD006295C2 /* EPYCTabsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */; };
-		FA44B3FD1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */; };
-		FA44B3FE1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */; };
+		FA44B3FD1737413B006295C2 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FC1737413B006295C2 /* appIcon.png */; };
+		FA44B3FE1737413B006295C2 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FC1737413B006295C2 /* appIcon.png */; };
 		FA44B400173741BE006295C2 /* EPYCbig.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B3FF173741BE006295C2 /* EPYCbig.png */; };
 		FA44B402173741C3006295C2 /* epycsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = FA44B401173741C3006295C2 /* epycsmall.png */; };
 		FA468DF717402A58006C57B8 /* ALScrollViewPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = FA468DF617402A58006C57B8 /* ALScrollViewPaging.m */; };
@@ -111,13 +111,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2DBA11BC94EAEBEB35C460CA /* GCPagedScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPagedScrollView.m; sourceTree = "<group>"; };
-		2DBA1581A2B1A3191AB0E954 /* GCPagedScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPagedScrollView.h; sourceTree = "<group>"; };
 		2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataViewController.m; sourceTree = "<group>"; };
 		2DBA1E846178106790E82A80 /* GameDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataViewController.h; sourceTree = "<group>"; };
 		FA05BFB11708D97C00F6B7CA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FA1880E2170A99DC00AA6634 /* StoryboardDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoryboardDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FA1880E5170A9BE100AA6634 /* StoryboardDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		FA25F80B1744A92900B7C5DE /* GameDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataCell.h; sourceTree = "<group>"; };
+		FA25F80C1744A92900B7C5DE /* GameDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataCell.m; sourceTree = "<group>"; };
 		FA296288172A49FD000D0FB8 /* StoryboardDataModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 3.xcdatamodel"; sourceTree = "<group>"; };
 		FA2AF5131703FD91004E785E /* EPYCPersonal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EPYCPersonal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2AF5161703FD91004E785E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -158,7 +158,7 @@
 		FA3A0D85172C7A3A00643888 /* StoryboardDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
 		FA44B3F81735DDDD006295C2 /* EPYCTabsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPYCTabsController.h; sourceTree = "<group>"; };
 		FA44B3F91735DDDD006295C2 /* EPYCTabsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPYCTabsController.m; sourceTree = "<group>"; };
-		FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Appigo-Todo-Application-Icon.png"; sourceTree = "<group>"; };
+		FA44B3FC1737413B006295C2 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		FA44B3FF173741BE006295C2 /* EPYCbig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EPYCbig.png; path = ../EPYCbig.png; sourceTree = "<group>"; };
 		FA44B401173741C3006295C2 /* epycsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = epycsmall.png; path = ../epycsmall.png; sourceTree = "<group>"; };
 		FA44B40817374732006295C2 /* EPYCDrawingViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPYCDrawingViewDelegate.h; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 				FA3A0D8D172DD2C000643888 /* ManagedObjects */,
 				FAE2F375171275CE0006F499 /* Custom UI Objects */,
 				FA386B65171E6EBC00E5129A /* Custom Delegate Interfaces */,
-				FA44B3FC1737413B006295C2 /* Appigo-Todo-Application-Icon.png */,
+				FA44B3FC1737413B006295C2 /* appIcon.png */,
 				FAD8BFD11708EEF1002BAF35 /* UserDataManager.h */,
 				FAD8BFD21708EEF1002BAF35 /* UserDataManager.m */,
 				FA2AF5251703FD91004E785E /* EPYCAppDelegate.h */,
@@ -340,7 +340,6 @@
 		FA3A0D8D172DD2C000643888 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				FA4C194D1742007E00916165 /* GameDataTableCell.xib */,
 				FA5CA2AD173A0CA600F7594A /* GameEntry.h */,
 				FA5CA2AE173A0CA600F7594A /* GameEntry.m */,
 				FA37830F1738BA4A007E78E7 /* Squiggle.h */,
@@ -388,14 +387,15 @@
 		FAE2F375171275CE0006F499 /* Custom UI Objects */ = {
 			isa = PBXGroup;
 			children = (
+				FA4C194D1742007E00916165 /* GameDataTableCell.xib */,
+				FA25F80B1744A92900B7C5DE /* GameDataCell.h */,
+				FA25F80C1744A92900B7C5DE /* GameDataCell.m */,
 				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
 				FA4C19501742019C00916165 /* GameDataEntryTableViewController.h */,
 				FA4C19511742019C00916165 /* GameDataEntryTableViewController.m */,
 				FAE2F376171276060006F499 /* UserCell.xib */,
 				FAE2F3711712753B0006F499 /* UserCell.h */,
 				FAE2F3721712753B0006F499 /* UserCell.m */,
-				2DBA1581A2B1A3191AB0E954 /* GCPagedScrollView.h */,
-				2DBA11BC94EAEBEB35C460CA /* GCPagedScrollView.m */,
 				FA468DF517402A58006C57B8 /* ALScrollViewPaging.h */,
 				FA468DF617402A58006C57B8 /* ALScrollViewPaging.m */,
 				2DBA1E846178106790E82A80 /* GameDataViewController.h */,
@@ -518,7 +518,7 @@
 				FA696616172E3B9100DB01E9 /* 63-runner.png in Resources */,
 				FA696618172E3B9100DB01E9 /* 08-chat.png in Resources */,
 				FA69661A172E3B9100DB01E9 /* star.jpeg in Resources */,
-				FA44B3FD1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */,
+				FA44B3FD1737413B006295C2 /* appIcon.png in Resources */,
 				FA44B400173741BE006295C2 /* EPYCbig.png in Resources */,
 				FA44B402173741C3006295C2 /* epycsmall.png in Resources */,
 				FA3783081738A0D5007E78E7 /* shakeSoundShort1.mp3 in Resources */,
@@ -536,7 +536,7 @@
 				FA696617172E3B9100DB01E9 /* 63-runner.png in Resources */,
 				FA696619172E3B9100DB01E9 /* 08-chat.png in Resources */,
 				FA69661B172E3B9100DB01E9 /* star.jpeg in Resources */,
-				FA44B3FE1737413B006295C2 /* Appigo-Todo-Application-Icon.png in Resources */,
+				FA44B3FE1737413B006295C2 /* appIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,10 +582,10 @@
 				FA37830E1738B273007E78E7 /* MBButtonMenuViewController.m in Sources */,
 				FA3783111738BA4A007E78E7 /* Squiggle.m in Sources */,
 				FA5CA2AF173A0CA600F7594A /* GameEntry.m in Sources */,
-				2DBA1E9265DB9F045525CB37 /* GCPagedScrollView.m in Sources */,
 				2DBA157A1E922D2C74CE848B /* GameDataViewController.m in Sources */,
 				FA468DF717402A58006C57B8 /* ALScrollViewPaging.m in Sources */,
 				FA4C19521742019C00916165 /* GameDataEntryTableViewController.m in Sources */,
+				FA25F80D1744A92900B7C5DE /* GameDataCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

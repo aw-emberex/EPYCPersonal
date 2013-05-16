@@ -107,5 +107,11 @@ static GameManager* _instance = nil;
     return [[NSOrderedSet alloc]initWithArray:result];
 }
 
+- (NSMutableOrderedSet *)getAllGameData {
+    NSFetchRequest * fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameEntry"];
+    NSError* __autoreleasing error;
+    NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
+    return [NSMutableOrderedSet orderedSetWithArray:result];
+}
 @end
 
