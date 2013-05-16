@@ -14,4 +14,5 @@
     #import "EPYCAppDelegate.h"
     #import "ALScrollViewPaging.h"
     #import "GameManager.h"
+#import <Social/Social.h>
 #endif

@@ -40,8 +40,6 @@
     [testArray addObject:[self addThing:5]];
 
     [self.scrollView addPages:testArray];
-
-    //[self.scrollView setHasPageControl:YES];
 }
 
 -(UIView*) addThing:(NSInteger)someInt {

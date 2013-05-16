@@ -95,6 +95,11 @@
     }
     return cell;
 }
+- (IBAction)postToFB:(id)sender {
+    SLComposeViewController* facebookThing = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [facebookThing setInitialText:@"I love EPYC Personal!"];
+    [self presentViewController:facebookThing animated:YES completion:nil];
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray* users = [_userDataManager getUsers];
