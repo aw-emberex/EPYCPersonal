@@ -251,11 +251,6 @@
 		FA2AF50A1703FD91004E785E = {
 			isa = PBXGroup;
 			children = (
-				FA25F81E1744AFBF00B7C5DE /* Social.framework */,
-				FA25F81C1744AFB800B7C5DE /* Security.framework */,
-				FA25F81A1744AFB100B7C5DE /* libsqlite3.dylib */,
-				FA25F8181744AFA300B7C5DE /* Accounts.framework */,
-				FA25F8161744AF9B00B7C5DE /* AdSupport.framework */,
 				FA2AF51C1703FD91004E785E /* EPYCPersonal */,
 				FA2AF5401703FD91004E785E /* StoryBoardTest1Tests */,
 				FA2AF5151703FD91004E785E /* Frameworks */,
@@ -275,6 +270,11 @@
 		FA2AF5151703FD91004E785E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA25F81E1744AFBF00B7C5DE /* Social.framework */,
+				FA25F81C1744AFB800B7C5DE /* Security.framework */,
+				FA25F81A1744AFB100B7C5DE /* libsqlite3.dylib */,
+				FA25F8181744AFA300B7C5DE /* Accounts.framework */,
+				FA25F8161744AF9B00B7C5DE /* AdSupport.framework */,
 				FA25F8141744AF4A00B7C5DE /* FacebookSDKResources.bundle */,
 				FA25F8121744AF2600B7C5DE /* FacebookSDK.framework */,
 				FAF85FE0173B63D400142EDB /* TapkuLibrary.xcodeproj */,
