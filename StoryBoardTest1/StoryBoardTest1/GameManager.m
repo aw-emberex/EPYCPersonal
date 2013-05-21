@@ -106,7 +106,7 @@ static GameManager *_instance = nil;
 }
 
 - (NSMutableOrderedSet *)getAllGameData {
-    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameEntry"];
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameData"];
     NSError *__autoreleasing error;
     NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
     return [NSMutableOrderedSet orderedSetWithArray:result];

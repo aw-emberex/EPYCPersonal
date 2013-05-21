@@ -31,7 +31,8 @@
     [self.view addSubview:self.scrollView];
 
     NSMutableArray *testArray = [[NSMutableArray alloc] initWithCapacity:2];
-    [testArray addObject:[self createDrawingViewWithGameEntries:self.gameData.gameEntries]];
+    DrawingView *firstDrawingView = [self createDrawingViewWithGameEntries:[self.gameData.gameEntries objectAtIndex:0] withFrame:self.mainView.frame];
+    [testArray addObject:firstDrawingView];
 
     [[self scrollView] addPages:testArray];
 }
@@ -50,8 +51,10 @@
 //    return view;
 //}
 
-- (DrawingView *)createDrawingViewWithGameEntries:(NSArray *)gameEntries {
-
+- (DrawingView *)createDrawingViewWithGameEntries:(GameEntry *)gameEntry withFrame:(CGRect)frame {
+    DrawingView* newDrawingView = [[DrawingView alloc] initWithFrame:frame];
+    [newDrawingView setPreviousSquiggles:[gameEntry squiggles] ];
+    return newDrawingView;
 }
 
 - (void)didReceiveMemoryWarning {

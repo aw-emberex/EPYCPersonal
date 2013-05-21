@@ -23,45 +23,45 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        // initialize squiggles and finishedSquiggles
-        squiggles = [[NSMutableDictionary alloc] init];
-        finishedSquiggles = [[NSMutableArray alloc] init];
-        // the starting color is black
-        color = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:1];
-        lineWidth = 5;
-        gameManager = [GameManager getInstance];
-        [self setMultipleTouchEnabled:YES];
-        NSString *shakeSoundPath = [NSString stringWithFormat:@"%@/shakeSoundShort1.mp3", [[NSBundle mainBundle] resourcePath]];
-        NSURL *url = [NSURL fileURLWithPath:shakeSoundPath];
-        shakePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-        [shakePlayer setNumberOfLoops:-1];
-        [shakePlayer prepareToPlay];
-        [shakePlayer setNumberOfLoops:-1];
-        self.respondsToTouches = YES;
-        [self becomeFirstResponder];
+        [self setup];
     }
     return self;
 }
 
 
 - (id)initWithFrame:(CGRect)frame {
-
     self = [super initWithFrame:frame];
     if (self) {
         gameManager = [GameManager getInstance];
         [self setup];
     }
-    [self setUserInteractionEnabled:FALSE];
+    //[self setUserInteractionEnabled:FALSE];
     return self;
 }
 
 - (void)setup {
-
+    // initialize squiggles and finishedSquiggles
+    squiggles = [[NSMutableDictionary alloc] init];
+    finishedSquiggles = [[NSMutableArray alloc] init];
+    // the starting color is black
+    color = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:1];
+    self.backgroundColor = [UIColor whiteColor];
+    lineWidth = 5;
+    gameManager = [GameManager getInstance];
+    [self setMultipleTouchEnabled:YES];
+    NSString *shakeSoundPath = [NSString stringWithFormat:@"%@/shakeSoundShort1.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *url = [NSURL fileURLWithPath:shakeSoundPath];
+    shakePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    [shakePlayer setNumberOfLoops:-1];
+    [shakePlayer prepareToPlay];
+    [shakePlayer setNumberOfLoops:-1];
+    self.respondsToTouches = YES;
+    [self becomeFirstResponder];
 }
 
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
-
+    NSLog(@"Previous Squiggles!! %@", previousSquiggles);
     for (Squiggle *squiggle in previousSquiggles) {
         [self drawSquiggle:squiggle inContext:context];
     }
@@ -101,9 +101,10 @@
 
     CGPoint firstPoint;
     SquigglePoint *firstSquigglePoint = [[someSquiggle points] objectAtIndex:0];
-    firstPoint.x = [firstSquigglePoint.xPoint floatValue];
-    firstPoint.y = [firstSquigglePoint.yPoint floatValue];
+    firstPoint.x = [firstSquigglePoint.xPoint floatValue] * widthRatio;
+    firstPoint.y = [firstSquigglePoint.yPoint floatValue] * heightRatio;
 
+    //NSLog(@"Moving to Point %d %d", firstPoint.x, firstPoint.y);
     CGContextMoveToPoint(context, firstPoint.x, firstPoint.y);
 
     [someSquiggle.points enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
