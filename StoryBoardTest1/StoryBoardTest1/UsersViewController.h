@@ -12,7 +12,6 @@
 
 @interface UsersViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UserDetailViewDelegate>
 
--(NSArray*) viewControllers;
 -(NSString*) test;
 
 @property (readonly, nonatomic) UserDataManager* userDataManager;

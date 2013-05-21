@@ -8,6 +8,7 @@
 
 #import "GameDataViewController.h"
 #import "GCPagedScrollView.h"
+#import "DrawingView.h"
 
 @interface GameDataViewController ()
 
@@ -33,27 +34,27 @@
     [self.view addSubview:self.scrollView];
 
     NSMutableArray * testArray = [[NSMutableArray alloc] initWithCapacity:2];
-    [testArray addObject:[self addThing:1]];
-    [testArray addObject:[self addThing:2]];
-    [testArray addObject:[self addThing:3]];
-    [testArray addObject:[self addThing:4]];
-    [testArray addObject:[self addThing:5]];
+    [testArray addObject:[self createDrawingViewWithGameEntries:self.gameData.gameEntries]];
 
-    [self.scrollView addPages:testArray];
+    [[self scrollView] addPages:testArray];
 }
 
--(UIView*) addThing:(NSInteger)someInt {
-    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width+0,
-            self.scrollView.frame.size.height+0)];
+//-(UIView*) addThing:(NSInteger)someInt {
+//    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width+0,
+//            self.scrollView.frame.size.height+0)];
+//
+//    UILabel* numberLabel = [[UILabel alloc] initWithFrame:view.bounds];
+//    numberLabel.text = [NSString stringWithFormat:@"%d", someInt];
+//    [numberLabel setTextColor:[UIColor redColor]];
+//    [view setBackgroundColor:[UIColor greenColor]];
+//    [view setAlpha:1];
+//    numberLabel.font = [UIFont boldSystemFontOfSize:50.0];
+//    [view addSubview:numberLabel];
+//    return view;
+//}
 
-    UILabel* numberLabel = [[UILabel alloc] initWithFrame:view.bounds];
-    numberLabel.text = [NSString stringWithFormat:@"%d", someInt];
-    [numberLabel setTextColor:[UIColor redColor]];
-    [view setBackgroundColor:[UIColor greenColor]];
-    [view setAlpha:1];
-    numberLabel.font = [UIFont boldSystemFontOfSize:50.0];
-    [view addSubview:numberLabel];
-    return view;
+-(DrawingView*) createDrawingViewWithGameEntries:(NSArray*) gameEntries {
+
 }
 
 - (void)didReceiveMemoryWarning

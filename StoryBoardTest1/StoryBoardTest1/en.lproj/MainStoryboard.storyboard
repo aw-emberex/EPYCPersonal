@@ -34,21 +34,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Lx-rB-TMJ">
-                                <rect key="frame" x="84" y="44" width="99" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Post to FB">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="postToFB:" destination="EXS-gX-iLo" eventType="touchUpInside" id="7Cb-Np-36Y"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -69,7 +54,7 @@
                     </items>
                 </toolbar>
             </objects>
-            <point key="canvasLocation" x="94" y="-749"/>
+            <point key="canvasLocation" x="94" y="-429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QxM-Lj-BDL">
@@ -84,7 +69,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhS-UT-sHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="469" y="-745"/>
+            <point key="canvasLocation" x="501" y="-441"/>
         </scene>
         <!--Add User View Controller - New User-->
         <scene sceneID="HPJ-0u-GGE">
@@ -135,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoM-ls-tIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="-749"/>
+            <point key="canvasLocation" x="910" y="-441"/>
         </scene>
         <!--Tabs Controller-->
         <scene sceneID="yre-iy-mN5">
@@ -150,23 +135,39 @@
                     <connections>
                         <segue destination="EXS-gX-iLo" kind="relationship" relationship="viewControllers" id="pdW-AN-zto"/>
                         <segue destination="3vn-0n-gbq" kind="relationship" relationship="viewControllers" id="9xI-aT-E2F"/>
-                        <segue destination="0y0-kA-NAJ" kind="relationship" relationship="viewControllers" id="UlO-0Y-n9U"/>
+                        <segue destination="djv-2m-SoN" kind="relationship" relationship="viewControllers" id="iVo-Fc-FPt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmN-ec-ZUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-440" y="-422"/>
+            <point key="canvasLocation" x="-1060" y="546"/>
         </scene>
-        <!--Game Data Entry Table View Controller - Item-->
+        <!--Navigation Controller - Gahmes-->
+        <scene sceneID="hJR-6q-PAG">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="djv-2m-SoN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gahmes" image="63-runner.png" id="hE7-jD-Tqu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6JK-Ob-25O">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0y0-kA-NAJ" kind="relationship" relationship="rootViewController" id="RRe-mG-sta"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLt-dt-Qaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-536" y="1312"/>
+        </scene>
+        <!--Game Data Entry Table View Controller - EPYC Games-->
         <scene sceneID="2Eb-qK-rUw">
             <objects>
-                <viewController id="0y0-kA-NAJ" customClass="GameDataEntryTableViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameDataEntryStoryboardID" id="0y0-kA-NAJ" customClass="GameDataEntryTableViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0CA-8R-JLB">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="boz-et-V2J">
-                                <rect key="frame" x="0.0" y="80" width="320" height="381"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="337"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <sections/>
@@ -178,34 +179,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Mwe-SQ-5hg"/>
+                    <navigationItem key="navigationItem" title="EPYC Games" id="vUp-nF-ckH">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="a7T-eg-kyy"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bp0-6E-5ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-795" y="512"/>
+            <point key="canvasLocation" x="-91" y="1312"/>
         </scene>
         <!--Game Data View Controller - Test-->
         <scene sceneID="Plf-Iy-j0R">
             <objects>
-                <viewController id="i2z-Tm-kxC" customClass="GameDataViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameDataViewStoryboardController" id="i2z-Tm-kxC" customClass="GameDataViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uZf-b6-LAf">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Custom Views Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s51-H6-K4p">
-                                <rect key="frame" x="57" y="16" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" id="dqv-2z-b34">
-                                <rect key="frame" x="0.0" y="70" width="320" height="292"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="fzh-lF-bnn">
-                                <rect key="frame" x="141" y="370" width="38" height="36"/>
+                                <rect key="frame" x="141" y="300" width="38" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.51511393439999997" blue="0.54816110799999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -217,12 +213,11 @@
                     <connections>
                         <outlet property="mainView" destination="dqv-2z-b34" id="cao-fh-354"/>
                         <outlet property="myPageControl" destination="fzh-lF-bnn" id="ZVx-74-r0w"/>
-                        <outlet property="someLabel" destination="s51-H6-K4p" id="Cyc-ag-XDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgF-Yg-CEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="436"/>
+            <point key="canvasLocation" x="-1755" y="2000"/>
         </scene>
         <!--Game View Controller - Game-->
         <scene sceneID="yoY-Ft-5Ys">
@@ -254,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USF-Y0-F6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="99" y="-60"/>
+            <point key="canvasLocation" x="75" y="388"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="qpb-25-s98">
@@ -315,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFT-D2-Lzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989" y="164"/>
+            <point key="canvasLocation" x="557" y="940"/>
         </scene>
     </scenes>
     <resources>

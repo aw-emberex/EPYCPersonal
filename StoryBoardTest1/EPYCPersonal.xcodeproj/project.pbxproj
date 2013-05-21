@@ -294,8 +294,7 @@
 		FA2AF51C1703FD91004E785E /* EPYCPersonal */ = {
 			isa = PBXGroup;
 			children = (
-				FA37830C1738B273007E78E7 /* MBButtonMenuViewController.h */,
-				FA37830D1738B273007E78E7 /* MBButtonMenuViewController.m */,
+				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
 				FA3783071738A0D5007E78E7 /* shakeSoundShort1.mp3 */,
 				FA96AB0E1732276C008676EC /* PainterImports */,
 				FA3A0D8E172DD2E600643888 /* View Controllers */,
@@ -414,10 +413,11 @@
 		FAE2F375171275CE0006F499 /* Custom UI Objects */ = {
 			isa = PBXGroup;
 			children = (
+				FA37830C1738B273007E78E7 /* MBButtonMenuViewController.h */,
+				FA37830D1738B273007E78E7 /* MBButtonMenuViewController.m */,
 				FA4C194D1742007E00916165 /* GameDataTableCell.xib */,
 				FA25F80B1744A92900B7C5DE /* GameDataCell.h */,
 				FA25F80C1744A92900B7C5DE /* GameDataCell.m */,
-				FA2AF52E1703FD91004E785E /* MainStoryboard.storyboard */,
 				FA4C19501742019C00916165 /* GameDataEntryTableViewController.h */,
 				FA4C19511742019C00916165 /* GameDataEntryTableViewController.m */,
 				FAE2F376171276060006F499 /* UserCell.xib */,
