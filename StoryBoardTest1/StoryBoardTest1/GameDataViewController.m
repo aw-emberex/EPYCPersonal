@@ -53,7 +53,7 @@
 
 - (DrawingView *)createDrawingViewWithGameEntries:(GameEntry *)gameEntry withFrame:(CGRect)frame {
     DrawingView* newDrawingView = [[DrawingView alloc] initWithFrame:frame];
-    [newDrawingView setPreviousSquiggles:[gameEntry squiggles] ];
+    [newDrawingView setPreviousSquiggles:[[gameEntry squiggles] array]];
     return newDrawingView;
 }
 

@@ -156,7 +156,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "76"
          endingLineNumber = "76"
-         landmarkName = "-drawSquiggle:inContext:"
+         landmarkName = "-drawRect:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -195,7 +195,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "149"
          endingLineNumber = "149"
-         landmarkName = "-motionBegan:withEvent:"
+         landmarkName = "-alertView:clickedButtonAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
