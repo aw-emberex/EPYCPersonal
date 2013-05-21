@@ -19,20 +19,18 @@
 @synthesize allGameDataSets = _allGameDataSets;
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     _allGameDataSets = [[GameManager getInstance] getAllGameData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWi3llAppear = NO;
- 
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -40,8 +38,7 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -49,42 +46,39 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    UIStoryboard* myStoryboard = self.storyboard;
-    GameDataViewController* tableViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"GameDataViewStoryboardController"];
-    GameData* gameData = [self.allGameDataSets objectAtIndex:indexPath.row];
+    UIStoryboard *myStoryboard = self.storyboard;
+    GameDataViewController *tableViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"GameDataViewStoryboardController"];
+    GameData *gameData = [self.allGameDataSets objectAtIndex:indexPath.row];
     [tableViewController setGameData:gameData];
     [self.navigationController pushViewController:tableViewController animated:YES];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     NSLog(@"count %d", [_allGameDataSets count]);
     return [_allGameDataSets count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    GameDataCell* cell = [tableView dequeueReusableCellWithIdentifier:@"GameDataCell"];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    GameDataCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GameDataCell"];
 
     if (!cell) {
-        NSArray* topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"GameDataTableCell" owner:nil options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"GameDataTableCell" owner:nil options:nil];
         for (id currentObject in topLevelObjects) {
             if ([currentObject isKindOfClass:[GameDataCell class]]) {
-                cell = (GameDataCell*) currentObject;
+                cell = (GameDataCell *) currentObject;
                 break;
             }
         }
     }
-    
+
     return cell;
 }
 

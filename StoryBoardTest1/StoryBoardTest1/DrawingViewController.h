@@ -25,13 +25,15 @@
 
 
 @interface DrawingViewController : UIViewController <EPYCDrawingViewDelegate, MBButtonMenuViewControllerDelegate> {
-	NSMutableArray* createdSquiggles;
-    MBButtonMenuViewController* colorsMenu;
-    MBButtonMenuViewController* lineWidthMenu;
+    NSMutableArray *createdSquiggles;
+    MBButtonMenuViewController *colorsMenu;
+    MBButtonMenuViewController *lineWidthMenu;
 }
 
--(IBAction)cancelledDrawing:(id)sender;
--(IBAction)wantsToSaveDrawing:(id)sender;
-@property (strong, nonatomic) IBOutlet DrawingView *mainView;
+- (IBAction)cancelledDrawing:(id)sender;
+
+- (IBAction)wantsToSaveDrawing:(id)sender;
+
+@property(strong, nonatomic) IBOutlet DrawingView *mainView;
 
 @end

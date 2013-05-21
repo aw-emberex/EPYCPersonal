@@ -7,7 +7,6 @@
 //
 
 #import "GameDataViewController.h"
-#import "GCPagedScrollView.h"
 #import "DrawingView.h"
 
 @interface GameDataViewController ()
@@ -16,8 +15,7 @@
 
 @implementation GameDataViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 
@@ -25,15 +23,14 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    ALScrollViewPaging* scrollView;
+    ALScrollViewPaging *scrollView;
     scrollView = [[ALScrollViewPaging alloc] initWithFrame:self.mainView.frame andWithPageControl:self.myPageControl];
     self.scrollView = scrollView;
     [self.view addSubview:self.scrollView];
 
-    NSMutableArray * testArray = [[NSMutableArray alloc] initWithCapacity:2];
+    NSMutableArray *testArray = [[NSMutableArray alloc] initWithCapacity:2];
     [testArray addObject:[self createDrawingViewWithGameEntries:self.gameData.gameEntries]];
 
     [[self scrollView] addPages:testArray];
@@ -53,12 +50,11 @@
 //    return view;
 //}
 
--(DrawingView*) createDrawingViewWithGameEntries:(NSArray*) gameEntries {
+- (DrawingView *)createDrawingViewWithGameEntries:(NSArray *)gameEntries {
 
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

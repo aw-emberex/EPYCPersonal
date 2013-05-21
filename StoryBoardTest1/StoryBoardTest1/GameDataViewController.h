@@ -14,10 +14,10 @@
 
 @interface GameDataViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UILabel* someLabel;
-@property (strong, nonatomic) IBOutlet ALScrollViewPaging *scrollView;
-@property (strong, nonatomic) IBOutlet UIView *mainView;
-@property (weak, nonatomic) IBOutlet UIPageControl *myPageControl;
-@property (strong, nonatomic) GameData* gameData;
+@property(strong, nonatomic) IBOutlet UILabel *someLabel;
+@property(strong, nonatomic) IBOutlet ALScrollViewPaging *scrollView;
+@property(strong, nonatomic) IBOutlet UIView *mainView;
+@property(weak, nonatomic) IBOutlet UIPageControl *myPageControl;
+@property(strong, nonatomic) GameData *gameData;
 
 @end

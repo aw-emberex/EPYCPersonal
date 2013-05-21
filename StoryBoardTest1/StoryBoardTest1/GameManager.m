@@ -6,26 +6,25 @@
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
-#import "GameManager.h"
 #import "GameData.h"
 
 @implementation GameManager
 
-static GameManager* _instance = nil;
+static GameManager *_instance = nil;
 
-@synthesize appDelegate,gameEntryEntity,managedObjectContent, squiggleEntity,squigglePointEntity;
+@synthesize appDelegate, gameEntryEntity, managedObjectContent, squiggleEntity, squigglePointEntity;
 @synthesize mainGameDataInstance = _mainGameDataInstance;
 @synthesize currentGameEntry = _currentGameEntry;
 
-+(GameManager*) getInstance {
++ (GameManager *)getInstance {
     if (_instance == nil) {
         _instance = [[self alloc] init];
     }
     return _instance;
 }
 
--(GameEntry *)requestLatestGameEntry {
-    _currentGameEntry = (GameEntry*)[[self.mainGameDataInstance gameEntries] lastObject];
+- (GameEntry *)requestLatestGameEntry {
+    _currentGameEntry = (GameEntry *) [[self.mainGameDataInstance gameEntries] lastObject];
     if (!_currentGameEntry) {
         _currentGameEntry = [self createNewGameEntry];
     }
@@ -34,22 +33,21 @@ static GameManager* _instance = nil;
     return _currentGameEntry;
 }
 
--(GameEntry*)createNewGameEntry {
-    GameEntry* entry = (GameEntry*)[NSEntityDescription insertNewObjectForEntityForName:@"GameEntry" inManagedObjectContext:managedObjectContent];
+- (GameEntry *)createNewGameEntry {
+    GameEntry *entry = (GameEntry *) [NSEntityDescription insertNewObjectForEntityForName:@"GameEntry" inManagedObjectContext:managedObjectContent];
     [entry setOwningGameData:_mainGameDataInstance];
     return entry;
 }
 
--(Squiggle*)createNewSquiggle {
-    Squiggle* squiggle = (Squiggle*)[NSEntityDescription insertNewObjectForEntityForName:@"Squiggle" inManagedObjectContext:appDelegate.managedObjectContext];
+- (Squiggle *)createNewSquiggle {
+    Squiggle *squiggle = (Squiggle *) [NSEntityDescription insertNewObjectForEntityForName:@"Squiggle" inManagedObjectContext:appDelegate.managedObjectContext];
     return squiggle;
 }
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
-        appDelegate = (EPYCAppDelegate *)[[UIApplication sharedApplication] delegate];
+        appDelegate = (EPYCAppDelegate *) [[UIApplication sharedApplication] delegate];
         self.managedObjectContent = self.appDelegate.managedObjectContext;
         self.gameEntryEntity = [NSEntityDescription entityForName:@"GameEntry" inManagedObjectContext:managedObjectContent];
         self.squigglePointEntity = [NSEntityDescription entityForName:@"SquigglePoint" inManagedObjectContext:managedObjectContent];
@@ -60,22 +58,22 @@ static GameManager* _instance = nil;
     return self;
 }
 
--(GameData *)getMainGameData {
+- (GameData *)getMainGameData {
     //if (_mainGameDataInstance == nil) {
-        [self loadMainGameData];
+    [self loadMainGameData];
     //}
     return _mainGameDataInstance;
 }
 
--(void) loadMainGameData {
-    NSError* __autoreleasing error;
-    NSFetchRequest* fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameData"];
+- (void)loadMainGameData {
+    NSError *__autoreleasing error;
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameData"];
     [fetch setReturnsObjectsAsFaults:NO];
 
-    NSArray* result = (NSArray*)[managedObjectContent executeFetchRequest:fetch error:&error];
+    NSArray *result = (NSArray *) [managedObjectContent executeFetchRequest:fetch error:&error];
 
     if ([result count] == 0) {
-        _mainGameDataInstance = (GameData*)[NSEntityDescription insertNewObjectForEntityForName:@"GameData" inManagedObjectContext:managedObjectContent];
+        _mainGameDataInstance = (GameData *) [NSEntityDescription insertNewObjectForEntityForName:@"GameData" inManagedObjectContext:managedObjectContent];
         NSLog(@"OMG %@", error);
         [self saveContext];
     } else {
@@ -85,14 +83,14 @@ static GameManager* _instance = nil;
     }
 }
 
--(void)deleteAllGameData {
+- (void)deleteAllGameData {
     [managedObjectContent deleteObject:_mainGameDataInstance];
     [self saveContext];
     [self loadMainGameData];
 }
 
--(void) saveContext {
-    NSError* __autoreleasing error;
+- (void)saveContext {
+    NSError *__autoreleasing error;
     BOOL result = [self.managedObjectContent save:&error];
     if (!result) {
         NSLog(@"Severe Error Saving: %@", error);
@@ -100,16 +98,16 @@ static GameManager* _instance = nil;
     }
 }
 
--(NSOrderedSet*)getGameEntries; {
-    NSFetchRequest* fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameEntry"];
-    NSError* __autoreleasing error;
-    NSArray* result = [managedObjectContent executeFetchRequest:fetch error:&error];
-    return [[NSOrderedSet alloc]initWithArray:result];
+- (NSOrderedSet *)getGameEntries; {
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameEntry"];
+    NSError *__autoreleasing error;
+    NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
+    return [[NSOrderedSet alloc] initWithArray:result];
 }
 
 - (NSMutableOrderedSet *)getAllGameData {
-    NSFetchRequest * fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameEntry"];
-    NSError* __autoreleasing error;
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameEntry"];
+    NSError *__autoreleasing error;
     NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
     return [NSMutableOrderedSet orderedSetWithArray:result];
 }

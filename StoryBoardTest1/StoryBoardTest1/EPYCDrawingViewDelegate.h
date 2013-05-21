@@ -11,8 +11,10 @@
 
 @protocol EPYCDrawingViewDelegate <NSObject>
 
--(void)createdNewSquiggle:(Squiggle*)squiggle;
--(void)cancelledDrawing;
--(void)erasedDrawing;
+- (void)createdNewSquiggle:(Squiggle *)squiggle;
+
+- (void)cancelledDrawing;
+
+- (void)erasedDrawing;
 
 @end

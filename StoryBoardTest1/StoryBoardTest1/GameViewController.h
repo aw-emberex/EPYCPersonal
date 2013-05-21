@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GameViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UIViewController* userDataSource;
+@property(nonatomic, weak) IBOutlet UIViewController *userDataSource;
 
 
 @end

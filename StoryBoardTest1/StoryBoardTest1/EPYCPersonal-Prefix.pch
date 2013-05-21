@@ -9,10 +9,12 @@
 #endif
 
 #ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-    #import "EPYCAppDelegate.h"
-    #import "ALScrollViewPaging.h"
-    #import "GameManager.h"
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "EPYCAppDelegate.h"
+#import "ALScrollViewPaging.h"
+#import "GameManager.h"
 #import <Social/Social.h>
+
 #endif

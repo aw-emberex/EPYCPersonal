@@ -10,7 +10,9 @@
 #import "User.h"
 
 @protocol UserDetailViewDelegate <NSObject>
--(void)didCancelDialog;
--(void)didAddUser:(User*)userAdded;
--(User*)didRequestUser;
+- (void)didCancelDialog;
+
+- (void)didAddUser:(User *)userAdded;
+
+- (User *)didRequestUser;
 @end

@@ -6,9 +6,6 @@
 //  Copyright (c) 2013 Andrea Lufino. All rights reserved.
 //
 
-#import <CoreGraphics/CoreGraphics.h>
-#import "ALScrollViewPaging.h"
-
 @implementation ALScrollViewPaging {
 @private
     int _currentPage;
@@ -21,8 +18,7 @@ const int kDotWidth = 7;
 @synthesize currentPage = _currentPage;
 @synthesize externalPageControl = _externalPageControl;
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         //setting the 'must have' properties
@@ -46,8 +42,7 @@ const int kDotWidth = 7;
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame andPages:(NSArray *)pages
-{
+- (id)initWithFrame:(CGRect)frame andPages:(NSArray *)pages {
     self = [super initWithFrame:frame];
     if (self) {
         //add pages to scrollview
@@ -129,34 +124,34 @@ const int kDotWidth = 7;
 //method for paging
 - (void)changePage:(id)sender {
     //update the scroll view to the appropriate page
-	CGRect frame;
-	frame.origin.x = self.frame.size.width * (self.externalPageControl.currentPage);
-	frame.origin.y = 0;
-	frame.size = self.frame.size;
-	[self scrollRectToVisible:frame animated:YES];
-	pageControlBeingUsed = YES;
+    CGRect frame;
+    frame.origin.x = self.frame.size.width * (self.externalPageControl.currentPage);
+    frame.origin.y = 0;
+    frame.size = self.frame.size;
+    [self scrollRectToVisible:frame animated:YES];
+    pageControlBeingUsed = YES;
 }
 
 #pragma mark - ScrollView delegate
 
 //methods for paging
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
-	if (!pageControlBeingUsed) {
-		//switch the page when more than 50% of the previous/next page is visible
-		CGFloat pageWidth = self.frame.size.width;
-		NSInteger page = floor((self.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-		self.currentPage = page;
+    if (!pageControlBeingUsed) {
+        //switch the page when more than 50% of the previous/next page is visible
+        CGFloat pageWidth = self.frame.size.width;
+        NSInteger page = floor((self.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+        self.currentPage = page;
         pageControl.currentPage = self.currentPage;
         _externalPageControl.currentPage = self.currentPage;
-	}
+    }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-	pageControlBeingUsed = NO;
+    pageControlBeingUsed = NO;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-	pageControlBeingUsed = NO;
+    pageControlBeingUsed = NO;
 }
 
 @end

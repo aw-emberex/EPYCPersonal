@@ -14,31 +14,37 @@
 #import "EPYCAppDelegate.h"
 
 
-
 @interface GameManager : NSObject {
 }
 
-+(GameManager*) getInstance;
--(NSOrderedSet*)getGameEntries;
--(GameEntry*)requestLatestGameEntry;
--(GameEntry*)createNewGameEntry;
--(Squiggle*)createNewSquiggle;
--(void)deleteAllGameData;
--(void)saveContext;
--(GameData *)getMainGameData;
++ (GameManager *)getInstance;
+
+- (NSOrderedSet *)getGameEntries;
+
+- (GameEntry *)requestLatestGameEntry;
+
+- (GameEntry *)createNewGameEntry;
+
+- (Squiggle *)createNewSquiggle;
+
+- (void)deleteAllGameData;
+
+- (void)saveContext;
+
+- (GameData *)getMainGameData;
 
 
-@property (readwrite, nonatomic) GameData* mainGameDataInstance;
+@property(readwrite, nonatomic) GameData *mainGameDataInstance;
 
 - (NSMutableOrderedSet *)getAllGameData;
 
-@property (readwrite, nonatomic) GameEntry* currentGameEntry;
-@property (readwrite, nonatomic) NSEntityDescription* squiggleEntity;
-@property (readwrite, nonatomic) NSEntityDescription* squigglePointEntity;
-@property (readwrite, nonatomic) NSEntityDescription* gameEntryEntity;
-@property (readwrite, nonatomic) NSEntityDescription* gameDataEntity;
-@property (readwrite, nonatomic) EPYCAppDelegate* appDelegate;
-@property (readwrite, nonatomic) NSManagedObjectContext* managedObjectContent;
+@property(readwrite, nonatomic) GameEntry *currentGameEntry;
+@property(readwrite, nonatomic) NSEntityDescription *squiggleEntity;
+@property(readwrite, nonatomic) NSEntityDescription *squigglePointEntity;
+@property(readwrite, nonatomic) NSEntityDescription *gameEntryEntity;
+@property(readwrite, nonatomic) NSEntityDescription *gameDataEntity;
+@property(readwrite, nonatomic) EPYCAppDelegate *appDelegate;
+@property(readwrite, nonatomic) NSManagedObjectContext *managedObjectContent;
 
 
 @end

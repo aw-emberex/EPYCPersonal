@@ -14,14 +14,16 @@
     UIPageControl *pageControl;
 }
 
-@property (nonatomic) int currentPage;
-@property (nonatomic) BOOL hasPageControl;
-@property (nonatomic, strong) UIColor *pageControlCurrentPageColor;
-@property (nonatomic, strong) UIColor *pageControlOtherPagesColor;
-@property (nonatomic, strong) UIPageControl *externalPageControl;   
+@property(nonatomic) int currentPage;
+@property(nonatomic) BOOL hasPageControl;
+@property(nonatomic, strong) UIColor *pageControlCurrentPageColor;
+@property(nonatomic, strong) UIColor *pageControlOtherPagesColor;
+@property(nonatomic, strong) UIPageControl *externalPageControl;
 
-- (id)initWithFrame:(CGRect)frame andWithPageControl: (UIPageControl *)pageControl;
+- (id)initWithFrame:(CGRect)frame andWithPageControl:(UIPageControl *)pageControl;
+
 - (id)initWithFrame:(CGRect)frame andPages:(NSArray *)pages;
+
 - (void)addPages:(NSArray *)pages;
 
 @end

@@ -12,27 +12,29 @@
 
 @interface MBButtonMenuViewController : UIViewController
 
-@property (nonatomic, readonly, getter = isVisible) BOOL visible;
-@property (nonatomic, assign) BOOL shrinksParentView;
+@property(nonatomic, readonly, getter = isVisible) BOOL visible;
+@property(nonatomic, assign) BOOL shrinksParentView;
 
-@property (nonatomic, strong) UIColor *backgroundColor UI_APPEARANCE_SELECTOR;
+@property(nonatomic, strong) UIColor *backgroundColor UI_APPEARANCE_SELECTOR;
 
-@property (nonatomic, strong) NSArray *buttonTitles;
-@property (nonatomic, assign) NSInteger cancelButtonIndex;
+@property(nonatomic, strong) NSArray *buttonTitles;
+@property(nonatomic, assign) NSInteger cancelButtonIndex;
 
-@property (nonatomic, assign) id<MBButtonMenuViewControllerDelegate> delegate;
+@property(nonatomic, assign) id <MBButtonMenuViewControllerDelegate> delegate;
 
 
-- (id)initWithButtonTitles:(NSArray *) buttonTitles;
+- (id)initWithButtonTitles:(NSArray *)buttonTitles;
 
-- (void) showInView:(UIView*)view;
-- (void) hide;
+- (void)showInView:(UIView *)view;
+
+- (void)hide;
 
 @end
 
 @protocol MBButtonMenuViewControllerDelegate <NSObject>
 
-- (void) buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index;
-- (void) buttonMenuViewControllerDidCancel:(MBButtonMenuViewController *)buttonMenu;
+- (void)buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index;
+
+- (void)buttonMenuViewControllerDidCancel:(MBButtonMenuViewController *)buttonMenu;
 
 @end

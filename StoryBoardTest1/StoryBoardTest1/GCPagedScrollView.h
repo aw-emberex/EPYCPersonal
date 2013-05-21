@@ -11,18 +11,24 @@
 //Simple UIScrollView subclass that automatically handle UIPageControl and paged content
 @interface GCPagedScrollView : UIScrollView
 
-@property (nonatomic, assign) NSUInteger page; //Zero based number of page
-@property (nonatomic, readwrite, strong) UIPageControl* externalPageControl;
+@property(nonatomic, assign) NSUInteger page; //Zero based number of page
+@property(nonatomic, readwrite, strong) UIPageControl *externalPageControl;
 
-- (void) setPage:(NSUInteger)page animated:(BOOL) animated;
-- (id)initWithFrame:(CGRect)frame withPageControl: (UIPageControl*)aPageControl;
+- (void)setPage:(NSUInteger)page animated:(BOOL)animated;
+
+- (id)initWithFrame:(CGRect)frame withPageControl:(UIPageControl *)aPageControl;
+
 //Add or remove content view from the scrollview
-- (void) addContentSubview:(UIView*) view;
-- (void) addContentSubview:(UIView*) view atIndex:(NSUInteger) index;
-- (void) addContentSubviewsFromArray:(NSArray*) contentViews;
+- (void)addContentSubview:(UIView *)view;
 
-- (void) removeContentSubview:(UIView*) view;
-- (void) removeContentSubviewAtIndex:(NSUInteger) index;
-- (void) removeAllContentSubviews;
+- (void)addContentSubview:(UIView *)view atIndex:(NSUInteger)index;
+
+- (void)addContentSubviewsFromArray:(NSArray *)contentViews;
+
+- (void)removeContentSubview:(UIView *)view;
+
+- (void)removeContentSubviewAtIndex:(NSUInteger)index;
+
+- (void)removeAllContentSubviews;
 
 @end

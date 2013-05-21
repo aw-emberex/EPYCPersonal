@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface GameDataEntryTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {}
+@interface GameDataEntryTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+}
 
-@property NSMutableOrderedSet * allGameDataSets;
+@property NSMutableOrderedSet *allGameDataSets;
 
 @end

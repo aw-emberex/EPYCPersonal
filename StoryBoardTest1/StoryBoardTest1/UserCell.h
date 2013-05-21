@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface UserCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
-@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *starImageView;
--(void) setNumberLabelText:(NSInteger)text;
--(void) setUserNameText:(NSString*)text;
+@property(weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property(weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property(weak, nonatomic) IBOutlet UIImageView *starImageView;
+
+- (void)setNumberLabelText:(NSInteger)text;
+
+- (void)setUserNameText:(NSString *)text;
 
 @end

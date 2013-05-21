@@ -12,11 +12,11 @@
 
 @interface UsersViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UserDetailViewDelegate>
 
--(NSString*) test;
+- (NSString *)test;
 
-@property (readonly, nonatomic) UserDataManager* userDataManager;
-@property (weak, nonatomic) IBOutlet UINavigationItem *userDisplayLabelViewold;
-@property (weak, nonatomic) IBOutlet UITableView *usersTableView;
-@property (weak, nonatomic) IBOutlet UINavigationItem *userDisplayLabelView;
+@property(readonly, nonatomic) UserDataManager *userDataManager;
+@property(weak, nonatomic) IBOutlet UINavigationItem *userDisplayLabelViewold;
+@property(weak, nonatomic) IBOutlet UITableView *usersTableView;
+@property(weak, nonatomic) IBOutlet UINavigationItem *userDisplayLabelView;
 
 @end
