@@ -61,7 +61,6 @@
 
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    NSLog(@"Previous Squiggles!! %@", previousSquiggles);
     for (Squiggle *squiggle in previousSquiggles) {
         [self drawSquiggle:squiggle inContext:context];
     }
@@ -156,7 +155,6 @@
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (event.subtype == UIEventSubtypeMotionShake) {
-        NSLog(@"started!");
         [shakePlayer play];
     }
 }
@@ -168,7 +166,6 @@
 //// called when a motion event, such as a shake, ends
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     // if a shake event ended
-    NSLog(@"ended!");
     if (!self.respondsToTouches) return;
 
     if (event.subtype == UIEventSubtypeMotionShake) {
@@ -247,5 +244,10 @@
     [squiggles removeAllObjects];
     [finishedSquiggles removeAllObjects];
     [self setNeedsDisplay];    // refresh the display
+}
+
+- (void)undoLastSquiggle {
+    [self.finishedSquiggles removeLastObject];
+    [self setNeedsDisplay];
 }
 @end

@@ -33,6 +33,7 @@
 - (IBAction)cancelledDrawing:(id)sender;
 
 - (IBAction)wantsToSaveDrawing:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *undoAction;
 
 @property(strong, nonatomic) IBOutlet DrawingView *mainView;
 

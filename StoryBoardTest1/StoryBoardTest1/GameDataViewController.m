@@ -33,7 +33,8 @@
     NSMutableArray *testArray = [[NSMutableArray alloc] initWithCapacity:2];
     DrawingView *firstDrawingView = [self createDrawingViewWithGameEntries:[self.gameData.gameEntries objectAtIndex:0] withFrame:self.mainView.frame];
     [testArray addObject:firstDrawingView];
-
+    //DrawingView *firstDrawingView2 = [self createDrawingViewWithGameEntries:[self.gameData.gameEntries objectAtIndex:0] withFrame:self.mainView.frame];
+    //[testArray addObject:firstDrawingView2];
     [[self scrollView] addPages:testArray];
 }
 

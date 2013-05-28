@@ -22,7 +22,6 @@ static EPYCAppDelegate *_appDelegate = nil;
 
 - (IBAction)cancelledDrawing:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"Dismissed!");
         [self cancelledDrawing];
     }];
 }
@@ -36,7 +35,6 @@ static EPYCAppDelegate *_appDelegate = nil;
         CGRect mainView = [self.mainView frame];
         [newestEntry setOriginalViewportX:[NSNumber numberWithFloat:mainView.size.width]];
         [newestEntry setOriginalViewportY:[NSNumber numberWithFloat:mainView.size.height]];
-        NSLog(@"saving......%@", currentSquiggle);
 
     }];
     [manager saveContext];
@@ -51,7 +49,6 @@ static EPYCAppDelegate *_appDelegate = nil;
 - (void)cancelledDrawing {
     [createdSquiggles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         Squiggle *squiggle = (Squiggle *) obj;
-        NSLog(@"deleting %@", squiggle);
         [_appDelegate.managedObjectContext deleteObject:squiggle];
     }];
     [createdSquiggles removeAllObjects];
@@ -66,6 +63,7 @@ static EPYCAppDelegate *_appDelegate = nil;
         [_appDelegate.managedObjectContext deleteObject:squiggle];
     }];
 }
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -112,6 +110,11 @@ static EPYCAppDelegate *_appDelegate = nil;
 
 - (IBAction)didSelectColorsButton:(id)sender {
     [colorsMenu showInView:[self mainView]];
+}
+- (IBAction)undoLastSquiggleAction:(id)sender {
+    [createdSquiggles removeLastObject];
+    [self.mainView undoLastSquiggle];
+    NSLog(@"createdSquiggles %@", createdSquiggles);
 }
 
 - (void)buttonMenuViewController:(MBButtonMenuViewController *)buttonMenu buttonTappedAtIndex:(NSUInteger)index {

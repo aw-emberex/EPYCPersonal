@@ -44,4 +44,6 @@
 
 - (void)resetView;    // clear all squiggles from the view
 
+-(void)undoLastSquiggle;
+
 @end
