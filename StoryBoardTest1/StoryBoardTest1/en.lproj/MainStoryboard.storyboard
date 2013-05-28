@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgF-Yg-CEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="1194"/>
+            <point key="canvasLocation" x="254" y="1312"/>
         </scene>
         <!--Game View Controller - Game-->
         <scene sceneID="yoY-Ft-5Ys">
@@ -330,7 +330,6 @@
         <class className="AddUserViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddUserViewController.h"/>
             <relationships>
-                <relationship kind="action" name="didAddUser:"/>
                 <relationship kind="action" name="didCancel:"/>
                 <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
             </relationships>
@@ -374,7 +373,6 @@
         <class className="UsersViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UsersViewController.h"/>
             <relationships>
-                <relationship kind="action" name="postToFB:"/>
                 <relationship kind="outlet" name="userDisplayLabelView" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="userDisplayLabelViewold" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="usersTableView" candidateClass="UITableView"/>

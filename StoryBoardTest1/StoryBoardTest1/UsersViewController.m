@@ -36,17 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _userDataManager = [UserDataManager getUserDataManager];
-    [self updateLabels];
     self.usersTableView.scrollEnabled = YES;
-}
-
-- (void)updateLabels {
-    User *currentUser = [_userDataManager getCurrentUser];
-    if (currentUser) {
-        [self.userDisplayLabelView setTitle:[NSString stringWithFormat:@"Current User: %@", currentUser.name]];
-    } else {
-        [self.userDisplayLabelView setTitle:@"No Current User"];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +73,7 @@
     User *currentUser = [[_userDataManager getUsers] objectAtIndex:indexPath.row];
     [cell setUserNameText:currentUser.name];
     [cell setNumberLabelText:indexPath.row];
+    [cell.positionLabel setText:[NSString stringWithFormat:@"%d", indexPath.row]];
     NSLog(@"%@", currentUser.isSelectedUser);
     if ([currentUser.isSelectedUser isEqualToNumber:[NSNumber numberWithInt:0]]) {
         [cell setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:255 alpha:1]];
@@ -92,25 +83,17 @@
     return cell;
 }
 
-- (IBAction)postToFB:(id)sender {
-    SLComposeViewController *facebookThing = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [facebookThing setInitialText:@"I love EPYC Personal!"];
-    [self presentViewController:facebookThing animated:YES completion:nil];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *users = [_userDataManager getUsers];
     User *newSelectedUser = [users objectAtIndex:indexPath.row];
     [_userDataManager setCurrentUser:newSelectedUser];
     [self.usersTableView reloadData];
-    [self updateLabels];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [_userDataManager deleteUserAtIndex:indexPath.row];
     }
-    [self updateLabels];
     [self.usersTableView reloadData];
 }
 
@@ -120,7 +103,6 @@
         AddUserViewController *segueDestination = [[nav viewControllers] objectAtIndex:0];
         [segueDestination setDelegate:self];
         NSLog(@"SUCCESS");
-
     }
 }
 
@@ -131,7 +113,6 @@
 - (void)didAddUser:(User *)userAdded {
     [_userDataManager setCurrentUser:userAdded];
     [self.usersTableView reloadData];
-    [self updateLabels];
 }
 
 - (User *)didRequestUser {

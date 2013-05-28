@@ -12,6 +12,7 @@
 @property(weak, nonatomic) IBOutlet UILabel *numberLabel;
 @property(weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property(weak, nonatomic) IBOutlet UIImageView *starImageView;
+@property (weak, nonatomic) IBOutlet UILabel *positionLabel;
 
 - (void)setNumberLabelText:(NSInteger)text;
 
