@@ -10,6 +10,11 @@
 		2DBA157A1E922D2C74CE848B /* GameDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */; };
 		FA05BFB21708D97C00F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05BFB11708D97C00F6B7CA /* CoreData.framework */; };
 		FA05BFB31708DA8900F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05BFB11708D97C00F6B7CA /* CoreData.framework */; };
+		FA0CAA111755A6AF00E756C0 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0CAA101755A6AF00E756C0 /* LICENSE.txt */; };
+		FA0CAA1E1755A73200E756C0 /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAA171755A73200E756C0 /* BButton.m */; };
+		FA0CAA1F1755A73200E756C0 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAA191755A73200E756C0 /* NSString+FontAwesome.m */; };
+		FA0CAA201755A73200E756C0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA0CAA1B1755A73200E756C0 /* FontAwesome.ttf */; };
+		FA0CAA211755A73200E756C0 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CAA1D1755A73200E756C0 /* UIColor+BButton.m */; };
 		FA1880E3170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */; };
 		FA1880E4170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */; };
 		FA25F80D1744A92900B7C5DE /* GameDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA25F80C1744A92900B7C5DE /* GameDataCell.m */; };
@@ -121,6 +126,14 @@
 		2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataViewController.m; sourceTree = "<group>"; };
 		2DBA1E846178106790E82A80 /* GameDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataViewController.h; sourceTree = "<group>"; };
 		FA05BFB11708D97C00F6B7CA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FA0CAA101755A6AF00E756C0 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../../../../OBJCLibraries/BButton/LICENSE.txt; sourceTree = "<group>"; };
+		FA0CAA161755A73200E756C0 /* BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BButton.h; sourceTree = "<group>"; };
+		FA0CAA171755A73200E756C0 /* BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BButton.m; sourceTree = "<group>"; };
+		FA0CAA181755A73200E756C0 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		FA0CAA191755A73200E756C0 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		FA0CAA1B1755A73200E756C0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		FA0CAA1C1755A73200E756C0 /* UIColor+BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BButton.h"; sourceTree = "<group>"; };
+		FA0CAA1D1755A73200E756C0 /* UIColor+BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BButton.m"; sourceTree = "<group>"; };
 		FA1880E2170A99DC00AA6634 /* StoryboardDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoryboardDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FA1880E5170A9BE100AA6634 /* StoryboardDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		FA25F80B1744A92900B7C5DE /* GameDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataCell.h; sourceTree = "<group>"; };
@@ -248,6 +261,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0CAA151755A73200E756C0 /* BButton */ = {
+			isa = PBXGroup;
+			children = (
+				FA0CAA161755A73200E756C0 /* BButton.h */,
+				FA0CAA171755A73200E756C0 /* BButton.m */,
+				FA0CAA181755A73200E756C0 /* NSString+FontAwesome.h */,
+				FA0CAA191755A73200E756C0 /* NSString+FontAwesome.m */,
+				FA0CAA1A1755A73200E756C0 /* resources */,
+				FA0CAA1C1755A73200E756C0 /* UIColor+BButton.h */,
+				FA0CAA1D1755A73200E756C0 /* UIColor+BButton.m */,
+			);
+			path = BButton;
+			sourceTree = "<group>";
+		};
+		FA0CAA1A1755A73200E756C0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA0CAA1B1755A73200E756C0 /* FontAwesome.ttf */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		FA2AF50A1703FD91004E785E = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +360,7 @@
 				FA2AF51F1703FD91004E785E /* InfoPlist.strings */,
 				FA2AF5221703FD91004E785E /* main.m */,
 				FA2AF5241703FD91004E785E /* EPYCPersonal-Prefix.pch */,
+				FA0CAA101755A6AF00E756C0 /* LICENSE.txt */,
 				FA2AF5281703FD91004E785E /* Default.png */,
 				FA2AF52A1703FD91004E785E /* Default@2x.png */,
 				FA2AF52C1703FD91004E785E /* Default-568h@2x.png */,
@@ -347,6 +383,7 @@
 		FA2AF5411703FD91004E785E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA0CAA151755A73200E756C0 /* BButton */,
 				FAF85FE9173B63ED00142EDB /* TapkuLibrary.bundle */,
 				FA2AF5421703FD91004E785E /* EPYCPersonalTests-Info.plist */,
 				FA2AF5431703FD91004E785E /* InfoPlist.strings */,
@@ -552,6 +589,8 @@
 				FAF85FEA173B63ED00142EDB /* TapkuLibrary.bundle in Resources */,
 				FA4C194E1742007E00916165 /* GameDataTableCell.xib in Resources */,
 				FA25F8151744AF4A00B7C5DE /* FacebookSDKResources.bundle in Resources */,
+				FA0CAA111755A6AF00E756C0 /* LICENSE.txt in Resources */,
+				FA0CAA201755A73200E756C0 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +653,9 @@
 				FA468DF717402A58006C57B8 /* ALScrollViewPaging.m in Sources */,
 				FA4C19521742019C00916165 /* GameDataEntryTableViewController.m in Sources */,
 				FA25F80D1744A92900B7C5DE /* GameDataCell.m in Sources */,
+				FA0CAA1E1755A73200E756C0 /* BButton.m in Sources */,
+				FA0CAA1F1755A73200E756C0 /* NSString+FontAwesome.m in Sources */,
+				FA0CAA211755A73200E756C0 /* UIColor+BButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

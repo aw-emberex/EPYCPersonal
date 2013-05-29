@@ -171,19 +171,16 @@ static EPYCAppDelegate *_appDelegate = nil;
 
 
 - (void)setColor:(UIColor *)color {
-    DrawingView *view = (DrawingView *) self.mainView;
+    DrawingView *view = self.mainView;
     view.color = color;
 }
 
 - (void)setLineWidth:(float)width {
-    DrawingView *view = (DrawingView *) self.mainView;
-    [view setLineWidth:width];
-    NSLog(@"Line width: %f", view.lineWidth);
+    [self.mainView setLineWidth:width];
+    NSLog(@"Line width: %f", self.mainView.lineWidth);
 }
 
-- (void)resetView {
-    DrawingView *view = (DrawingView *) self.mainView;
-    [view resetView];
-}
+
+
 
 @end
