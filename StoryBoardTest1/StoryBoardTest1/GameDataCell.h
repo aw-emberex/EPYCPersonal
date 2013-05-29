@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GameDataCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *timeCreatedLabel;
 
 @end

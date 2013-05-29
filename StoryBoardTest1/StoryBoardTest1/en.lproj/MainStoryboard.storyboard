@@ -54,7 +54,7 @@
                     </items>
                 </toolbar>
             </objects>
-            <point key="canvasLocation" x="94" y="-429"/>
+            <point key="canvasLocation" x="-210" y="-1397"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QxM-Lj-BDL">
@@ -69,7 +69,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhS-UT-sHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501" y="-441"/>
+            <point key="canvasLocation" x="197" y="-1409"/>
         </scene>
         <!--Add User View Controller - New User-->
         <scene sceneID="HPJ-0u-GGE">
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoM-ls-tIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="-441"/>
+            <point key="canvasLocation" x="606" y="-1409"/>
         </scene>
         <!--Tabs Controller-->
         <scene sceneID="yre-iy-mN5">
@@ -140,7 +140,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmN-ec-ZUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="546"/>
+            <point key="canvasLocation" x="-1820" y="-1702"/>
         </scene>
         <!--Navigation Controller - Gahmes-->
         <scene sceneID="hJR-6q-PAG">
@@ -156,7 +156,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLt-dt-Qaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-536" y="1312"/>
+            <point key="canvasLocation" x="-840" y="344"/>
         </scene>
         <!--Game Data Entry Table View Controller - EPYC Games-->
         <scene sceneID="2Eb-qK-rUw">
@@ -192,6 +192,10 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="presentActiveGameAction:" destination="0y0-kA-NAJ" eventType="touchUpInside" id="Zk4-YF-LoD"/>
+                                    <segue destination="esi-2a-Hgh" kind="push" id="jCf-gY-wcp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -202,7 +206,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bp0-6E-5ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="1312"/>
+            <point key="canvasLocation" x="-283" y="344"/>
+        </scene>
+        <!--View Controller - Active Game-->
+        <scene sceneID="91R-yO-feq">
+            <objects>
+                <viewController title="Active Game" id="esi-2a-Hgh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dex-3h-hEu">
+                        <rect key="frame" x="0.0" y="94" width="320" height="425"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Active Game" prompt="Gahme!" id="o1e-vh-2Z0">
+                        <barButtonItem key="backBarButtonItem" title="Back To All Games" id="KQV-pC-4JF"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hih-hK-Wp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="735"/>
         </scene>
         <!--Game Data View Controller - Test-->
         <scene sceneID="Plf-Iy-j0R">
@@ -234,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgF-Yg-CEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="1312"/>
+            <point key="canvasLocation" x="-1306" y="812"/>
         </scene>
         <!--Game View Controller - Game-->
         <scene sceneID="yoY-Ft-5Ys">
@@ -266,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USF-Y0-F6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="388"/>
+            <point key="canvasLocation" x="-229" y="-580"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="qpb-25-s98">
@@ -333,72 +354,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFT-D2-Lzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="396"/>
+            <point key="canvasLocation" x="367" y="-572"/>
         </scene>
     </scenes>
     <resources>
         <image name="08-chat.png" width="24" height="22"/>
         <image name="63-runner.png" width="18" height="25"/>
     </resources>
-    <classes>
-        <class className="ALScrollViewPaging" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ALScrollViewPaging.h"/>
-        </class>
-        <class className="AddUserViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddUserViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="didCancel:"/>
-                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="BButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BButton.h"/>
-        </class>
-        <class className="DrawingView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingView.h"/>
-        </class>
-        <class className="DrawingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelledDrawing:"/>
-                <relationship kind="action" name="didSelectColorsButton:"/>
-                <relationship kind="action" name="didSelectLineButton:"/>
-                <relationship kind="action" name="undoLastSquiggleAction:"/>
-                <relationship kind="action" name="wantsToSaveDrawing:"/>
-                <relationship kind="outlet" name="mainView" candidateClass="DrawingView"/>
-                <relationship kind="outlet" name="undoAction" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="EPYCTabsController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EPYCTabsController.h"/>
-        </class>
-        <class className="GameDataEntryTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDataEntryTableViewController.h"/>
-        </class>
-        <class className="GameDataViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDataViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="myPageControl" candidateClass="UIPageControl"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="ALScrollViewPaging"/>
-                <relationship kind="outlet" name="someLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GameViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="userDataSource" candidateClass="UIViewController"/>
-            </relationships>
-        </class>
-        <class className="UsersViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UsersViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="userDisplayLabelView" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="userDisplayLabelViewold" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="usersTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

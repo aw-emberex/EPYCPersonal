@@ -134,6 +134,8 @@
 		FA0CAA1B1755A73200E756C0 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		FA0CAA1C1755A73200E756C0 /* UIColor+BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BButton.h"; sourceTree = "<group>"; };
 		FA0CAA1D1755A73200E756C0 /* UIColor+BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BButton.m"; sourceTree = "<group>"; };
+		FA0CAA221755AA9D00E756C0 /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = SOURCE_ROOT; };
+		FA0CAA231755AA9D00E756C0 /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = SOURCE_ROOT; };
 		FA1880E2170A99DC00AA6634 /* StoryboardDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoryboardDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FA1880E5170A9BE100AA6634 /* StoryboardDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "StoryboardDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		FA25F80B1744A92900B7C5DE /* GameDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataCell.h; sourceTree = "<group>"; };
@@ -342,6 +344,8 @@
 				FA2AF5251703FD91004E785E /* EPYCAppDelegate.h */,
 				FA2AF5261703FD91004E785E /* EPYCAppDelegate.m */,
 				FA1880E1170A99DC00AA6634 /* StoryboardDataModel.xcdatamodeld */,
+				FA0CAA221755AA9D00E756C0 /* GameData.h */,
+				FA0CAA231755AA9D00E756C0 /* GameData.m */,
 				FA2AF51D1703FD91004E785E /* Supporting Files */,
 			);
 			name = EPYCPersonal;

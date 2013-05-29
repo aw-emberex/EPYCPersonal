@@ -2,7 +2,7 @@
 //  GameData.m
 //  EPYCPersonal
 //
-//  Created by Alex Wait on 5/1/13.
+//  Created by Alex Wait on 5/28/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
@@ -12,6 +12,11 @@
 
 @implementation GameData
 
+@dynamic creationTime;
 @dynamic gameEntries;
+
+-(void)awakeFromInsert {
+    self.creationTime = [NSDate date];
+}
 
 @end
