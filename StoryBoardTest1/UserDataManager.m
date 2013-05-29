@@ -31,10 +31,8 @@ static UserDataManager* _selfSingleton = nil;
 - (id) init {
     if (self = [super init]) {
         _appDelegate = (EPYCAppDelegate *)[[UIApplication sharedApplication] delegate];
-        //other stuff here
         _userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:_appDelegate.managedObjectContext];
     }
-    [self addNewUserWithName:@"SUPER DERP!"];
     return self;
 };
 

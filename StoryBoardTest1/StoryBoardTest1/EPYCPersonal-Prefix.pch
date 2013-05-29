@@ -16,5 +16,6 @@
 #import "ALScrollViewPaging.h"
 #import "GameManager.h"
 #import <Social/Social.h>
+#import "BButton.h"
 
 #endif
