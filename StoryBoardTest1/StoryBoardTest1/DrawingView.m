@@ -35,7 +35,6 @@
         gameManager = [GameManager getInstance];
         [self setup];
     }
-    //[self setUserInteractionEnabled:FALSE];
     return self;
 }
 
@@ -45,7 +44,7 @@
     finishedSquiggles = [[NSMutableArray alloc] init];
     // the starting color is black
     color = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:1];
-    self.backgroundColor = [UIColor whiteColor];
+    //self.backgroundColor = [UIColor whiteColor];
     lineWidth = 5;
     gameManager = [GameManager getInstance];
     [self setMultipleTouchEnabled:YES];
@@ -197,7 +196,6 @@
         NSValue *touchValue = [NSValue valueWithPointer:CFBridgingRetain(touch)];
         NSString *key = [NSString stringWithFormat:@"%@", touchValue];
         CFBridgingRelease((__bridge CFTypeRef) (touch));
-
 
         [squiggles setValue:squiggle forKey:key];
     }

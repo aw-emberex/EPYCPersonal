@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DBA132787BAC2FE7A2AE234 /* UIView+AnimateHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA19425D857607D71D9BD4 /* UIView+AnimateHidden.m */; };
 		2DBA157A1E922D2C74CE848B /* GameDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */; };
 		FA05BFB21708D97C00F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05BFB11708D97C00F6B7CA /* CoreData.framework */; };
 		FA05BFB31708DA8900F6B7CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05BFB11708D97C00F6B7CA /* CoreData.framework */; };
@@ -125,6 +126,8 @@
 
 /* Begin PBXFileReference section */
 		2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataViewController.m; sourceTree = "<group>"; };
+		2DBA19425D857607D71D9BD4 /* UIView+AnimateHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimateHidden.m"; sourceTree = "<group>"; };
+		2DBA1D5D96BF65D615B07564 /* UIView+AnimateHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimateHidden.h"; sourceTree = "<group>"; };
 		2DBA1E846178106790E82A80 /* GameDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataViewController.h; sourceTree = "<group>"; };
 		FA05BFB11708D97C00F6B7CA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FA0CAA101755A6AF00E756C0 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../../../../OBJCLibraries/BButton/LICENSE.txt; sourceTree = "<group>"; };
@@ -441,6 +444,8 @@
 				FA2AF55E170401A1004E785E /* GameViewController.m */,
 				FA2AF5311703FD91004E785E /* EPYCViewController.h */,
 				FA2AF5321703FD91004E785E /* EPYCViewController.m */,
+				2DBA19425D857607D71D9BD4 /* UIView+AnimateHidden.m */,
+				2DBA1D5D96BF65D615B07564 /* UIView+AnimateHidden.h */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -666,6 +671,7 @@
 				FA0CAA1F1755A73200E756C0 /* NSString+FontAwesome.m in Sources */,
 				FA0CAA211755A73200E756C0 /* UIColor+BButton.m in Sources */,
 				FA0CAA271755B3FE00E756C0 /* CurrentGameDisplayController.m in Sources */,
+				2DBA132787BAC2FE7A2AE234 /* UIView+AnimateHidden.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

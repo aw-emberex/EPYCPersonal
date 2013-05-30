@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastPhraseTextLabel;
 @property (weak, nonatomic) IBOutlet DrawingView *latestDrawingView;
 @property (strong, nonatomic) GameManager * gameManager;
+@property (weak, nonatomic) IBOutlet UIView *phraseTextLabelView;
 
 @end
