@@ -1,9 +1,5 @@
 //
-//  MainViewController.m
-//  Painter
-//
-//  Created by Edward Chiang on 2010/11/20.
-//  Copyright Edward 2010. All rights reserved.
+//by Alex Wait for EPYC Copyright 2013 Emberex
 //
 
 #import "DrawingViewController.h"
@@ -41,7 +37,6 @@ static EPYCAppDelegate *_appDelegate = nil;
 
     }];
     [manager saveContext];
-
     [self dismissViewControllerAnimated:YES completion:^{
         [self.delegate savedSquiggles:[NSOrderedSet orderedSetWithArray:createdSquiggles]];
     }];
@@ -170,11 +165,9 @@ static EPYCAppDelegate *_appDelegate = nil;
 }
 
 - (void)buttonMenuViewControllerDidCancel:(MBButtonMenuViewController *)buttonMenu {
-    //do nothing for now! :)
     [colorsMenu hide];
     [lineWidthMenu hide];
 }
-
 
 - (void)setColor:(UIColor *)color {
     DrawingView *view = self.mainView;
@@ -185,8 +178,6 @@ static EPYCAppDelegate *_appDelegate = nil;
     [self.mainView setLineWidth:width];
     NSLog(@"Line width: %f", self.mainView.lineWidth);
 }
-
-
 
 
 @end

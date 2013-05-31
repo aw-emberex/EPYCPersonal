@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     _allGameDataSets = [[GameManager getInstance] getAllGameData];
 }
 
@@ -34,9 +33,7 @@
     
 }
 
-
 #pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIStoryboard *myStoryboard = self.storyboard;
     GameDataViewController *tableViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"GameDataViewStoryboardController"];
