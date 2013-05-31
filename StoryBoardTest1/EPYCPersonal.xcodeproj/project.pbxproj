@@ -125,6 +125,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DBA160C1A464534E55978F3 /* DrawingViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewControllerDelegate.h; sourceTree = "<group>"; };
 		2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataViewController.m; sourceTree = "<group>"; };
 		2DBA19425D857607D71D9BD4 /* UIView+AnimateHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimateHidden.m"; sourceTree = "<group>"; };
 		2DBA1D5D96BF65D615B07564 /* UIView+AnimateHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimateHidden.h"; sourceTree = "<group>"; };
@@ -280,8 +281,9 @@
 				FA0CAA1C1755A73200E756C0 /* UIColor+BButton.h */,
 				FA0CAA1D1755A73200E756C0 /* UIColor+BButton.m */,
 			);
-			path = BButton;
-			sourceTree = "<group>";
+			name = BButton;
+			path = StoryBoardTest1Tests/BButton;
+			sourceTree = SOURCE_ROOT;
 		};
 		FA0CAA1A1755A73200E756C0 /* resources */ = {
 			isa = PBXGroup;
@@ -361,6 +363,7 @@
 		FA2AF51D1703FD91004E785E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA0CAA151755A73200E756C0 /* BButton */,
 				FA44B401173741C3006295C2 /* epycsmall.png */,
 				FA44B3FF173741BE006295C2 /* EPYCbig.png */,
 				FA696613172E3B9100DB01E9 /* 63-runner.png */,
@@ -393,7 +396,6 @@
 		FA2AF5411703FD91004E785E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA0CAA151755A73200E756C0 /* BButton */,
 				FAF85FE9173B63ED00142EDB /* TapkuLibrary.bundle */,
 				FA2AF5421703FD91004E785E /* EPYCPersonalTests-Info.plist */,
 				FA2AF5431703FD91004E785E /* InfoPlist.strings */,
@@ -406,6 +408,7 @@
 			children = (
 				FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */,
 				FA44B40817374732006295C2 /* EPYCDrawingViewDelegate.h */,
+				2DBA160C1A464534E55978F3 /* DrawingViewControllerDelegate.h */,
 			);
 			name = "Custom Delegate Interfaces";
 			sourceTree = "<group>";

@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "DrawingView.h"
+#import "DrawingViewControllerDelegate.h"
 
-@interface CurrentGameDisplayController : UIViewController
+@interface CurrentGameDisplayController : UIViewController <DrawingViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *nextTurnButton;
 @property (weak, nonatomic) IBOutlet UIButton *endGameButton;
 @property (weak, nonatomic) IBOutlet UILabel *lastPhraseTextLabel;
 @property (weak, nonatomic) IBOutlet DrawingView *latestDrawingView;
 @property (strong, nonatomic) GameManager * gameManager;
 @property (weak, nonatomic) IBOutlet UIView *phraseTextLabelView;
+@property (weak, nonatomic) IBOutlet UITextField *phraseEnteredTextView;
 
 @end

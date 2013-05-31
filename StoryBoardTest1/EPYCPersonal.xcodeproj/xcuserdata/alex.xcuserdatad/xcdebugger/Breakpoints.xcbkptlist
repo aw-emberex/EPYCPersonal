@@ -156,8 +156,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "76"
          endingLineNumber = "76"
-         landmarkName = "-drawRect:"
-         landmarkType = "5">
+         landmarkName = "@implementation DrawingView"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -195,8 +195,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "149"
          endingLineNumber = "149"
-         landmarkName = "-alertView:clickedButtonAtIndex:"
-         landmarkType = "5">
+         landmarkName = "@implementation DrawingView"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -368,7 +368,7 @@
          landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "StoryBoardTest1Tests/DBTests.m"
@@ -377,7 +377,20 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "32"
          endingLineNumber = "32"
-         landmarkName = "-setUp"
+         landmarkName = "@implementation DBTests"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "StoryBoardTest1Tests/DBTests.m"
+         timestampString = "391664898.253201"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
+         landmarkName = "-testMainGameData"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

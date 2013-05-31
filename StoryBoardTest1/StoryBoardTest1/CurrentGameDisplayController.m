@@ -8,6 +8,7 @@
 
 #import "CurrentGameDisplayController.h"
 #import "UIView+AnimateHidden.h"
+#import "DrawingViewController.h"
 
 @interface CurrentGameDisplayController ()
 
@@ -20,7 +21,6 @@
 @synthesize lastPhraseTextLabel = _lastPhraseTextLabel;
 @synthesize latestDrawingView = _latestDrawingView;
 @synthesize gameManager = _gameManager;
-@synthesize phraseTextLabelView = _phraseTextLabelView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,11 +45,31 @@
 }
 
 - (IBAction)nextTurnAction:(id)sender {
-    //[self.phraseTextLabelView setHiddenAnimated:YES withDuration:1.1];
-    //[self.phraseTextLabelView setHiddenAnimated:NO withDuration:1.1];
+    GameEntry *latestGameEntry = [_gameManager requestLatestGameEntry];
+    if ([[latestGameEntry squiggles] count] == 0) {
+        UIStoryboard *myStoryboard = self.storyboard;
+        DrawingViewController *drawingViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"DrawingViewController"];
+        [drawingViewController setDelegate:self];
+        [self presentViewController:drawingViewController animated:YES completion:^{
+
+        }];
+        NSLog(@"Starting");
+    } else {
+
+    }
 }
 
 - (IBAction)endGameAction:(id)sender {
+
+
+}
+- (IBAction)enteredPhraseTextAction:(id)sender {
+    NSString* phrase = self.phraseEnteredTextView.text;
+    [_gameManager setCurrentGameDataPhraseText:phrase];
+}
+
+- (void)savedSquiggles:(NSOrderedSet *)squigglesSaved {
+    NSLog(@"Saved Squiggles %@", squigglesSaved);
 }
 
 @end

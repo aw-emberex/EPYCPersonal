@@ -7,6 +7,7 @@
 //
 
 #import "DrawingViewController.h"
+#import "DrawingViewControllerDelegate.h"
 
 @implementation DrawingViewController
 
@@ -15,6 +16,8 @@
 
 static EPYCAppDelegate *_appDelegate = nil;
 
+
+@synthesize delegate = _delegate;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return (toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
@@ -38,7 +41,10 @@ static EPYCAppDelegate *_appDelegate = nil;
 
     }];
     [manager saveContext];
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.delegate savedSquiggles:[NSOrderedSet orderedSetWithArray:createdSquiggles]];
+    }];
 }
 
 - (void)createdNewSquiggle:(Squiggle *)squiggle {

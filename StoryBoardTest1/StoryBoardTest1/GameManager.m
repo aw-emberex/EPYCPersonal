@@ -70,7 +70,7 @@ static GameManager *_instance = nil;
     NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameData"];
     [fetch setReturnsObjectsAsFaults:NO];
 
-    NSArray *result = (NSArray *) [managedObjectContent executeFetchRequest:fetch error:&error];
+    NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
 
     if ([result count] == 0) {
         _mainGameDataInstance = (GameData *) [NSEntityDescription insertNewObjectForEntityForName:@"GameData" inManagedObjectContext:managedObjectContent];
@@ -110,6 +110,30 @@ static GameManager *_instance = nil;
     NSError *__autoreleasing error;
     NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
     return [NSMutableOrderedSet orderedSetWithArray:result];
+}
+
+- (void)setCurrentGameDataPhraseText:(NSString *)phraseText {
+    GameEntry *latestGameEntry = [self requestLatestGameEntry];
+    if ([latestGameEntry phraseText] == nil) {
+        //use existing
+        [latestGameEntry setPhraseText:phraseText];
+    }
+    else {
+        GameEntry *newGameEntry = [self createNewGameEntry];
+        [newGameEntry setPhraseText:phraseText];
+    }
+    [self saveContext];
+}
+
+- (void)setCurrentGameEntrySquiggles:(NSOrderedSet *)squiggles {
+    GameEntry *latestGameEntry = [self requestLatestGameEntry];
+    if ([[latestGameEntry squiggles] count] == 0) {
+        [latestGameEntry setSquiggles:squiggles];
+    } else {
+        GameEntry *newGameEntry = [self createNewGameEntry];
+        [newGameEntry setSquiggles:squiggles];
+    }
+    [self saveContext];
 }
 @end
 

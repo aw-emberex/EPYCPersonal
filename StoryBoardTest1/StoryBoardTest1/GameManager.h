@@ -33,6 +33,9 @@
 
 - (GameData *)getMainGameData;
 
+- (void)setCurrentGameDataPhraseText:(NSString *)phraseText;
+
+- (void)setCurrentGameEntrySquiggles:(NSOrderedSet *)squiggles;
 
 @property(readwrite, nonatomic) GameData *mainGameDataInstance;
 

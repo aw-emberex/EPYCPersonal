@@ -16,12 +16,13 @@
  THE SOFTWARE IS PROVIDEED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-//#import "FlipsideViewController.h"
 #import "Squiggle.h"
 #import "EPYCDrawingViewDelegate.h"
 #import "DrawingView.h"
 #import "MBButtonMenuViewController.h"
 #import "../Tapku/src/TapkuLibrary/TapkuLibrary.h"
+
+@protocol DrawingViewControllerDelegate;
 
 
 @interface DrawingViewController : UIViewController <EPYCDrawingViewDelegate, MBButtonMenuViewControllerDelegate> {
@@ -36,5 +37,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *undoAction;
 
 @property(strong, nonatomic) IBOutlet DrawingView *mainView;
+@property (strong, nonatomic) id<DrawingViewControllerDelegate> delegate;
 
 @end
