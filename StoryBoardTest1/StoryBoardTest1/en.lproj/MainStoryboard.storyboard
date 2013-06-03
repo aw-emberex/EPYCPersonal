@@ -212,10 +212,72 @@
         <scene sceneID="91R-yO-feq">
             <objects>
                 <viewController title="Active Game" id="esi-2a-Hgh" customClass="CurrentGameDisplayController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dex-3h-hEu">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Dex-3h-hEu">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" id="CHz-1t-Nan" userLabel="Phrase Entry Text View">
+                                <rect key="frame" x="6" y="54" width="310" height="380"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What did they draw?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fww-eV-k6v">
+                                        <rect key="frame" x="62" y="284" width="183" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SxP-4L-0iA" customClass="BButton">
+                                        <rect key="frame" x="216" y="313" width="89" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="EPYC!">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="enteredPhraseTextAction:" destination="esi-2a-Hgh" eventType="touchUpInside" id="5df-OG-yA6"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="A1w-jX-e2R">
+                                        <rect key="frame" x="17" y="313" width="191" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="esi-2a-Hgh" id="LJh-Ut-0ML"/>
+                                        </connections>
+                                    </textField>
+                                    <view hidden="YES" opaque="NO" contentMode="scaleToFill" id="nYL-kf-qHe" customClass="DrawingView">
+                                        <rect key="frame" x="17" y="14" width="161" height="146"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" red="0.073569866165617781" green="0.00053359762917992715" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" id="0jE-vf-JsG" userLabel="Previous Phrase View">
+                                <rect key="frame" x="6" y="109" width="308" height="238"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zd9-q8-wzW">
+                                        <rect key="frame" x="14" y="109" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Awh-Hy-o3B" customClass="BButton">
                                 <rect key="frame" x="6" y="406" width="308" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -256,54 +318,6 @@
                                     <action selector="nextTurnAction:" destination="esi-2a-Hgh" eventType="touchUpInside" id="Lsd-1d-zmS"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" id="nYL-kf-qHe" customClass="DrawingView">
-                                <rect key="frame" x="6" y="69" width="308" height="318"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.073569866165617781" green="0.00053359762917992715" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="0jE-vf-JsG" userLabel="Phrase Text View">
-                                <rect key="frame" x="6" y="109" width="308" height="238"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter Phrase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4HV-2v-5C8">
-                                        <rect key="frame" x="99" y="15" width="100" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k0a-rg-xKn" customClass="BButton">
-                                        <rect key="frame" x="20" y="82" width="268" height="146"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="EPYC!">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="enteredPhraseTextAction:" destination="esi-2a-Hgh" eventType="touchUpInside" id="Smk-RM-hdu"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Fys-LF-8oV">
-                                        <rect key="frame" x="20" y="44" width="268" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="esi-2a-Hgh" id="gZK-FR-JCk"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -313,16 +327,31 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="endGameButton" destination="Awh-Hy-o3B" id="3is-0F-eUT"/>
-                        <outlet property="lastPhraseTextLabel" destination="4HV-2v-5C8" id="hm4-XT-0jy"/>
                         <outlet property="latestDrawingView" destination="nYL-kf-qHe" id="DXv-g2-z9E"/>
                         <outlet property="nextTurnButton" destination="Brc-TH-TEJ" id="zOA-zR-EIf"/>
-                        <outlet property="phraseEnteredTextView" destination="Fys-LF-8oV" id="sUH-p6-102"/>
-                        <outlet property="phraseTextLabelView" destination="0jE-vf-JsG" id="EeO-uT-hcs"/>
+                        <outlet property="phraseEnteredTextView" destination="A1w-jX-e2R" id="eP9-QQ-haA"/>
+                        <outlet property="phraseTextLabelView" destination="CHz-1t-Nan" id="OK1-sk-nBi"/>
+                        <outlet property="previousPhraseDisplayLabel" destination="Zd9-q8-wzW" id="tne-AX-CXf"/>
+                        <outlet property="previousPhraseView" destination="0jE-vf-JsG" id="9Rv-S3-tjg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hih-hK-Wp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="166" y="509"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K0P-0e-AW3">
+            <objects>
+                <viewController id="jHg-PC-zVN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eIi-HO-Bql">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ztw-dc-JFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="401"/>
         </scene>
         <!--Game Data View Controller - Test-->
         <scene sceneID="Plf-Iy-j0R">
@@ -467,6 +496,7 @@
         <class className="AddUserViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddUserViewController.h"/>
             <relationships>
+                <relationship kind="action" name="didAddUser:"/>
                 <relationship kind="action" name="didCancel:"/>
                 <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
             </relationships>
@@ -486,6 +516,8 @@
                 <relationship kind="outlet" name="nextTurnButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="phraseEnteredTextView" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="phraseTextLabelView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="previousPhraseDisplayLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="previousPhraseView" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="DrawingView" superclassName="UIView">
@@ -495,6 +527,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancelledDrawing:"/>
+                <relationship kind="action" name="didSelectColorsButton:"/>
+                <relationship kind="action" name="didSelectLineButton:"/>
+                <relationship kind="action" name="undoLastSquiggleAction:"/>
                 <relationship kind="action" name="wantsToSaveDrawing:"/>
                 <relationship kind="outlet" name="mainView" candidateClass="DrawingView"/>
                 <relationship kind="outlet" name="undoAction" candidateClass="UIBarButtonItem"/>

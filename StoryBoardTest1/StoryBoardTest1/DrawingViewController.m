@@ -34,7 +34,6 @@ static EPYCAppDelegate *_appDelegate = nil;
         CGRect mainView = [self.mainView frame];
         [newestEntry setOriginalViewportX:[NSNumber numberWithFloat:mainView.size.width]];
         [newestEntry setOriginalViewportY:[NSNumber numberWithFloat:mainView.size.height]];
-
     }];
     [manager saveContext];
     [self dismissViewControllerAnimated:YES completion:^{

@@ -18,5 +18,7 @@
 @property (strong, nonatomic) GameManager * gameManager;
 @property (weak, nonatomic) IBOutlet UIView *phraseTextLabelView;
 @property (weak, nonatomic) IBOutlet UITextField *phraseEnteredTextView;
+@property (weak, nonatomic) IBOutlet UIView *previousPhraseView;
+@property (weak, nonatomic) IBOutlet UILabel *previousPhraseDisplayLabel;
 
 @end

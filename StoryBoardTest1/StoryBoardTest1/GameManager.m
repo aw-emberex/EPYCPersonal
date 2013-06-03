@@ -115,7 +115,6 @@ static GameManager *_instance = nil;
 - (void)setCurrentGameDataPhraseText:(NSString *)phraseText {
     GameEntry *latestGameEntry = [self requestLatestGameEntry];
     if ([latestGameEntry phraseText] == nil) {
-        //use existing
         [latestGameEntry setPhraseText:phraseText];
     }
     else {
@@ -126,14 +125,14 @@ static GameManager *_instance = nil;
 }
 
 - (void)setCurrentGameEntrySquiggles:(NSOrderedSet *)squiggles {
-    GameEntry *latestGameEntry = [self requestLatestGameEntry];
-    if ([[latestGameEntry squiggles] count] == 0) {
-        [latestGameEntry setSquiggles:squiggles];
-    } else {
-        GameEntry *newGameEntry = [self createNewGameEntry];
-        [newGameEntry setSquiggles:squiggles];
-    }
-    [self saveContext];
+//    GameEntry *latestGameEntry = [self requestLatestGameEntry];
+//    if ([[latestGameEntry squiggles] count] == 0) {
+//        [latestGameEntry setSquiggles:squiggles];
+//    } else {
+//        GameEntry *newGameEntry = [self createNewGameEntry];
+//        [newGameEntry setSquiggles:squiggles];
+//    }
+//    [self saveContext];
 }
 @end
 

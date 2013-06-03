@@ -19,4 +19,9 @@
 @dynamic owningGameData;
 @dynamic squiggles;
 
+- (BOOL)isPhraseEntryMode {
+    return self.phraseText == nil;
+}
+
+
 @end

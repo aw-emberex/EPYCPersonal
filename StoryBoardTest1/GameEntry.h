@@ -18,6 +18,9 @@
 @property (nonatomic, retain) NSNumber * originalViewportY;
 @property (nonatomic, retain) GameData *owningGameData;
 @property (nonatomic, retain) NSOrderedSet *squiggles;
+
+-(BOOL) isPhraseEntryMode;
+
 @end
 
 @interface GameEntry (CoreDataGeneratedAccessors)
