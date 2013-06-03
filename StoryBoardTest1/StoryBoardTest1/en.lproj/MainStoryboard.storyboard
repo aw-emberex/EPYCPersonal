@@ -297,6 +297,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="esi-2a-Hgh" id="gZK-FR-JCk"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -474,7 +477,9 @@
         <class className="CurrentGameDisplayController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentGameDisplayController.h"/>
             <relationships>
+                <relationship kind="action" name="endGameAction:"/>
                 <relationship kind="action" name="enteredPhraseTextAction:"/>
+                <relationship kind="action" name="nextTurnAction:"/>
                 <relationship kind="outlet" name="endGameButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="lastPhraseTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="latestDrawingView" candidateClass="DrawingView"/>
@@ -500,6 +505,9 @@
         </class>
         <class className="GameDataEntryTableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDataEntryTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="presentActiveGameAction:"/>
+            </relationships>
         </class>
         <class className="GameDataViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDataViewController.h"/>
