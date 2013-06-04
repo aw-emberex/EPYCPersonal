@@ -116,6 +116,8 @@
 		3BF9A833159791EA002A7F9E /* TKShapeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF9A831159791EA002A7F9E /* TKShapeView.h */; };
 		3BF9A834159791EA002A7F9E /* TKShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9A832159791EA002A7F9E /* TKShapeView.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		FA1B6F79175DAE1100941DAE /* GameData.h in Headers */ = {isa = PBXBuildFile; fileRef = FA1B6F77175DAE1100941DAE /* GameData.h */; };
+		FA1B6F7A175DAE1100941DAE /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1B6F78175DAE1100941DAE /* GameData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,6 +231,8 @@
 		AA747D9E0F9514B9006C5449 /* TapkuLibrary_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapkuLibrary_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTapkuLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1B6F77175DAE1100941DAE /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameData.h; path = ../../GameData.h; sourceTree = "<group>"; };
+		FA1B6F78175DAE1100941DAE /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameData.m; path = ../../GameData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +273,8 @@
 		0867D691FE84028FC02AAC07 /* TapkuLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				FA1B6F77175DAE1100941DAE /* GameData.h */,
+				FA1B6F78175DAE1100941DAE /* GameData.m */,
 				3BAC98C910953DCC00F235F1 /* TapkuLibrary */,
 				3B859EDF134C753E00661088 /* UnitTests */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -563,6 +569,7 @@
 				2057363416A330E700F8CDE6 /* TKCoverflowView.h in Headers */,
 				20FC7CA71719007300C3A7E1 /* NSMutableArray+TKCategory.h in Headers */,
 				20FC7CBC1719313A00C3A7E1 /* TKLoadingView.h in Headers */,
+				FA1B6F79175DAE1100941DAE /* GameData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +733,7 @@
 				2057363516A330E700F8CDE6 /* TKCoverflowView.m in Sources */,
 				20FC7CA81719007300C3A7E1 /* NSMutableArray+TKCategory.m in Sources */,
 				20FC7CBD1719313A00C3A7E1 /* TKLoadingView.m in Sources */,
+				FA1B6F7A175DAE1100941DAE /* GameData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -194,15 +194,16 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="presentActiveGameAction:" destination="0y0-kA-NAJ" eventType="touchUpInside" id="Zk4-YF-LoD"/>
-                                    <segue destination="esi-2a-Hgh" kind="push" id="jCf-gY-wcp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="EPYC Games" id="vUp-nF-ckH">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="a7T-eg-kyy"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="EPYC Games" id="vUp-nF-ckH"/>
+                    <connections>
+                        <outlet property="activeGameButton" destination="00o-bB-O81" id="kaR-rv-ctR"/>
+                        <outlet property="tableView" destination="boz-et-V2J" id="anR-A1-8QP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bp0-6E-5ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,13 +212,13 @@
         <!--Current Game Display Controller - Active Game-->
         <scene sceneID="91R-yO-feq">
             <objects>
-                <viewController title="Active Game" id="esi-2a-Hgh" customClass="CurrentGameDisplayController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentGameDataController" title="Active Game" id="esi-2a-Hgh" customClass="CurrentGameDisplayController" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="Dex-3h-hEu">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view hidden="YES" opaque="NO" contentMode="scaleToFill" id="0jE-vf-JsG" userLabel="Previous Phrase View">
-                                <rect key="frame" x="6" y="65" width="308" height="238"/>
+                                <rect key="frame" x="6" y="112" width="308" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zd9-q8-wzW">
@@ -231,7 +232,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="CHz-1t-Nan" userLabel="Phrase Entry Text View">
-                                <rect key="frame" x="6" y="54" width="308" height="262"/>
+                                <rect key="frame" x="6" y="54" width="308" height="355"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What did they draw?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fww-eV-k6v">
@@ -251,7 +252,7 @@
                                         </connections>
                                     </textField>
                                     <view opaque="NO" contentMode="scaleToFill" id="nYL-kf-qHe" customClass="DrawingView">
-                                        <rect key="frame" x="5" y="54" width="298" height="203"/>
+                                        <rect key="frame" x="5" y="73" width="298" height="275"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -259,7 +260,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Awh-Hy-o3B" customClass="BButton">
-                                <rect key="frame" x="6" y="318" width="308" height="44"/>
+                                <rect key="frame" x="6" y="411" width="308" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="End Game">
@@ -318,21 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hih-hK-Wp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="509"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="K0P-0e-AW3">
-            <objects>
-                <viewController id="jHg-PC-zVN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eIi-HO-Bql">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ztw-dc-JFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="579" y="401"/>
+            <point key="canvasLocation" x="78" y="355"/>
         </scene>
         <!--Game Data View Controller - Test-->
         <scene sceneID="Plf-Iy-j0R">
@@ -343,28 +330,36 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="dqv-2z-b34">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="292"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="46" width="320" height="292"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="fzh-lF-bnn">
-                                <rect key="frame" x="141" y="300" width="38" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="141" y="346" width="38" height="36"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="pageIndicatorTintColor" red="0.30191489659999998" green="0.67687540850000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.51511393439999997" blue="0.54816110799999995" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xO1-k2-yr8">
+                                <rect key="frame" x="5" y="11" width="310" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.88243036679999998" green="0.88243036679999998" blue="0.88243036679999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Test" id="cGV-qg-3mN"/>
                     <connections>
                         <outlet property="mainView" destination="dqv-2z-b34" id="cao-fh-354"/>
                         <outlet property="myPageControl" destination="fzh-lF-bnn" id="ZVx-74-r0w"/>
+                        <outlet property="phraseTextLabel" destination="xO1-k2-yr8" id="8bM-iU-yX9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgF-Yg-CEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1306" y="812"/>
+            <point key="canvasLocation" x="-278" y="986"/>
         </scene>
         <!--Game View Controller - Game-->
         <scene sceneID="yoY-Ft-5Ys">
@@ -463,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFT-D2-Lzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367" y="-572"/>
+            <point key="canvasLocation" x="187" y="-580"/>
         </scene>
     </scenes>
     <resources>
@@ -523,6 +518,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameDataEntryTableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="presentActiveGameAction:"/>
+                <relationship kind="outlet" name="activeGameButton" candidateClass="BButton"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="GameDataViewController" superclassName="UIViewController">
@@ -530,6 +527,7 @@
             <relationships>
                 <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="myPageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="phraseTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="ALScrollViewPaging"/>
                 <relationship kind="outlet" name="someLabel" candidateClass="UILabel"/>
             </relationships>

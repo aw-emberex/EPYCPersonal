@@ -22,4 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *previousPhraseDisplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phrasePromptTextLabel;
 
+@property (strong, nonatomic) GameData* mainGameData;
+
 @end

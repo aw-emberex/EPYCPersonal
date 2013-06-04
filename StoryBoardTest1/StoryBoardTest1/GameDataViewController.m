@@ -17,26 +17,28 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-
-    }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     ALScrollViewPaging *scrollView;
-    scrollView = [[ALScrollViewPaging alloc] initWithFrame:self.mainView.frame andWithPageControl:self.myPageControl];
+    scrollView = [[ALScrollViewPaging alloc] initWithFrame:self.mainView.frame withPageControl:self.myPageControl];
     self.scrollView = scrollView;
     [self.view addSubview:self.scrollView];
 
-    NSMutableArray *testArray = [[NSMutableArray alloc] initWithCapacity:2];
-    DrawingView *firstDrawingView = [self createDrawingViewWithGameEntry:[self.gameData.gameEntries objectAtIndex:0] withFrame:self.mainView.frame];
-    [firstDrawingView setRespondsToTouches:NO];
-    [testArray addObject:firstDrawingView];
-    DrawingView *firstDrawingView2 = [self createDrawingViewWithGameEntry:[self.gameData.gameEntries objectAtIndex:0] withFrame:self.mainView.frame];
-    [testArray addObject:firstDrawingView2];
-    [[self scrollView] addPages:testArray];
+    NSMutableArray *pages = [[NSMutableArray alloc] initWithCapacity:2];
+
+    [_gameData.gameEntries enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        GameEntry* entry = (GameEntry*)obj;
+        if ([entry.squiggles count] == 0) return;
+        DrawingView *drawingView = [self createDrawingViewWithGameEntry:entry withFrame:self.mainView.frame];
+        [drawingView setBackgroundColor:[UIColor whiteColor]];
+        [pages addObject:drawingView];
+    }];
+    [[self scrollView] addPages:pages];
+    [self.scrollView setEventDelegate:self];
+    self.phraseTextLabel.text = [[_gameData.gameEntries objectAtIndex:0] phraseText];
 }
 
 - (DrawingView *)createDrawingViewWithGameEntry:(GameEntry *)gameEntry withFrame:(CGRect)frame {
@@ -47,7 +49,11 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)changedPage:(NSInteger)newPage {
+    GameEntry* current = [self.gameData.gameEntries objectAtIndex:newPage];
+    self.phraseTextLabel.text = current.phraseText;
 }
 
 @end

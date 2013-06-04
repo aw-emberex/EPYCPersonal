@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Andrea Lufino. All rights reserved.
 //
 
+#import "ALScrollViewPagingDelegate.h"
+
 @implementation ALScrollViewPaging {
 @private
     int _currentPage;
@@ -33,7 +35,7 @@ const int kDotWidth = 7;
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame andWithPageControl:(UIPageControl *)blahPageControl {
+- (id)initWithFrame:(CGRect)frame withPageControl:(UIPageControl *)blahPageControl {
     self = [self initWithFrame:frame];
     if (self) {
         self.externalPageControl = blahPageControl;
@@ -101,7 +103,6 @@ const int kDotWidth = 7;
 }
 
 #pragma mark - Add pages
-
 //add pages to the scrollview
 - (void)addPages:(NSArray *)pages {
     _pages = pages;
@@ -130,6 +131,7 @@ const int kDotWidth = 7;
     frame.size = self.frame.size;
     [self scrollRectToVisible:frame animated:YES];
     pageControlBeingUsed = YES;
+    [self.eventDelegate changedPage:_externalPageControl.currentPage];
 }
 
 #pragma mark - ScrollView delegate
@@ -140,9 +142,13 @@ const int kDotWidth = 7;
         //switch the page when more than 50% of the previous/next page is visible
         CGFloat pageWidth = self.frame.size.width;
         NSInteger page = floor((self.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+        BOOL difference = page == self.currentPage;
         self.currentPage = page;
         pageControl.currentPage = self.currentPage;
         _externalPageControl.currentPage = self.currentPage;
+        if (difference) {
+            [self.eventDelegate changedPage:self.currentPage];
+        }
     }
 }
 

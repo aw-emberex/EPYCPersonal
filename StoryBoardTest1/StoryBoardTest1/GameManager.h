@@ -13,6 +13,8 @@
 #import "GameEntry.h"
 #import "EPYCAppDelegate.h"
 
+@class GameData;
+
 
 @interface GameManager : NSObject {
 }
@@ -35,11 +37,13 @@
 
 - (void)setCurrentGameDataPhraseText:(NSString *)phraseText;
 
-- (void)setCurrentGameEntrySquiggles:(NSOrderedSet *)squiggles;
+-(void) setMainGameData:(GameData *)gameData;
+- (NSMutableOrderedSet *)getActiveGameData;
+- (void)createNewGameData;
 
 @property(readwrite, nonatomic) GameData *mainGameDataInstance;
 
-- (NSMutableOrderedSet *)getAllGameData;
+- (NSMutableOrderedSet *)getAllFinishedGameData;
 
 @property(readwrite, nonatomic) GameEntry *currentGameEntry;
 @property(readwrite, nonatomic) NSEntityDescription *squiggleEntity;

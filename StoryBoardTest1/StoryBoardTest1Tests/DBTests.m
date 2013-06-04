@@ -86,7 +86,7 @@ static GameManager *gameManager = nil;
         STAssertEquals([[manager getGameEntries] count], 2U, @"Should be two entries now");
 
         //should have some game data entries
-        NSMutableOrderedSet *allGameData = [manager getAllGameData];
+        NSMutableOrderedSet *allGameData = [manager getAllFinishedGameData];
         STAssertTrue([allGameData count] > 0, @"There should be a non zero amount of gata datas");
 
     }

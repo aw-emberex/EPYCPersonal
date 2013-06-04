@@ -54,6 +54,7 @@
     [shakePlayer setNumberOfLoops:-1];
     [shakePlayer prepareToPlay];
     [shakePlayer setNumberOfLoops:-1];
+    [self setBackgroundColor:[UIColor whiteColor]];
     self.respondsToTouches = YES;
     [self becomeFirstResponder];
 }

@@ -2,6 +2,7 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="GameData" representedClassName="GameData" syncable="YES">
         <attribute name="creationTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="finished" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <relationship name="gameEntries" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="GameEntry" inverseName="owningGameData" inverseEntity="GameEntry" syncable="YES"/>
     </entity>
     <entity name="GameEntry" representedClassName="GameEntry" syncable="YES">
@@ -29,7 +30,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="GameData" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="GameData" positionX="160" positionY="192" width="128" height="90"/>
         <element name="GameEntry" positionX="160" positionY="192" width="128" height="120"/>
         <element name="Squiggle" positionX="160" positionY="192" width="128" height="135"/>
         <element name="SquigglePoint" positionX="160" positionY="192" width="128" height="90"/>

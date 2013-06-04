@@ -1,9 +1,9 @@
 //
 //  GameData.h
-//  EPYCPersonal
+//  TapkuLibrary
 //
-//  Created by Alex Wait on 5/28/13.
-//  Copyright (c) 2013 Emberex. All rights reserved.
+//  Created by Alex Wait on 6/3/13.
+//
 //
 
 #import <Foundation/Foundation.h>
@@ -14,6 +14,7 @@
 @interface GameData : NSManagedObject
 
 @property (nonatomic, retain) NSDate * creationTime;
+@property (nonatomic, retain) NSNumber * finished;
 @property (nonatomic, retain) NSOrderedSet *gameEntries;
 @end
 

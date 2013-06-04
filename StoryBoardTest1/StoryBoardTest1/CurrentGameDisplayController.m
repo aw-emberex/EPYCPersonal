@@ -4,9 +4,7 @@
 //
 //  Created by Alex Wait on 5/28/13.
 //  Copyright (c) 2013 Emberex. All rights reserved.
-//
 
-#import <CoreGraphics/CoreGraphics.h>
 #import "CurrentGameDisplayController.h"
 #import "UIView+AnimateHidden.h"
 #import "DrawingViewController.h"
@@ -23,11 +21,10 @@
 @synthesize lastPhraseTextLabel = _lastPhraseTextLabel;
 @synthesize latestDrawingView = _latestDrawingView;
 @synthesize gameManager = _gameManager;
+@synthesize mainGameData = _mainGameData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
     return self;
 }
 
@@ -39,14 +36,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _gameManager = [GameManager getInstance];
+    [_gameManager setMainGameData:self.mainGameData];
     self.latestDrawingView.respondsToTouches = NO;
     [self changeGameMode];
-    // Do any additional setup after loading the view.
 }
 
 - (void)changeGameMode {
     GameEntry* latestEntry = [self getLatestEntry];
-    NSLog(@"aAAAAAA, %f %f", self.latestDrawingView.frame.size.width, self.latestDrawingView.frame.size.height);
     NSOrderedSet *allGameEntries = [[_gameManager getMainGameData] gameEntries];
     if ([latestEntry isPhraseEntryMode]) {
         if ([allGameEntries count] == 1) {
@@ -72,23 +68,23 @@
         [_nextTurnButton setTitle:@"Draw the Phrase" forState:UIControlStateNormal];
         [self.latestDrawingView setHidden:YES];
         [self.phraseTextLabelView setHidden:YES];
-        NSLog(@"%@ %d, %d", self.previousPhraseDisplayLabel.text, self.previousPhraseDisplayLabel.hidden, self.phraseTextLabelView.hidden);
     }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)nextTurnAction:(id)sender {
     GameEntry *latestGameEntry= [self getLatestEntry];
     if ([latestGameEntry isPhraseEntryMode] == NO) {
+        if ([latestGameEntry.squiggles count] != 0) {
+            [_gameManager createNewGameEntry];
+        }
         UIStoryboard *myStoryboard = self.storyboard;
         DrawingViewController *drawingViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"DrawingViewController"];
         [drawingViewController setDelegate:self];
         [self presentViewController:drawingViewController animated:YES completion:^{
-            NSLog(@"done");
             [self changeGameMode];
         }];
     } else {
@@ -96,6 +92,7 @@
         NSLog(@"User entered %@", phrase);
         [_gameManager setCurrentGameDataPhraseText:phrase];
         [self.phraseEnteredTextView resignFirstResponder];
+        [self.phraseEnteredTextView setText:@""];
         [self changeGameMode];
     }
 }
@@ -106,12 +103,13 @@
 }
 
 - (IBAction)endGameAction:(id)sender {
+    [_gameManager getMainGameData].finished = [NSNumber numberWithBool:YES];
+    [_gameManager saveContext];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)savedSquiggles:(NSOrderedSet *)squigglesSaved {
-    //NSLog(@"Saved Squiggles %@", squigglesSaved);
     [_gameManager createNewGameEntry];
-    //[_gameManager setCurrentGameEntrySquiggles:squigglesSaved];
     [self changeGameMode];
 }
 

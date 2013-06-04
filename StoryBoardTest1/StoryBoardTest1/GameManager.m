@@ -59,28 +59,32 @@ static GameManager *_instance = nil;
 }
 
 - (GameData *)getMainGameData {
-    //if (_mainGameDataInstance == nil) {
-    [self loadMainGameData];
-    //}
+    if (_mainGameDataInstance == nil) {
+        [self loadMainGameData];
+    }
     return _mainGameDataInstance;
+}
+
+-(void) setMainGameData:(GameData *)gameData {
+    _mainGameDataInstance = gameData;
 }
 
 - (void)loadMainGameData {
     NSError *__autoreleasing error;
     NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameData"];
     [fetch setReturnsObjectsAsFaults:NO];
-
     NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
 
     if ([result count] == 0) {
-        _mainGameDataInstance = (GameData *) [NSEntityDescription insertNewObjectForEntityForName:@"GameData" inManagedObjectContext:managedObjectContent];
-        NSLog(@"OMG %@", error);
-        [self saveContext];
+        //[self createNewGameData];
     } else {
-        _mainGameDataInstance = [result objectAtIndex:0];
-        NSLog(@"%@", _mainGameDataInstance);
-        NSLog(@"%d", [_mainGameDataInstance.gameEntries count]);
+        _mainGameDataInstance = [result lastObject];
     }
+}
+
+- (void)createNewGameData {
+    _mainGameDataInstance = (GameData *) [NSEntityDescription insertNewObjectForEntityForName:@"GameData" inManagedObjectContext:managedObjectContent];
+    [self saveContext];
 }
 
 - (void)deleteAllGameData {
@@ -105,9 +109,20 @@ static GameManager *_instance = nil;
     return [[NSOrderedSet alloc] initWithArray:result];
 }
 
-- (NSMutableOrderedSet *)getAllGameData {
+- (NSMutableOrderedSet *)getAllFinishedGameData {
     NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameData"];
     NSError *__autoreleasing error;
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"finished == 1"];
+    [fetch setPredicate:predicate];
+    NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
+    return [NSMutableOrderedSet orderedSetWithArray:result];
+}
+
+- (NSMutableOrderedSet *)getActiveGameData {
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"GameData"];
+    NSError *__autoreleasing error;
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"finished == 0"];
+    [fetch setPredicate:predicate];
     NSArray *result = [managedObjectContent executeFetchRequest:fetch error:&error];
     return [NSMutableOrderedSet orderedSetWithArray:result];
 }
@@ -124,15 +139,4 @@ static GameManager *_instance = nil;
     [self saveContext];
 }
 
-- (void)setCurrentGameEntrySquiggles:(NSOrderedSet *)squiggles {
-//    GameEntry *latestGameEntry = [self requestLatestGameEntry];
-//    if ([[latestGameEntry squiggles] count] == 0) {
-//        [latestGameEntry setSquiggles:squiggles];
-//    } else {
-//        GameEntry *newGameEntry = [self createNewGameEntry];
-//        [newGameEntry setSquiggles:squiggles];
-//    }
-//    [self saveContext];
-}
 @end
-

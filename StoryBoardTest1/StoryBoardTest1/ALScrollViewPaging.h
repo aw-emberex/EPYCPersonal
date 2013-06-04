@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ALScrollViewPagingDelegate;
+
 @interface ALScrollViewPaging : UIScrollView <UIScrollViewDelegate> {
     BOOL pageControlBeingUsed;
     NSArray *_pages;
@@ -20,7 +22,9 @@
 @property(nonatomic, strong) UIColor *pageControlOtherPagesColor;
 @property(nonatomic, strong) UIPageControl *externalPageControl;
 
-- (id)initWithFrame:(CGRect)frame andWithPageControl:(UIPageControl *)pageControl;
+@property(nonatomic, strong) id<ALScrollViewPagingDelegate> eventDelegate;
+
+- (id)initWithFrame:(CGRect)frame withPageControl:(UIPageControl *)pageControl;
 
 - (id)initWithFrame:(CGRect)frame andPages:(NSArray *)pages;
 

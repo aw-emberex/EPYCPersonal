@@ -1,9 +1,9 @@
 //
 //  GameData.m
-//  EPYCPersonal
+//  TapkuLibrary
 //
-//  Created by Alex Wait on 5/28/13.
-//  Copyright (c) 2013 Emberex. All rights reserved.
+//  Created by Alex Wait on 6/3/13.
+//
 //
 
 #import "GameData.h"
@@ -13,10 +13,12 @@
 @implementation GameData
 
 @dynamic creationTime;
+@dynamic finished;
 @dynamic gameEntries;
 
 -(void)awakeFromInsert {
     self.creationTime = [NSDate date];
 }
+
 
 @end

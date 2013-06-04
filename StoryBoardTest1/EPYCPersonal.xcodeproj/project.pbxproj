@@ -62,7 +62,6 @@
 		FA468DF717402A58006C57B8 /* ALScrollViewPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = FA468DF617402A58006C57B8 /* ALScrollViewPaging.m */; };
 		FA4C194E1742007E00916165 /* GameDataTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4C194D1742007E00916165 /* GameDataTableCell.xib */; };
 		FA4C19521742019C00916165 /* GameDataEntryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4C19511742019C00916165 /* GameDataEntryTableViewController.m */; };
-		FA5A64891731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648A1731E60B000D703D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A64881731E60B000D703D /* GameData.m */; };
 		FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A648C1731E60B000D703D /* SquigglePoint.m */; };
 		FA5A648E1731E60B000D703D /* SquigglePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A648C1731E60B000D703D /* SquigglePoint.m */; };
@@ -125,6 +124,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DBA14BEE93E754D1FA5CA35 /* ALScrollViewPagingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALScrollViewPagingDelegate.h; sourceTree = "<group>"; };
 		2DBA160C1A464534E55978F3 /* DrawingViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewControllerDelegate.h; sourceTree = "<group>"; };
 		2DBA17962E7D7055AB9989C9 /* GameDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataViewController.m; sourceTree = "<group>"; };
 		2DBA19425D857607D71D9BD4 /* UIView+AnimateHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimateHidden.m"; sourceTree = "<group>"; };
@@ -409,6 +409,7 @@
 				FA386B66171E6EEA00E5129A /* UserDetailViewDelegate.h */,
 				FA44B40817374732006295C2 /* EPYCDrawingViewDelegate.h */,
 				2DBA160C1A464534E55978F3 /* DrawingViewControllerDelegate.h */,
+				2DBA14BEE93E754D1FA5CA35 /* ALScrollViewPagingDelegate.h */,
 			);
 			name = "Custom Delegate Interfaces";
 			sourceTree = "<group>";
@@ -657,7 +658,6 @@
 				FAE2F3731712753B0006F499 /* UserCell.m in Sources */,
 				FA386B63171E6E0600E5129A /* AddUserViewController.m in Sources */,
 				FA696646172E40DD00DB01E9 /* GameManager.m in Sources */,
-				FA5A64891731E60B000D703D /* GameData.m in Sources */,
 				FA5A648D1731E60B000D703D /* SquigglePoint.m in Sources */,
 				FA5A64951731E60B000D703D /* User.m in Sources */,
 				FA96AB131732354D008676EC /* DrawingView.m in Sources */,
