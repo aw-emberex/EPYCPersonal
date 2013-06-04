@@ -66,13 +66,13 @@
         [self.previousPhraseView setHidden:YES];
     } else {
         //Drawing turn
-        GameEntry* secondLatest = [[[_gameManager getMainGameData] gameEntries] lastObject];
         NSLog(@"drawing turn! %@", latestEntry);
         [self.previousPhraseDisplayLabel setText:latestEntry.phraseText];
         [self.previousPhraseView setHidden:NO];
-        [_nextTurnButton setTitle:@"Take Drawing Turn" forState:UIControlStateNormal];
+        [_nextTurnButton setTitle:@"Draw the Phrase" forState:UIControlStateNormal];
         [self.latestDrawingView setHidden:YES];
         [self.phraseTextLabelView setHidden:YES];
+        NSLog(@"%@ %d, %d", self.previousPhraseDisplayLabel.text, self.previousPhraseDisplayLabel.hidden, self.phraseTextLabelView.hidden);
     }
 }
 
@@ -92,7 +92,11 @@
             [self changeGameMode];
         }];
     } else {
-        //nothing here, will be taken care of by enter phrase button
+        NSString* phrase = self.phraseEnteredTextView.text;
+        NSLog(@"User entered %@", phrase);
+        [_gameManager setCurrentGameDataPhraseText:phrase];
+        [self.phraseEnteredTextView resignFirstResponder];
+        [self changeGameMode];
     }
 }
 
@@ -102,14 +106,6 @@
 }
 
 - (IBAction)endGameAction:(id)sender {
-}
-
-- (IBAction)enteredPhraseTextAction:(id)sender {
-    NSString* phrase = self.phraseEnteredTextView.text;
-    NSLog(@"User entered %@", phrase);
-    [_gameManager setCurrentGameDataPhraseText:phrase];
-    [self.phraseEnteredTextView resignFirstResponder];
-    [self changeGameMode];
 }
 
 - (void)savedSquiggles:(NSOrderedSet *)squigglesSaved {
