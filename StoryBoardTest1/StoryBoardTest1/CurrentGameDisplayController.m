@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Emberex. All rights reserved.
 //
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "CurrentGameDisplayController.h"
 #import "UIView+AnimateHidden.h"
 #import "DrawingViewController.h"
@@ -45,21 +46,33 @@
 
 - (void)changeGameMode {
     GameEntry* latestEntry = [self getLatestEntry];
+    NSLog(@"aAAAAAA, %f %f", self.latestDrawingView.frame.size.width, self.latestDrawingView.frame.size.height);
+    NSOrderedSet *allGameEntries = [[_gameManager getMainGameData] gameEntries];
     if ([latestEntry isPhraseEntryMode]) {
-        NSLog(@"phrase turn! %@", latestEntry);
-        [_nextTurnButton setTitle:@"Enter Phrase" forState:UIControlStateNormal];
-        [self.latestDrawingView setHiddenAnimated:NO withDuration:1.5];
+        if ([allGameEntries count] == 1) {
+            [self.latestDrawingView setHidden:YES];
+            [self.phrasePromptTextLabel setText:@"Beginning Phrase"];
+            [_nextTurnButton setTitle:@"Enter Beginning Phrase" forState:UIControlStateNormal];
+        } else {
+            GameEntry* previousEntry = [allGameEntries objectAtIndex:[allGameEntries count]-2];
+            NSLog(@"Previous Entry %@", previousEntry);
+            [self.latestDrawingView setHiddenAnimated:NO withDuration:1.5];
+            [self.latestDrawingView setPreviousSquiggles:[previousEntry.squiggles array]];
+            [self.latestDrawingView setNeedsDisplay];
+            [_nextTurnButton setTitle:@"Enter Phrase" forState:UIControlStateNormal];
+            [self.phrasePromptTextLabel setText:@"What was drawn?"];
+        }
         [self.phraseTextLabelView setHidden:NO];
         [self.previousPhraseView setHidden:YES];
-        [self.latestDrawingView setPreviousSquiggles:latestEntry.squiggles];
-        [self.latestDrawingView setNeedsDisplay];
     } else {
-        //get previous drawing!
+        //Drawing turn
         GameEntry* secondLatest = [[[_gameManager getMainGameData] gameEntries] lastObject];
         NSLog(@"drawing turn! %@", latestEntry);
         [self.previousPhraseDisplayLabel setText:latestEntry.phraseText];
         [self.previousPhraseView setHidden:NO];
         [_nextTurnButton setTitle:@"Take Drawing Turn" forState:UIControlStateNormal];
+        [self.latestDrawingView setHidden:YES];
+        [self.phraseTextLabelView setHidden:YES];
     }
 }
 

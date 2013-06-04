@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *phraseEnteredTextView;
 @property (weak, nonatomic) IBOutlet UIView *previousPhraseView;
 @property (weak, nonatomic) IBOutlet UILabel *previousPhraseDisplayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phrasePromptTextLabel;
 
 @end
