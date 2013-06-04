@@ -33,6 +33,7 @@
         GameEntry* entry = (GameEntry*)obj;
         if ([entry.squiggles count] == 0) return;
         DrawingView *drawingView = [self createDrawingViewWithGameEntry:entry withFrame:self.mainView.frame];
+        [drawingView setRespondsToTouches:NO];
         [drawingView setBackgroundColor:[UIColor whiteColor]];
         [pages addObject:drawingView];
     }];
